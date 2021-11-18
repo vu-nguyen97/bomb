@@ -1,9 +1,9 @@
 .site-header {
-  position: absolute !important;
+  position: fixed !important;
   top: 0;
   width: 100%;
   z-index: 10 !important;
-  background: color-bg(header);
+  background-color: color-bg(header);
 
   + .site-content {
     .section:first-of-type {
@@ -13,6 +13,23 @@
 
   .brand {
     margin-right: $header-nav--padding-h;
+  }
+
+  &.another-bg {
+    background-color: white;
+  }
+
+  &.another-color {
+    a {
+      color: get-color(dark, 3) !important;
+      &:hover {
+        color: color(primary) !important;
+      }
+    }
+  }
+
+  a.nav-actived {
+    color: color(primary) !important;
   }
 }
 

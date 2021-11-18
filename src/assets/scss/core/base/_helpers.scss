@@ -500,6 +500,10 @@ img.has-shadow {
   padding-top: 64px;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 @include media("<=medium") {
   .ta-l-mobile {
     text-align: left;

@@ -23,7 +23,7 @@ const FeaturesTiles = ({
   ...props
 }) => {
   const outerClasses = classNames(
-    "features-tiles section",
+    "features-tiles section page-section",
     topOuterDivider && "has-top-divider",
     bottomOuterDivider && "has-bottom-divider",
     hasBgColor && "has-bg-color",
@@ -43,13 +43,13 @@ const FeaturesTiles = ({
   );
 
   const sectionHeader = {
-    title: "Build up the whole picture",
+    title: "FeaturesTiles",
     paragraph:
       "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum — semper quis lectus nulla at volutpat diam ut venenatis.",
   };
 
   return (
-    <section {...props} className={outerClasses}>
+    <section {...props} className={outerClasses} id="penguin">
       <div className="container">
         <div className={innerClasses}>
           <SectionHeader data={sectionHeader} className="center-content" />

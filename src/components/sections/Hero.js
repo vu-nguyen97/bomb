@@ -37,7 +37,7 @@ const Hero = ({
   };
 
   const outerClasses = classNames(
-    "hero section center-content",
+    "hero section center-content page-section",
     topOuterDivider && "has-top-divider",
     bottomOuterDivider && "has-bottom-divider",
     hasBgColor && "has-bg-color",
@@ -52,7 +52,7 @@ const Hero = ({
   );
 
   return (
-    <section {...props} className={outerClasses}>
+    <section {...props} className={outerClasses} id="home">
       <div className="container-sm">
         <div className={innerClasses}>
           <div className="hero-content">

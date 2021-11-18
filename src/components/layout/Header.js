@@ -18,13 +18,13 @@ const defaultProps = {
   bottomDivider: false,
 };
 
-const HeaderLinks = [
-  { name: "Home", url: "/" },
-  { name: "Features", url: "/" },
-  { name: "Penguin", url: "/" },
-  { name: "Gameplay", url: "/" },
-  { name: "Tokenomics", url: "/" },
-  { name: "Pitchdeck", url: "/" },
+export const HeaderLinks = [
+  { name: "Home", id: "home" },
+  { name: "Features", id: "features" },
+  { name: "Penguin", id: "penguin" },
+  { name: "Gameplay", id: "gameplay" },
+  { name: "Tokenomics", id: "tokenomics" },
+  { name: "Pitchdeck", id: "pitchdeck" },
 ];
 
 const Header = ({
@@ -84,8 +84,22 @@ const Header = ({
     className
   );
 
+  const onClickNav = (itemId) => {
+    const itemEl = document.getElementById(itemId);
+
+    if (itemEl) {
+      const yOffset = 80; // height of fixed header
+      const distanceTop =
+        itemEl.getBoundingClientRect().top + window.pageYOffset - yOffset;
+
+      window.scrollTo({ top: distanceTop });
+    }
+
+    closeMenu();
+  };
+
   return (
-    <header {...props} className={classes}>
+    <header {...props} className={classes} id="site-header">
       <div className="container">
         <div
           className={classNames(
@@ -119,7 +133,11 @@ const Header = ({
                   >
                     {HeaderLinks.map((item, index) => (
                       <li key={index}>
-                        <Link to={item.url} onClick={closeMenu}>
+                        <Link
+                          to=""
+                          onClick={() => onClickNav(item.id)}
+                          className="header-nav-item"
+                        >
                           {item.name}
                         </Link>
                       </li>
