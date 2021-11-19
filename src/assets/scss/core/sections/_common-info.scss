@@ -1,0 +1,11 @@
+.CommonInfo {
+  margin-top: 80px;
+
+  &-content {
+    .img-size {
+      width: 300px;
+      height: 300px;
+      object-fit: contain;
+    }
+  }
+}

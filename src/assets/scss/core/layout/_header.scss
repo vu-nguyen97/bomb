@@ -100,6 +100,17 @@
   display: none;
 }
 
+.scroll-to-top {
+  position: fixed;
+  right: 40px;
+  bottom: 60px;
+  height: 40px;
+  width: 40px;
+  background-color: white;
+  border-radius: 50%;
+  z-index: 1000;
+}
+
 @include media("<=medium") {
   .header-nav-toggle {
     display: block;

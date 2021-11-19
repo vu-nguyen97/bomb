@@ -31,3 +31,8 @@
 .site-content {
   flex: 1 0 auto;
 }
+
+.full-viewport {
+  height: calc(100vh - 80px);
+  width: 100%;
+}

@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 // import sections
-import Hero from "../components/sections/Hero";
+// import Hero from "../components/sections/Hero";
 import FeaturesTiles from "../components/sections/FeaturesTiles";
 import FeaturesSplit from "../components/sections/FeaturesSplit";
 import Testimonial from "../components/sections/Testimonial";
 import Features from "../components/sections/Features";
 import Cta from "../components/sections/Cta";
 import { HeaderLinks } from "../components/layout/Header";
+import CommonInfo from "../components/sections/CommonInfo";
+import FundInfo from "../components/sections/FundInfo";
 
 const Home = () => {
   const [isShowSmoothScroll, setIsShowSmoothScroll] = useState(false);
@@ -33,12 +35,17 @@ const Home = () => {
 
     for (let i = 0; i < Object.keys(listNav).length; i++) {
       const currentElTop = listNav[i].getBoundingClientRect().top;
-      const currentElBottom = listNav[i].getBoundingClientRect().bottom;
+      const nextElTop =
+        i === Object.keys(listNav).length - 1
+          ? Infinity
+          : listNav[i + 1].getBoundingClientRect().top;
+
       const activedIndex = HeaderLinks.findIndex(
         (item) => item.id === listNav[i].id
       );
 
-      if (currentElTop <= 80 && currentElBottom > 80) {
+      if (activedIndex === -1) continue;
+      if (currentElTop <= 80 && nextElTop > 80) {
         if (activedIndex > -1) {
           navItems[activedIndex].classList.add("nav-actived");
         }
@@ -68,7 +75,9 @@ const Home = () => {
 
   return (
     <>
-      <Hero className="illustration-section-01" />
+      <CommonInfo />
+      <FundInfo />
+      {/* <Hero className="illustration-section-01" /> */}
       <Features />
       <FeaturesTiles />
       <FeaturesSplit

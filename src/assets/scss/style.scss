@@ -2,13 +2,14 @@
 # Based on Cruip framework - v1.0.0
 --------------------------------------------------------------*/
 
+@import "./override-style";
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
 /*--------------------------------------------------------------
 # Variables, functions and mixins
 --------------------------------------------------------------*/
-@import "core/abstracts/functions",
-		"settings/settings",
-        "core/abstracts/mixins",
-        'core/abstracts/include-media';
+@import "core/abstracts/functions", "settings/settings", "core/abstracts/mixins",
+  "core/abstracts/include-media";
 
 /*--------------------------------------------------------------
 # Normalize
@@ -96,6 +97,10 @@
 # Hero
 --------------------------------------------------------------*/
 @import "core/sections/hero";
+
+@import "core/sections/common-info";
+
+@import "core/sections/fund-info";
 
 /*--------------------------------------------------------------
 # Features split
