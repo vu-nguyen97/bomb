@@ -1,11 +1,11 @@
 import React from "react";
 import classNames from "classnames";
 
-const FooterSocial = ({ className, ...props }) => {
-  const classes = classNames("footer-social", className);
+const FooterSocial = ({ className }) => {
+  const classes = classNames("footer-social mt-2", className);
 
   return (
-    <div {...props} className={classes}>
+    <div className={classes}>
       <ul className="list-reset">
         <li>
           <a href="https://facebook.com/">

@@ -31,14 +31,13 @@ const Footer = ({ className, topOuterDivider, topDivider, ...props }) => {
             topDivider && "has-top-divider"
           )}
         >
-          <div className="footer-top space-between text-xxs">
-            <Logo />
-            <FooterSocial />
-          </div>
-          <div className="footer-bottom space-between text-xxs invert-order-desktop">
-            <FooterNav />
-            <div className="footer-copyright">
-              Made by <a href="https://cruip.com">Cruip</a>. All right reserved
+          <div className="row">
+            <div className="col-3 d-flex flex-column align-items-center">
+              <Logo width={200} />
+              <FooterSocial />
+            </div>
+            <div className="col-9 d-flex justify-content-center mt-4">
+              <FooterNav />
             </div>
           </div>
         </div>

@@ -3,8 +3,11 @@ import iceImg from "../../assets/images/landing-page/ice-img.png";
 
 const CommonInfo = () => {
   return (
-    <section id="home" className="CommonInfo page-section full-viewport">
-      <div className="container d-flex flex-column justify-content-end h-100">
+    <section
+      id="home"
+      className="CommonInfo page-section full-viewport d-flex align-items-end"
+    >
+      <div className="container">
         <div className="CommonInfo-content mb-5">
           <div className="row align-items-center">
             <div className="col-md-5">

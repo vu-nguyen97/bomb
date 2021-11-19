@@ -1,0 +1,11 @@
+.Features {
+  &-item {
+    width: 200px;
+
+    &-img {
+      width: 140px;
+      height: 140px;
+      object-fit: contain;
+    }
+  }
+}

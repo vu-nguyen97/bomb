@@ -82,8 +82,8 @@ const FundInfo = () => {
           <div className="row text-color-mid">
             {FundList.map((item, id) => (
               <div className="col-md-6 col-xs-12 mt-4" key={id}>
-                <div className="border p-2">
-                  <div className="row">
+                <div className="border p-2 h-100">
+                  <div className="row h-100">
                     <div className="col-4 d-flex flex-column align-items-center justify-content-center">
                       <img
                         src={item.img}
@@ -95,9 +95,11 @@ const FundInfo = () => {
                         {item.note}
                       </div>
                     </div>
-                    <div className="col-8">
-                      <h5 className="mt-0">{item.title}</h5>
-                      <div>{item.content}</div>
+                    <div className="col-8 d-flex flex-column justify-content-between">
+                      <div>
+                        <h5 className="mt-0">{item.title}</h5>
+                        <div>{item.content}</div>
+                      </div>
                       <div className="d-flex justify-content-end mt-2">
                         {item.btn}
                       </div>
