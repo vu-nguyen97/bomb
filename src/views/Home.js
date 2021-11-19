@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 // import sections
 // import Hero from "../components/sections/Hero";
-import FeaturesTiles from "../components/sections/FeaturesTiles";
 import FeaturesSplit from "../components/sections/FeaturesSplit";
 import Testimonial from "../components/sections/Testimonial";
 import Features from "../components/sections/Features";
@@ -9,6 +8,9 @@ import Cta from "../components/sections/Cta";
 import { HeaderLinks } from "../components/layout/Header";
 import CommonInfo from "../components/sections/CommonInfo";
 import FundInfo from "../components/sections/FundInfo";
+import PenguinPreview from "../components/sections/PenguinPreview";
+import GameplayDemo from "../components/sections/GameplayDemo";
+import TokensAndAssets from "../components/sections/TokensAndAssets";
 
 const Home = () => {
   const [isShowSmoothScroll, setIsShowSmoothScroll] = useState(false);
@@ -79,7 +81,9 @@ const Home = () => {
       <FundInfo />
       {/* <Hero className="illustration-section-01" /> */}
       <Features />
-      <FeaturesTiles />
+      <PenguinPreview />
+      <GameplayDemo />
+      <TokensAndAssets />
       <FeaturesSplit
         invertMobile
         topDivider

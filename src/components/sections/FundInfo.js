@@ -6,15 +6,19 @@ import fund4 from "../../assets/images/landing-page/fund4.png";
 
 const FundInfo = () => {
   const allowcationBtn = (
-    <button className="btn btn-outline-primary">Allowcation reports</button>
+    <button className="btn btn-outline-primary text-truncate">
+      Allowcation reports
+    </button>
   );
   const stakeBtn = (
-    <button className="btn btn-outline-primary">Stake now</button>
+    <button className="btn btn-outline-primary text-truncate">Stake now</button>
   );
   const gameBtnGroup = (
     <>
       {allowcationBtn}
-      <button className="btn btn-outline-primary ms-2">Play now</button>
+      <button className="btn btn-outline-primary ms-2 text-truncate">
+        Play now
+      </button>
     </>
   );
 
@@ -82,7 +86,7 @@ const FundInfo = () => {
           <div className="row text-color-mid">
             {FundList.map((item, id) => (
               <div className="col-md-6 col-xs-12 mt-4" key={id}>
-                <div className="border p-2 h-100">
+                <div className="border p-2 h-100 rounded">
                   <div className="row h-100">
                     <div className="col-4 d-flex flex-column align-items-center justify-content-center">
                       <img
