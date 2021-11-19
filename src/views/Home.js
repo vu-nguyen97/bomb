@@ -91,7 +91,7 @@ const Home = () => {
         className="illustration-section-02"
       />
       <Testimonial topDivider />
-      <Cta split />
+      <Cta />
 
       {isShowSmoothScroll && (
         <div className="scroll-to-top" onClick={scrollToTop}>
