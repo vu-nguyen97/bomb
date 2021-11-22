@@ -22,20 +22,20 @@ const TokensAndAssets = (props) => {
       className="TokensAndAssets page-section full-viewport d-flex align-items-center"
     >
       <div className="container">
-        <h2 className="mb-3 mt-0 text-center reveal-from-bottom">
+        <h2 className="m-0 text-center reveal-from-bottom">
           Tokens and Assets
         </h2>
 
         <div>
           <div className="row align-items-center">
-            <div className="col-md-5 reveal-from-left">
-              <div className="h5 text-color-mid">
+            <div className="col-md-5 mt-3 reveal-from-left">
+              <div className="h5 m-0 text-color-mid">
                 ICE is the govern token, which give the owner chance to receive
                 valuable rewards, the rights to vote and the be a part of the
                 evolution of Penguin World.
               </div>
               <button
-                className="btn btn-outline-primary"
+                className="btn btn-outline-primary mt-3"
                 onClick={props.onClickMoreInfoBtn}
               >
                 More info
@@ -43,8 +43,10 @@ const TokensAndAssets = (props) => {
             </div>
 
             <div className="col-md-3"></div>
-            <div className="col-md-4 d-flex flex-column align-items-center reveal-from-right">
-              <h5 className="text-reset">Limited ICE token release</h5>
+            <div className="col-md-4 mt-3 d-flex flex-column align-items-center reveal-from-right">
+              <h5 className="text-reset mb-2 mt-0">
+                Limited ICE token release
+              </h5>
               <img src={iceImg} className="img-size mx-auto" alt="ice img" />
             </div>
           </div>

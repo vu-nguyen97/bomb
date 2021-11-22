@@ -42,7 +42,7 @@ const CommonInfo = (props) => {
                 data-reveal-delay="200"
               >
                 <h3>Bring the metaverse to you</h3>
-                <div className="h6 text-color-mid">
+                <div className="h6 text-color-mid mb-0">
                   <div>
                     Join in a world where every penguin is a warrior, fight for
                     glory and prosperous of their own kingdom.
@@ -57,7 +57,7 @@ const CommonInfo = (props) => {
               </div>
               <div className="col-md-3"></div>
               <div
-                className="col-md-4 reveal-from-right"
+                className="col-md-4 reveal-from-right my-3"
                 data-reveal-delay="200"
               >
                 <img src={iceImg} className="img-size mx-auto" alt="ice img" />

@@ -1,3 +1,36 @@
-.cta-bg {
-  object-fit: contain;
+.cta {
+  .cta-bg {
+    max-height: 230px;
+  }
+
+  @include media("<=992px") {
+    .cta-title-1 {
+      @include font-size(xs);
+    }
+
+    .cta-title-2 {
+      @include font-size(sm);
+    }
+  }
+
+  @include media("<=768px") {
+    .cta-title-wrapper {
+      display: flex;
+      align-items: center;
+
+      .cta-title-1 {
+        @include font-size(sm);
+      }
+
+      .cta-title-2 {
+        @include font-size(h3);
+        margin-left: 7px !important;
+      }
+    }
+
+    .cta-text {
+      padding: 0.5rem 1rem 1.2rem 1rem !important;
+      text-align: start;
+    }
+  }
 }

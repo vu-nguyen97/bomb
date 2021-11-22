@@ -607,3 +607,9 @@ img.has-shadow {
     }
   }
 }
+
+@include media("<=768px") {
+  .md-m-0 {
+    margin: 0 !important;
+  }
+}
