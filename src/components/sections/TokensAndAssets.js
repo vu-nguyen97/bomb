@@ -7,7 +7,7 @@ import fish from "../../assets/images/landing-page/fish.png";
 import equipment from "../../assets/images/landing-page/equipment.png";
 import ice from "../../assets/images/landing-page/ice.png";
 
-const TokensAndAssets = () => {
+const TokensAndAssets = (props) => {
   const listItem = [
     { name: "ICE token", img: ice, content: "Govern token - ERC 21" },
     { name: "FISH token", img: fish, content: "Ingame token - ERC 21" },
@@ -21,8 +21,10 @@ const TokensAndAssets = () => {
       id="tokenomics"
       className="TokensAndAssets page-section full-viewport d-flex align-items-center"
     >
-      <div className="container reveal-from-bottom" data-reveal-delay="200">
-        <h2 className="mb-3 mt-0 text-center">Tokens and Assets</h2>
+      <div className="container">
+        <h2 className="mb-3 mt-0 text-center reveal-from-bottom">
+          Tokens and Assets
+        </h2>
 
         <div>
           <div className="row align-items-center">
@@ -32,7 +34,12 @@ const TokensAndAssets = () => {
                 valuable rewards, the rights to vote and the be a part of the
                 evolution of Penguin World.
               </div>
-              <button className="btn btn-outline-primary">More info</button>
+              <button
+                className="btn btn-outline-primary"
+                onClick={props.onClickMoreInfoBtn}
+              >
+                More info
+              </button>
             </div>
 
             <div className="col-md-3"></div>
@@ -42,7 +49,7 @@ const TokensAndAssets = () => {
             </div>
           </div>
 
-          <div className="mt-5 reveal-from-bottom">
+          <div className="mt-5 reveal-from-bottom" data-reveal-delay="300">
             <OwlCarousel
               className="owl-theme"
               loop={true}

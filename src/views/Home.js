@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
+import { useHistory } from "react-router-dom";
 // import sections
 // import Hero from "../components/sections/Hero";
 // import FeaturesSplit from "../components/sections/FeaturesSplit";
@@ -12,13 +13,15 @@ import PenguinPreview from "../components/sections/PenguinPreview";
 import GameplayDemo from "../components/sections/GameplayDemo";
 import TokensAndAssets from "../components/sections/TokensAndAssets";
 
-const Home = () => {
+const Home = (props) => {
   const [isShowSmoothScroll, setIsShowSmoothScroll] = useState(false);
+  const isMoreInfo = props.location?.state?.isMoreInfo || false;
+  const history = useHistory();
 
-  const listenScrollEvent = () => {
-    const siteHeaderEl = document.getElementById("site-header");
+  const listenScrollEvent = useCallback(() => {
     const listNav = document.getElementsByClassName("page-section");
     const navItems = document.getElementsByClassName("header-nav-item");
+    const siteHeaderEl = document.getElementById("site-header");
     let isAnotherStyle = false;
 
     if (window.scrollY <= 120) {
@@ -35,6 +38,12 @@ const Home = () => {
       siteHeaderEl.classList.remove("another-color", "another-bg");
     }
 
+    if (isMoreInfo) {
+      return Array.from(navItems).forEach((element) => {
+        element.classList.remove("nav-actived");
+      });
+    }
+
     for (let i = 0; i < Object.keys(listNav).length; i++) {
       const currentElTop = listNav[i].getBoundingClientRect().top;
       const nextElTop =
@@ -48,25 +57,23 @@ const Home = () => {
 
       if (activedIndex === -1) continue;
       if (currentElTop <= 80 && nextElTop > 80) {
-        if (activedIndex > -1) {
-          navItems[activedIndex].classList.add("nav-actived");
-        }
+        navItems[activedIndex].classList.add("nav-actived");
       } else {
         navItems[activedIndex].classList.remove("nav-actived");
       }
     }
-  };
+  }, [isMoreInfo]);
 
   useEffect(() => {
     listenScrollEvent();
-  }, []);
+  }, [listenScrollEvent]);
 
   useEffect(() => {
     window.addEventListener("scroll", listenScrollEvent);
     return () => {
       window.removeEventListener("scroll", listenScrollEvent);
     };
-  }, []);
+  }, [listenScrollEvent]);
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -75,23 +82,38 @@ const Home = () => {
     });
   };
 
+  const handleClickMoreInfoBtn = () => {
+    history.push({
+      pathname: "",
+      state: { isMoreInfo: true },
+    });
+    document.getElementById("home").scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <>
-      <CommonInfo />
-      <FundInfo />
-      {/* <Hero className="illustration-section-01" /> */}
-      <Features />
-      <PenguinPreview />
-      <GameplayDemo />
-      <TokensAndAssets />
-      {/* <FeaturesSplit
+      <CommonInfo isShowFull={!isMoreInfo} />
+      {isMoreInfo ? (
+        <>
+          <FundInfo />
+        </>
+      ) : (
+        <>
+          {/* <Hero className="illustration-section-01" /> */}
+          <Features />
+          <PenguinPreview />
+          <GameplayDemo />
+          <TokensAndAssets onClickMoreInfoBtn={handleClickMoreInfoBtn} />
+          {/* <FeaturesSplit
         invertMobile
         topDivider
         imageFill
         className="illustration-section-02"
       /> */}
-      {/* <Testimonial topDivider /> */}
-      <Cta />
+          {/* <Testimonial topDivider /> */}
+          <Cta />
+        </>
+      )}
 
       {isShowSmoothScroll && (
         <div className="scroll-to-top" onClick={scrollToTop}>

@@ -64,8 +64,8 @@ const FundInfo = () => {
 
   return (
     <section className="FundInfo full-viewport d-flex align-items-center">
-      <div className="container" data-reveal-delay="200">
-        <div className="text-center reveal-from-bottom">
+      <div className="container">
+        <div className="text-center reveal-from-bottom" data-reveal-delay="300">
           <h2 className="mt-0 mb-16">Funds Distribution Results</h2>
 
           <div className="h6 mb-1">
@@ -91,6 +91,7 @@ const FundInfo = () => {
                   "reveal-from-left": id % 2 === 0,
                   "reveal-from-right": id % 2 === 1,
                 })}
+                data-reveal-delay="300"
                 key={id}
               >
                 <div className="border p-2 h-100 rounded">

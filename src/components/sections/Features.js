@@ -73,7 +73,7 @@ const Features = () => {
                     className="Features-item-img"
                   />
                   <h4 className="mb-2">{item.name}</h4>
-                  <div className="px-1">{item.content}</div>
+                  <div className="px-1 text-center">{item.content}</div>
                 </div>
               </div>
             ))}
