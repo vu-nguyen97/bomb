@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 // import sections
 // import Hero from "../components/sections/Hero";
-import FeaturesSplit from "../components/sections/FeaturesSplit";
-import Testimonial from "../components/sections/Testimonial";
+// import FeaturesSplit from "../components/sections/FeaturesSplit";
+// import Testimonial from "../components/sections/Testimonial";
 import Features from "../components/sections/Features";
 import Cta from "../components/sections/Cta";
 import { HeaderLinks } from "../components/layout/Header";
@@ -84,13 +84,13 @@ const Home = () => {
       <PenguinPreview />
       <GameplayDemo />
       <TokensAndAssets />
-      <FeaturesSplit
+      {/* <FeaturesSplit
         invertMobile
         topDivider
         imageFill
         className="illustration-section-02"
-      />
-      <Testimonial topDivider />
+      /> */}
+      {/* <Testimonial topDivider /> */}
       <Cta />
 
       {isShowSmoothScroll && (

@@ -26,7 +26,7 @@ const TokensAndAssets = () => {
 
         <div>
           <div className="row align-items-center">
-            <div className="col-md-5">
+            <div className="col-md-5 reveal-from-left">
               <div className="h5 text-color-mid">
                 ICE is the govern token, which give the owner chance to receive
                 valuable rewards, the rights to vote and the be a part of the
@@ -36,13 +36,13 @@ const TokensAndAssets = () => {
             </div>
 
             <div className="col-md-3"></div>
-            <div className="col-md-4 d-flex flex-column align-items-center">
+            <div className="col-md-4 d-flex flex-column align-items-center reveal-from-right">
               <h5 className="text-reset">Limited ICE token release</h5>
               <img src={iceImg} className="img-size mx-auto" alt="ice img" />
             </div>
           </div>
 
-          <div className="mt-5">
+          <div className="mt-5 reveal-from-bottom">
             <OwlCarousel
               className="owl-theme"
               loop={true}

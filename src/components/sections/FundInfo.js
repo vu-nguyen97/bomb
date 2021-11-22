@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import React from "react";
 import fund1 from "../../assets/images/landing-page/fund1.png";
 import fund2 from "../../assets/images/landing-page/fund2.png";
@@ -63,8 +64,8 @@ const FundInfo = () => {
 
   return (
     <section className="FundInfo full-viewport d-flex align-items-center">
-      <div className="container reveal-from-bottom" data-reveal-delay="200">
-        <div className="text-center">
+      <div className="container" data-reveal-delay="200">
+        <div className="text-center reveal-from-bottom">
           <h2 className="mt-0 mb-16">Funds Distribution Results</h2>
 
           <div className="h6 mb-1">
@@ -85,7 +86,13 @@ const FundInfo = () => {
         <div className="">
           <div className="row text-color-mid">
             {FundList.map((item, id) => (
-              <div className="col-md-6 col-xs-12 mt-4" key={id}>
+              <div
+                className={classNames("col-md-6 col-xs-12 mt-4", {
+                  "reveal-from-left": id % 2 === 0,
+                  "reveal-from-right": id % 2 === 1,
+                })}
+                key={id}
+              >
                 <div className="border p-2 h-100 rounded">
                   <div className="row h-100">
                     <div className="col-4 d-flex flex-column align-items-center justify-content-center">

@@ -47,8 +47,8 @@ const Cta = ({
                 <h3 className="m-0">METAVERSE</h3>
               </div>
             </div>
-            <div className="col-5">
-              <h6 className="mb-0 ps-2 pe-4 text-reset">
+            <div className="col-5 d-flex align-items-center">
+              <h6 className="m-0 ps-2 pe-4 text-reset">
                 Our destiny is to making a multiverse, a next level of gaming
                 experience where players can enjoy all our game in one
                 ecosystem, which connect all together.
