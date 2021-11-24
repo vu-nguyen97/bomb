@@ -101,8 +101,8 @@ const Home = (props) => {
         <>
           {/* <Hero className="illustration-section-01" /> */}
           <Features />
-          <PenguinPreview />
           <GameplayDemo />
+          <PenguinPreview />
           <TokensAndAssets onClickMoreInfoBtn={handleClickMoreInfoBtn} />
           {/* <FeaturesSplit
         invertMobile

@@ -21,8 +21,8 @@ const defaultProps = {
 export const HeaderLinks = [
   { name: "Home", id: "home" },
   { name: "Features", id: "features" },
-  { name: "Penguin", id: "penguin" },
   { name: "Gameplay", id: "gameplay" },
+  { name: "Penguin", id: "penguin" },
   { name: "Tokenomics", id: "tokenomics" },
   { name: "Pitchdeck", id: "pitchdeck" },
 ];
