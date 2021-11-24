@@ -111,7 +111,7 @@
   z-index: 1000;
 }
 
-@include media("<=medium") {
+@include media("<=992px") {
   .header-nav-toggle {
     display: block;
 
