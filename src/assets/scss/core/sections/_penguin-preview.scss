@@ -1,6 +1,86 @@
 .PenguinPreview {
+  &-title {
+    position: absolute;
+    top: -24px;
+    color: #9f6651;
+  }
+
+  .custom-position {
+    $content-left: 178px;
+    $content-right: 178px;
+
+    position: absolute;
+    top: 66px;
+    bottom: 80px;
+    left: $content-left;
+    right: $content-right;
+
+    .tape-bg {
+      z-index: 20;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    @include media("<=1150px") {
+      left: calc(#{$content-left} - 60px);
+      right: calc(#{$content-right} - 60px);
+    }
+  }
+
   .penguin-wrapper {
-    height: 200px;
-    width: 200px;
+    position: relative;
+    margin: 19px 0;
+    padding: 0 16px;
+    flex: 1 1 21%;
+    height: calc(50% - 38px);
+
+    .penguin-canvas {
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      flex-shrink: 1;
+    }
+
+    .bg-slot {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 8px;
+      left: 8px;
+      z-index: 1;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+    }
+
+    .bg-slot-1 {
+      background-image: url("../../../images/landing-page/penguin-preview/slot-1.png");
+    }
+    .bg-slot-2 {
+      background-image: url("../../../images/landing-page/penguin-preview/slot-2.png");
+    }
+    .bg-slot-3 {
+      background-image: url("../../../images/landing-page/penguin-preview/slot-3.png");
+    }
+    .bg-slot-4 {
+      background-image: url("../../../images/landing-page/penguin-preview/slot-4.png");
+    }
+    .bg-slot-5 {
+      background-image: url("../../../images/landing-page/penguin-preview/slot-5.png");
+    }
+    .bg-slot-6 {
+      background-image: url("../../../images/landing-page/penguin-preview/slot-6.png");
+    }
+    .bg-slot-7 {
+      background-image: url("../../../images/landing-page/penguin-preview/slot-7.png");
+    }
+    .bg-slot-8 {
+      background-image: url("../../../images/landing-page/penguin-preview/slot-8.png");
+    }
   }
 }

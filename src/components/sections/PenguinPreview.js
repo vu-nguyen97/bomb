@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import SpinePenguin from "../services/SpinePenguin";
+import tape from "../../assets/images/landing-page/penguin-preview/tape.png";
+import penguinPreviewBg from "../../assets/images/landing-page/penguin-preview/penguin-preview-bg.png";
 
 const PenguinPreview = () => {
   const totalDisplayPenguin = 8;
@@ -24,18 +26,30 @@ const PenguinPreview = () => {
       id="penguin"
       className="PenguinPreview page-section full-viewport d-flex align-items-center"
     >
-      <div className="container reveal-from-bottom" data-reveal-delay="200">
-        <h2 className="mb-3 mt-0 text-center">Penguin Preview</h2>
+      <div
+        className="PenguinPreview-wrapper container reveal-from-bottom"
+        data-reveal-delay="200"
+      >
+        <div className="position-relative">
+          <img src={penguinPreviewBg} alt="penguin preview bg" />
 
-        <div className="row">
-          {penguinArr.map((item, id) => (
-            <div
-              key={id}
-              className="col-md-3 col-sm-6 col-12 mt-4 d-flex justify-content-center"
-            >
-              <canvas id={`penguin-${id + 1}`} className="penguin-wrapper" />
+          <div className="custom-position d-flex flex-wrap justify-content-center">
+            <div className="h5 m-0 text-center PenguinPreview-title">
+              PENGUIN PREVIEW
             </div>
-          ))}
+
+            <img src={tape} alt="tape" className="tape-bg" />
+
+            {penguinArr.map((item, id) => (
+              <div
+                key={id}
+                className="penguin-wrapper d-flex align-items-center justify-content-center"
+              >
+                <canvas id={`penguin-${id + 1}`} className="penguin-canvas" />
+                <div className={`bg-slot bg-slot-${id + 1}`} />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
