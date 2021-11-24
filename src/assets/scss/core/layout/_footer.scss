@@ -1,5 +1,7 @@
 .site-footer {
   position: relative;
+  background-size: cover;
+  background-image: url("../../../images/landing-page/footer/footer-bg.png");
 
   &::before {
     content: "";
@@ -11,10 +13,6 @@
     background: color-bg(footer);
     z-index: -3;
   }
-}
-
-.site-footer-inner {
-  padding: $footer--padding__mobile 0;
 }
 
 .footer-blocks {
@@ -60,7 +58,6 @@
   }
 }
 
-.footer-social,
 .footer-nav {
   a {
     display: flex;
@@ -76,42 +73,19 @@
 }
 
 .footer-social {
-  ul {
-    margin-right: -($footer-social--inner-padding +
-          $footer-social--outer-padding-h);
-    margin-left: -($footer-social--inner-padding +
-          $footer-social--outer-padding-h);
+  img {
+    width: 1.5rem;
+    height: 1.5rem;
   }
 
-  li {
-    padding: 0 $footer-social--outer-padding-h;
-  }
-
-  a {
-    padding: $footer-social--inner-padding;
-
-    svg {
-      fill: color-icon(social);
-      transition: fill 0.15s ease;
-
-      .invert-color & {
-        fill: color-icon(social-inverse);
-      }
-    }
-
-    &:hover {
-      svg {
-        fill: color-icon(social-hover);
-
-        .invert-color & {
-          fill: color-icon(social-hover-inverse);
-        }
-      }
-    }
+  .social-margin {
+    margin: 0 0.3rem;
   }
 }
 
 .footer-nav {
+  @include font-family(page);
+
   margin-right: -$footer-nav--padding-h;
   margin-left: -$footer-nav--padding-h;
 

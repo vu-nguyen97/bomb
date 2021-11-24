@@ -17,7 +17,7 @@ const defaultProps = {
 
 const Footer = ({ className, topOuterDivider, topDivider, ...props }) => {
   const classes = classNames(
-    "site-footer center-content-mobile",
+    "site-footer py-5 center-content-mobile",
     topOuterDivider && "has-top-divider",
     className
   );
@@ -31,14 +31,10 @@ const Footer = ({ className, topOuterDivider, topDivider, ...props }) => {
             topDivider && "has-top-divider"
           )}
         >
-          <div className="row">
-            <div className="col-3 d-flex flex-column align-items-center">
-              <Logo width={130} />
-              <FooterSocial />
-            </div>
-            <div className="col-9 d-flex justify-content-center mt-4">
-              <FooterNav />
-            </div>
+          <div className="d-flex justify-content-between align-items-center">
+            <Logo className="my-2" width={130} />
+            <FooterNav className="my-2" />
+            <FooterSocial className="my-2" />
           </div>
         </div>
       </div>
