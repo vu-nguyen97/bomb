@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import { Link } from "react-router-dom";
-import Logo from "./partials/Logo";
+import logo from "../../assets/images/landing-page/logo-mini.png";
 
 const propTypes = {
   navPosition: PropTypes.string,
@@ -107,7 +107,12 @@ const Header = ({
             bottomDivider && "has-bottom-divider"
           )}
         >
-          <Logo />
+          <div className="header-logo">
+            <Link to="/">
+              <img src={logo} alt="logo" className="header-img w-100 h-100" />
+            </Link>
+          </div>
+
           {!hideNav && (
             <>
               <button

@@ -1,33 +1,17 @@
 import React from "react";
+import logo from "../../assets/images/landing-page/logo.png";
 import iceImg from "../../assets/images/landing-page/ice-img.png";
 
 const CommonInfo = (props) => {
   return (
     <>
-      <section
-        id="home"
-        className="CommonInfo page-section full-viewport d-flex align-items-end"
-      >
-        <div className="container">
-          <div className="CommonInfo-content mb-5">
-            <div className="row align-items-center">
-              <div
-                className="col-md-5 reveal-from-left"
-                data-reveal-delay="500"
-              >
-                <div className="h5 text-color-mid">
-                  We build an ecosystem which all transactions are relevant.
-                  Give to our players opportunities to receive valuable rewards
-                  and ability to help the ecosystem grow.
-                </div>
-              </div>
-              <div className="col-md-3"></div>
-              <div
-                className="col-md-4 reveal-from-right"
-                data-reveal-delay="500"
-              >
-                <img src={iceImg} className="img-size mx-auto" alt="ice img" />
-              </div>
+      <section id="home" className="CommonInfo page-section">
+        <div className="CommonInfo-header d-flex justify-content-center">
+          <div className="CommonInfo-header-wrapper">
+            <img src={logo} className="img-size mx-auto" alt="ice img" />
+
+            <div className="mt-2 text-white d-flex justify-content-end">
+              -PEGIN BEGINS-
             </div>
           </div>
         </div>

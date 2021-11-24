@@ -27,8 +27,8 @@
     }
 
     @include media("<=1150px") {
-      left: calc(#{$content-left} - 60px);
-      right: calc(#{$content-right} - 60px);
+      left: calc(#{$content-left} - 30px);
+      right: calc(#{$content-right} - 30px);
     }
   }
 

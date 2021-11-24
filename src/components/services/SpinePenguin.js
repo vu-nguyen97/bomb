@@ -21,7 +21,6 @@ export default class SpinePenguin {
     let skeletonData = skeletonJson.readSkeletonData(
       assetManager.require("Character.json")
     );
-    
 
     this.skeleton = new spine.Skeleton(skeletonData);
     let stateData = new spine.AnimationStateData(skeletonData);
@@ -57,18 +56,24 @@ export default class SpinePenguin {
     this.state.setAnimation(0, className + "/idle", true);
 
     for (var i in skeletonData.slots) {
-      if (skeletonData.slots[i].blendMode != spine.BlendMode.Multiply) continue;
+      if (skeletonData.slots[i].blendMode !== spine.BlendMode.Multiply)
+        continue;
       let slot = this.skeleton.findSlot(skeletonData.slots[i].name);
-      slot.color.r = 0.556; slot.color.g = 0.584; slot.color.b = 0.745; slot.color.a = 0.2;
+      slot.color.r = 0.556;
+      slot.color.g = 0.584;
+      slot.color.b = 0.745;
+      slot.color.a = 0.2;
     }
     canvas.renderer.camera.position.x = 20;
     canvas.renderer.camera.position.y = 185;
     let that = this;
-    this.timeout = setTimeout(function () { that.attack(className) }, Math.random() * 5000);
+    this.timeout = setTimeout(function () {
+      that.attack(className);
+    }, Math.random() * 5000);
     canvas.input.addListener({
       down: function (x, y) {
         that.attack(className);
-      }
+      },
     });
   }
 
@@ -77,7 +82,9 @@ export default class SpinePenguin {
     this.state.setAnimation(0, className + "/attack", false);
     this.state.addAnimation(0, className + "/idle", true, 0);
     let that = this;
-    this.timeout = setTimeout(function () { that.attack(className) }, Math.random() * 5000 + 5000);
+    this.timeout = setTimeout(function () {
+      that.attack(className);
+    }, Math.random() * 5000 + 5000);
   }
 
   update(canvas, delta) {

@@ -33,7 +33,7 @@ const Footer = ({ className, topOuterDivider, topDivider, ...props }) => {
         >
           <div className="row">
             <div className="col-3 d-flex flex-column align-items-center">
-              <Logo width={200} />
+              <Logo width={130} />
               <FooterSocial />
             </div>
             <div className="col-9 d-flex justify-content-center mt-4">

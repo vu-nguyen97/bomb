@@ -1,11 +1,17 @@
 .CommonInfo {
-  margin-top: 80px;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-image: url("../../../images/landing-page/bg-art.png");
 
-  &-content {
-    .img-size {
-      width: 300px;
-      height: 300px;
-      object-fit: contain;
+  &-header {
+    width: 100%;
+    position: absolute;
+    margin-top: 130px;
+
+    &-wrapper {
+      width: 20%;
     }
   }
 }
