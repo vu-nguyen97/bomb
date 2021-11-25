@@ -31,10 +31,10 @@ const Footer = ({ className, topOuterDivider, topDivider, ...props }) => {
             topDivider && "has-top-divider"
           )}
         >
-          <div className="d-flex justify-content-between align-items-center">
-            <Logo className="my-2" width={130} />
-            <FooterNav className="my-2" />
-            <FooterSocial className="my-2" />
+          <div className="d-flex flex-wrap justify-content-between align-items-center">
+            <Logo className="my-2 flex-shrink-0" width={130} />
+            <FooterNav className="my-2 mx-2 flex-shrink-0" />
+            <FooterSocial className="my-2 flex-shrink-0" />
           </div>
         </div>
       </div>
