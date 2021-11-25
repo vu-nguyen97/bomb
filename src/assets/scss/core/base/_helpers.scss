@@ -97,6 +97,14 @@
   }
 }
 
+.text-font {
+  @include font-family(page);
+}
+
+.text-base {
+  color: color(base);
+}
+
 // Text transform
 .tt-u {
   text-transform: uppercase;

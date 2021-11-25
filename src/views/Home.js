@@ -24,10 +24,10 @@ const Home = (props) => {
     const siteHeaderEl = document.getElementById("site-header");
     let isAnotherStyle = false;
 
-    if (window.scrollY <= 120) {
+    if (window.scrollY <= 95) {
       isAnotherStyle = false;
       setIsShowSmoothScroll(false);
-    } else if (window.scrollY >= 120) {
+    } else {
       isAnotherStyle = true;
       setIsShowSmoothScroll(true);
     }
@@ -92,7 +92,7 @@ const Home = (props) => {
 
   return (
     <>
-      <CommonInfo isShowFull={!isMoreInfo} />
+      <CommonInfo />
       {isMoreInfo ? (
         <>
           <FundInfo />

@@ -1,4 +1,39 @@
 .Features {
+  $margin-top: 200px;
+
+  &-wrapper {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: calc(0px - #{$margin-top});
+    min-width: calc(100vh - 80px + #{$margin-top});
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-image: url("../../../images/landing-page/metaverse/metaverse-bg.png");
+  }
+
+  &-metaverse {
+    margin-top: $margin-top;
+    height: calc(100% - #{$margin-top});
+    position: relative;
+
+    .metaverse-bg--lower {
+      position: absolute;
+      bottom: 1.5rem;
+      right: 0;
+      left: 45%;
+      top: 0;
+
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: right bottom;
+      background-image: url("../../../images/landing-page/metaverse/metaverse.png");
+    }
+  }
+
   &-item {
     width: 200px;
 

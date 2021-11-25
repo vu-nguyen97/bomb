@@ -2,13 +2,13 @@
   min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
+  background-position: center bottom;
   background-image: url("../../../images/landing-page/bg-art.png");
 
   &-header {
     width: 100%;
     position: absolute;
-    margin-top: 130px;
+    margin-top: 120px;
 
     &-wrapper {
       width: 20%;
