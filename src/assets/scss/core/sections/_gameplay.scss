@@ -1,4 +1,8 @@
 .GameplayDemo {
+  .container {
+    max-width: 1450px;
+  }
+
   &-header {
     position: absolute;
     top: 50px;

@@ -75,4 +75,9 @@
   &-link:nth-child(n + 2) {
     margin-left: 2rem;
   }
+
+  @include media("<=576px") {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
 }

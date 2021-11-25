@@ -36,10 +36,8 @@ const Features = () => {
     <section className="Features page-section full-viewport" id="features">
       <div className="Features-wrapper h-100">
         <div className="Features-metaverse h-100">
-          <div className="metaverse-bg--lower" />
-
-          <div className="container h-100 d-flex flex-column justify-content-around">
-            <div className="reveal-from-bottom my-4">
+          <div className="Features-metaverse-content container h-100 d-flex flex-column justify-content-around">
+            <div className="reveal-from-bottom mt-4 mb-3">
               <OwlCarousel
                 className="owl-theme"
                 loop={true}
@@ -79,7 +77,7 @@ const Features = () => {
               </OwlCarousel>
             </div>
 
-            <div className="row mb-4">
+            <div className="row mb-5">
               <div
                 className="col-md-5 reveal-from-left"
                 data-reveal-delay="200"
@@ -100,6 +98,11 @@ const Features = () => {
               </div>
             </div>
           </div>
+
+          <div
+            className="metaverse-bg--lower reveal-from-right"
+            data-reveal-delay="200"
+          />
         </div>
       </div>
     </section>

@@ -13,6 +13,10 @@
 
     &-wrapper {
       width: 20%;
+
+      @include media("<=768px") {
+        width: 40%;
+      }
     }
   }
 }

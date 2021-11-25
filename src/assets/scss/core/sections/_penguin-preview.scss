@@ -1,4 +1,8 @@
 .PenguinPreview {
+  .container {
+    max-width: 1450px;
+  }
+
   &-title {
     position: absolute;
     top: -24px;
