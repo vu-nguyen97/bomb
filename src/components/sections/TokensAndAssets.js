@@ -76,7 +76,7 @@ const TokensAndAssets = (props) => {
             >
               {listItem.map((item, id) => (
                 <div
-                  className="TokensAndAssets-item mx-auto py-3 px-2"
+                  className="TokensAndAssets-item mx-auto mb-2 py-3 px-2"
                   key={id}
                 >
                   <div className="d-flex flex-column align-items-center">

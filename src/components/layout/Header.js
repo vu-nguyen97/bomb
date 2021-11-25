@@ -24,7 +24,7 @@ export const HeaderLinks = [
   { name: "Gameplay", id: "gameplay" },
   { name: "Penguin", id: "penguin" },
   { name: "Tokenomics", id: "tokenomics" },
-  { name: "Pitchdeck", id: "pitchdeck" },
+  // { name: "Pitchdeck", id: "pitchdeck" },
 ];
 
 const Header = ({

@@ -23,13 +23,23 @@
     a {
       color: get-color(light, 4) !important;
       &:hover {
-        color: color(primary) !important;
+        color: #002631 !important;
       }
     }
   }
 
   a.nav-actived {
-    color: color(primary) !important;
+    color: #002631 !important;
+  }
+}
+
+.site-header.another-bg {
+  a:hover {
+    color: #6163ff !important;
+  }
+
+  a.nav-actived {
+    color: #6163ff !important;
   }
 }
 
