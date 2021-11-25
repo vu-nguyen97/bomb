@@ -1,11 +1,8 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { useHistory } from "react-router-dom";
 // import sections
-// import Hero from "../components/sections/Hero";
-// import FeaturesSplit from "../components/sections/FeaturesSplit";
-// import Testimonial from "../components/sections/Testimonial";
+// import Cta from "../components/sections/Cta";
 import Features from "../components/sections/Features";
-import Cta from "../components/sections/Cta";
 import { HeaderLinks } from "../components/layout/Header";
 import CommonInfo from "../components/sections/CommonInfo";
 import FundInfo from "../components/sections/FundInfo";
@@ -91,7 +88,9 @@ const Home = (props) => {
   };
 
   return (
-    <>
+    <div className="Home position-relative">
+      <div className="Home-bg" />
+
       <CommonInfo />
       {isMoreInfo ? (
         <>
@@ -99,19 +98,11 @@ const Home = (props) => {
         </>
       ) : (
         <>
-          {/* <Hero className="illustration-section-01" /> */}
           <Features />
           <GameplayDemo />
           <PenguinPreview />
           <TokensAndAssets onClickMoreInfoBtn={handleClickMoreInfoBtn} />
-          {/* <FeaturesSplit
-        invertMobile
-        topDivider
-        imageFill
-        className="illustration-section-02"
-      /> */}
-          {/* <Testimonial topDivider /> */}
-          <Cta />
+          {/* <Cta /> */}
         </>
       )}
 
@@ -122,7 +113,7 @@ const Home = (props) => {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 };
 

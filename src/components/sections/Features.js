@@ -1,7 +1,6 @@
 import React from "react";
 import ice from "../../assets/images/landing-page/ice.png";
 import OwlCarousel from "react-owl-carousel";
-// import metaverse from "../../assets/images/landing-page/metaverse/metaverse.png";
 
 const featureList = [
   {
@@ -35,8 +34,8 @@ const featureList = [
 const Features = () => {
   return (
     <section className="Features page-section full-viewport" id="features">
-      <div className="Features-wrapper">
-        <div className="Features-metaverse">
+      <div className="Features-wrapper h-100">
+        <div className="Features-metaverse h-100">
           <div className="metaverse-bg--lower" />
 
           <div className="container h-100 d-flex flex-column justify-content-around">

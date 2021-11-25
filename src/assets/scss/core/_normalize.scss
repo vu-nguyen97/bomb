@@ -229,3 +229,18 @@ template {
 [hidden] {
   display: none;
 }
+
+.Home {
+  &-bg {
+    $margin-top: 200px;
+    position: absolute;
+    top: calc(100vh - #{$margin-top});
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-image: url("../../images/landing-page/body.png");
+  }
+}
