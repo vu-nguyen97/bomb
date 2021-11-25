@@ -12,7 +12,7 @@
       top: 30px;
     }
 
-    @include media("<=568px") {
+    @include media("<=576px") {
       top: 15px;
     }
   }

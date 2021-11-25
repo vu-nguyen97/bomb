@@ -232,7 +232,8 @@ template {
 
 .Home {
   &-bg {
-    $margin-top: 200px;
+    $margin-top: 210px;
+
     position: absolute;
     top: calc(100vh - #{$margin-top});
     bottom: 0;
@@ -242,5 +243,9 @@ template {
     background-size: cover;
     background-position: center top;
     background-image: url("../../images/landing-page/body.png");
+
+    @include media("<=768px") {
+      top: calc(100vh - 115px);
+    }
   }
 }

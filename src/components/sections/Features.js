@@ -33,8 +33,8 @@ const featureList = [
 
 const Features = () => {
   return (
-    <section className="Features page-section full-viewport" id="features">
-      <div className="Features-wrapper h-100">
+    <section className="Features page-section" id="features">
+      <div className="Features-wrapper">
         <div className="Features-metaverse h-100">
           <div className="Features-metaverse-content container h-100 d-flex flex-column justify-content-around">
             <div className="reveal-from-bottom mt-4 mb-3">
@@ -77,7 +77,7 @@ const Features = () => {
               </OwlCarousel>
             </div>
 
-            <div className="row mb-5">
+            <div className="row mb-5 custom-margin">
               <div
                 className="col-md-5 reveal-from-left"
                 data-reveal-delay="200"

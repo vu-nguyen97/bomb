@@ -28,7 +28,7 @@ const PenguinPreview = () => {
       className="PenguinPreview page-section full-viewport d-flex align-items-center"
     >
       <div
-        className="PenguinPreview-wrapper container reveal-from-bottom"
+        className="PenguinPreview-wrapper container mt-2 mb-3 reveal-from-bottom"
         data-reveal-delay="200"
       >
         <div className="position-relative">

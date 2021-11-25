@@ -35,6 +35,18 @@
 .full-viewport {
   min-height: calc(100vh - 80px);
   width: 100%;
+
+  @include media("<=992px") {
+    min-height: calc(min(100vh - 80px, 700px));
+  }
+
+  @include media("<=768px") {
+    min-height: 480px;
+  }
+
+  @include media("<=576px") {
+    min-height: 280px;
+  }
 }
 
 .page-section {
