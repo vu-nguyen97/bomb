@@ -99,6 +99,7 @@
 
 .text-font {
   @include font-family(page);
+  letter-spacing: 1px;
 }
 
 .text-base {

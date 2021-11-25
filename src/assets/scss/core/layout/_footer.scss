@@ -70,8 +70,6 @@
 }
 
 .footer-nav {
-  @include font-family(page);
-
   &-link:nth-child(n + 2) {
     margin-left: 2rem;
   }

@@ -4,7 +4,6 @@
   width: 100%;
   z-index: 10 !important;
   background-color: color-bg(header);
-  @include font-family(page);
 
   + .site-content {
     .section:first-of-type {

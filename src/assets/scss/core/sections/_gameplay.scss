@@ -7,6 +7,14 @@
     position: absolute;
     top: 50px;
     width: 100%;
+
+    @include media("<=768px") {
+      top: 30px;
+    }
+
+    @include media("<=568px") {
+      top: 15px;
+    }
   }
 
   .img-bg {

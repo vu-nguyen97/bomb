@@ -3,7 +3,7 @@ import classNames from "classnames";
 import { Link } from "react-router-dom";
 
 const FooterNav = ({ className, ...props }) => {
-  const classes = classNames("footer-nav d-flex", className);
+  const classes = classNames("footer-nav text-font d-flex", className);
   const listNav = [
     { name: "Home", url: "#0" },
     { name: "Marketplace", url: "#0" },

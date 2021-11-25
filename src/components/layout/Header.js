@@ -79,7 +79,7 @@ const Header = ({
   };
 
   const classes = classNames(
-    "site-header",
+    "site-header text-font",
     bottomOuterDivider && "has-bottom-divider",
     className
   );

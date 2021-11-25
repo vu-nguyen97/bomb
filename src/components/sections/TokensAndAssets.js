@@ -1,6 +1,6 @@
 import React from "react";
 import OwlCarousel from "react-owl-carousel";
-import iceImg from "../../assets/images/landing-page/ice-img.png";
+import iceImg from "../../assets/images/landing-page/tokens-and-assets/ice.png";
 import land from "../../assets/images/landing-page/land.png";
 import avt1 from "../../assets/images/landing-page/avt1.png";
 import fish from "../../assets/images/landing-page/fish.png";
@@ -22,14 +22,14 @@ const TokensAndAssets = (props) => {
       className="TokensAndAssets page-section full-viewport d-flex align-items-center"
     >
       <div className="container">
-        <h2 className="m-0 text-center reveal-from-bottom">
-          Tokens and Assets
-        </h2>
-
         <div>
           <div className="row align-items-center">
-            <div className="col-md-5 mt-3 reveal-from-left">
-              <div className="h5 m-0 text-color-mid">
+            <div className="col-md-5 reveal-from-left">
+              <div className="h5 text-font mt-0 reveal-from-bottom">
+                Tokens and Assets
+              </div>
+
+              <div className="m-0">
                 ICE is the govern token, which give the owner chance to receive
                 valuable rewards, the rights to vote and the be a part of the
                 evolution of Penguin World.
@@ -43,15 +43,14 @@ const TokensAndAssets = (props) => {
             </div>
 
             <div className="col-md-3"></div>
-            <div className="col-md-4 mt-3 d-flex flex-column align-items-center reveal-from-right">
-              <h5 className="text-reset mb-2 mt-0">
-                Limited ICE token release
-              </h5>
-              <img src={iceImg} className="img-size mx-auto" alt="ice img" />
+            <div className="col-md-4 d-flex flex-column align-items-center reveal-from-right">
+              <img src={iceImg} className="img-size" alt="ice img" />
+              <h5 className="m-0">100.000.000 ICE</h5>
+              <div>Ready to distribution</div>
             </div>
           </div>
 
-          <div className="mt-5 reveal-from-bottom" data-reveal-delay="300">
+          <div className="my-5 reveal-from-bottom" data-reveal-delay="300">
             <OwlCarousel
               className="owl-theme"
               loop={true}
@@ -77,7 +76,7 @@ const TokensAndAssets = (props) => {
             >
               {listItem.map((item, id) => (
                 <div
-                  className="TokensAndAssets-item mx-auto py-3 px-2 border rounded"
+                  className="TokensAndAssets-item mx-auto py-3 px-2"
                   key={id}
                 >
                   <div className="d-flex flex-column align-items-center">
@@ -86,7 +85,7 @@ const TokensAndAssets = (props) => {
                       alt={item.name}
                       className="TokensAndAssets-item-img"
                     />
-                    <h4 className="mb-1">{item.name}</h4>
+                    <div className="mt-1 text-font">{item.name}</div>
                     <div className="TokensAndAssets-item-content text-center">
                       {item.content}
                     </div>

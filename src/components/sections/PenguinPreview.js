@@ -19,7 +19,8 @@ const PenguinPreview = () => {
         }
       );
     });
-  }, [penguinArr]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <section
@@ -34,7 +35,7 @@ const PenguinPreview = () => {
           <img src={penguinPreviewBg} alt="penguin preview bg" />
 
           <div className="custom-position d-flex flex-wrap justify-content-center">
-            <div className="h5 m-0 text-center PenguinPreview-title">
+            <div className="h5 m-0 text-center PenguinPreview-title text-font">
               PENGUIN PREVIEW
             </div>
 
