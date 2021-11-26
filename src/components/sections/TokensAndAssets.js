@@ -1,15 +1,14 @@
 import React from "react";
 import OwlCarousel from "react-owl-carousel";
 import iceImg from "../../assets/images/landing-page/tokens-and-assets/ice.png";
-import land from "../../assets/images/landing-page/land.png";
-import avt1 from "../../assets/images/landing-page/avt1.png";
-import fish from "../../assets/images/landing-page/fish.png";
-import equipment from "../../assets/images/landing-page/equipment.png";
-import ice from "../../assets/images/landing-page/ice.png";
+import land from "../../assets/images/landing-page/tokens-and-assets/land.png";
+import avt1 from "../../assets/images/landing-page/tokens-and-assets/penguin.png";
+import fish from "../../assets/images/landing-page/tokens-and-assets/fish.png";
+import equipment from "../../assets/images/landing-page/tokens-and-assets/equipment.png";
 
 const TokensAndAssets = (props) => {
   const listItem = [
-    { name: "ICE token", img: ice, content: "Govern token - ERC 21" },
+    { name: "ICE token", img: iceImg, content: "Govern token - ERC 21" },
     { name: "FISH token", img: fish, content: "Ingame token - ERC 21" },
     { name: "Penguins", img: avt1, content: "NFT assets - ERC 21" },
     { name: "Equipments", img: equipment, content: "NFT assets - ERC 21" },
@@ -35,12 +34,12 @@ const TokensAndAssets = (props) => {
                 valuable rewards but also to obtain the rights to decide upon
                 the future of the game.
               </div>
-              <button
+              {/* <button
                 className="btn btn-outline-primary mt-3"
                 onClick={props.onClickMoreInfoBtn}
               >
                 More info
-              </button>
+              </button> */}
             </div>
 
             <div className="col-md-3"></div>
@@ -86,7 +85,7 @@ const TokensAndAssets = (props) => {
                       alt={item.name}
                       className="TokensAndAssets-item-img"
                     />
-                    <div className="mt-1 text-font">{item.name}</div>
+                    <div className="mt-2 text-font">{item.name}</div>
                     <div className="TokensAndAssets-item-content text-center">
                       {item.content}
                     </div>

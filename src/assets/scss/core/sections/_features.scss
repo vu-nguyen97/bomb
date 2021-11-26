@@ -1,18 +1,13 @@
 .Features {
+  position: static;
   min-height: calc(100vh - 80px);
 
-  &-wrapper {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    top: 0;
-  }
-
   &-metaverse {
+    position: relative;
+
     .metaverse-bg--lower {
       position: absolute;
-      bottom: 3rem;
+      bottom: 0;
       right: 0;
       left: 45%;
       top: 0;
@@ -34,16 +29,18 @@
       }
 
       .metaverse-bg--lower {
+        flex-shrink: 0;
         position: relative;
         height: 200px;
         left: 0;
-        bottom: 0;
         margin-bottom: 3rem;
         background-position: right center;
       }
+    }
 
+    @include media("<=576px") {
       .custom-margin {
-        margin-bottom: 1.5rem !important;
+        margin-bottom: 0 !important;
       }
     }
   }
@@ -52,17 +49,7 @@
     width: 200px;
 
     &-img {
-      width: 140px;
-      height: 140px;
       object-fit: contain;
-    }
-
-    .img-wrapper {
-      width: 200px;
-      height: 250px;
-      border-radius: 20px;
-      background-color: #1f697d;
-      border: solid 1px #000;
     }
   }
 
