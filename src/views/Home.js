@@ -9,6 +9,7 @@ import FundInfo from "../components/sections/FundInfo";
 import PenguinPreview from "../components/sections/PenguinPreview";
 import GameplayDemo from "../components/sections/GameplayDemo";
 import TokensAndAssets from "../components/sections/TokensAndAssets";
+import RoadMap from "../components/sections/RoadMap";
 
 const Home = (props) => {
   const [isShowSmoothScroll, setIsShowSmoothScroll] = useState(false);
@@ -102,6 +103,7 @@ const Home = (props) => {
           <GameplayDemo />
           <PenguinPreview />
           <TokensAndAssets onClickMoreInfoBtn={handleClickMoreInfoBtn} />
+          <RoadMap />
           {/* <Cta /> */}
         </>
       )}

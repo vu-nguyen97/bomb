@@ -1,0 +1,16 @@
+.RoadMap {
+  &-wrapper {
+    border-radius: 20px;
+    background-color: #2a92ae;
+    box-shadow: 0 0.125rem 0.25rem #2a92ae;
+  }
+
+  .img-size {
+    width: 200px;
+    height: 200px;
+  }
+
+  @include media("<=576px") {
+    padding-top: 1rem !important;
+  }
+}

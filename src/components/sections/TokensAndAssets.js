@@ -55,7 +55,7 @@ const TokensAndAssets = (props) => {
               className="owl-theme"
               loop={true}
               margin={10}
-              dots={false}
+              dots={true}
               responsive={{
                 0: {
                   items: 1,

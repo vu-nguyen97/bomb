@@ -42,7 +42,7 @@ const Features = () => {
                 className="owl-theme"
                 loop={true}
                 margin={10}
-                dots={false}
+                dots={true}
                 responsive={{
                   0: {
                     items: 1,
@@ -64,11 +64,13 @@ const Features = () => {
                 {featureList.map((item, id) => (
                   <div className="Features-item mx-auto" key={id}>
                     <div className="d-flex flex-column align-items-center">
-                      <img
-                        src={item.img}
-                        alt={item.name}
-                        className="Features-item-img"
-                      />
+                      <div className="img-wrapper d-flex justify-content-center align-items-center">
+                        <img
+                          src={item.img}
+                          alt={item.name}
+                          className="Features-item-img"
+                        />
+                      </div>
                       <div className="h5 mb-2 text-font">{item.name}</div>
                       <div className="px-1 text-center">{item.content}</div>
                     </div>
