@@ -26,6 +26,7 @@ export const HeaderLinks = [
   { name: "Tokenomics", id: "tokenomics" },
   { name: "Roadmap", id: "roadmap" },
   // { name: "Pitchdeck", id: "pitchdeck" },
+  // { name: "Ice Token", id: "iceToken", url: "" },
 ];
 
 const Header = ({
@@ -140,9 +141,10 @@ const Header = ({
                     {HeaderLinks.map((item, index) => (
                       <li key={index}>
                         <Link
-                          to=""
+                          to={item.url || ""}
                           onClick={() => onClickNav(item.id)}
                           className="header-nav-item"
+                          id={`${item.id}Link`}
                         >
                           {item.name}
                         </Link>

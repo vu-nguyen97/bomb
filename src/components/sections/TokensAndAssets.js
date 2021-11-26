@@ -30,9 +30,10 @@ const TokensAndAssets = (props) => {
               </div>
 
               <div className="m-0">
-                ICE is the govern token, which give the owner chance to receive
-                valuable rewards, the rights to vote and the be a part of the
-                evolution of Penguin World.
+                Be a part of the evolution of Penguin World with ICE, our
+                governance token. Not only does it allows the owner to receive
+                valuable rewards but also to obtain the rights to decide upon
+                the future of the game.
               </div>
               <button
                 className="btn btn-outline-primary mt-3"

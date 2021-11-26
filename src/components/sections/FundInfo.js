@@ -31,7 +31,7 @@ const FundInfo = () => {
       note: "ICE saved",
       btn: allowcationBtn,
       content:
-        "The treasure to store any burning action maked in the game like buying fee, breeding...etc. This fund wil reallocates to other funds quarterly depend on how much it stored before.",
+        "All ICE burning actions in game (Trade, breeding fees, etc) will be stored in the treasury. This fund will be reallocated to other funds on a quarterly basis depending on the amount of tokens that it contains.",
     },
     {
       img: fund2,
@@ -40,7 +40,7 @@ const FundInfo = () => {
       note: "ICE ready reward player",
       btn: gameBtnGroup,
       content:
-        "This funds is used to serve only purposes of gaming activity reward to our players in, along with all games recently playable on our metaverse.",
+        "This fund's purpose is to reward our players from completing activities in any game playable in our metaverse.",
     },
     {
       img: fund3,
@@ -49,7 +49,7 @@ const FundInfo = () => {
       note: "ICE saved",
       btn: stakeBtn,
       content:
-        "To be a player also an invester, this will be a reward to them  whose decided to belive in the evolution of ICE token, Penguin World also the Falcon team.",
+        "To be a player is also to be an invester. The staking pool serves as a reward to our players who have decided to believe in the evolution of the ICE token, Penguin World and also the Falcon team.",
     },
     {
       img: fund4,
@@ -58,24 +58,26 @@ const FundInfo = () => {
       note: "/8000. 000. 000 ICE allocated",
       btn: allowcationBtn,
       content:
-        "This fund is created to serve the Penguin community and will be managed under Falcon team. All purpose, target and amount of using this funds will be reported clearly.",
+        "This fund is created to maintain the Penguin community and will be managed by the Falcon team. All purposes, targets and spendings using this fund will be transaprently communicated to the community.",
     },
   ];
 
   return (
-    <section className="FundInfo full-viewport d-flex align-items-center">
-      <div className="container">
+    <section
+      className="FundInfo full-viewport d-flex align-items-center"
+      id="iceToken"
+    >
+      <div className="container mb-5">
         <div className="text-center reveal-from-bottom" data-reveal-delay="300">
-          <h2 className="mt-0 mb-16">Funds Distribution Results</h2>
+          <h2 className="mt-0 mb-16">Funds Distribution</h2>
 
           <div className="h6 mb-1">
             <div className="row">
               <div className="col-md-3 d-sm-block d-none"></div>
               <div className="col-md-6 col-sm-12">
                 <div className="h6 text-color-mid my-0">
-                  We creat several funds with the certain goals, which have
-                  different purposes but all serve for only one mission - grow
-                  up the metaverse.
+                  Several funds are set up with specific goals in mind, but all
+                  are here to serve for only one purpose; to grow our metaverse.
                 </div>
               </div>
               <div className="col-md-3 d-sm-block d-none"></div>

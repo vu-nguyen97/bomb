@@ -6,12 +6,14 @@ const featureList = [
   {
     name: "Dungeon",
     img: ice,
-    content: "Raid the dungeon to defeat monster and gain valuable treasures.",
+    content:
+      "Raid dungeons ,defeat powerful monsters and hunt for valuable treasures.",
   },
   {
     name: "Arena",
     img: ice,
-    content: "Deploy your team in a fight for glory against another player.",
+    content:
+      "Put your strategical mind to the test by forming your own teams of penguins in a fight for glory against other players.",
   },
   {
     name: "Breeding",
@@ -21,12 +23,13 @@ const featureList = [
   {
     name: "Forging",
     img: ice,
-    content: "Create powerful equipments and bring into the battle.",
+    content: "Forge powerful equipments and bring them into the battle.",
   },
   {
     name: "Landlord",
     img: ice,
-    content: "Get your own a land and become a truly king in your kingdom.",
+    content:
+      "Get your own plot of land and become a true king in your kingdom.",
     title: "(Coming soon)",
   },
 ];
@@ -84,17 +87,19 @@ const Features = () => {
                 className="col-md-5 reveal-from-left"
                 data-reveal-delay="200"
               >
-                <div className="text-font h5">Bring the metaverse to you</div>
+                <div className="text-font h5">
+                  Bringing the metaverse to you
+                </div>
                 <div className="mb-0">
                   <div>
-                    Join in a world where every penguin is a warrior, fight for
-                    glory and prosperous of their own kingdom.
+                    Explore a world where penguins are fierce warriors, fighting
+                    for glory and prosperity of their kingdoms.
                   </div>
                   <div className="mt-4">
                     Dungeon. Arena. Breed. Forge. Lanlord. All in one world.
                   </div>
                   <div className="mt-4">
-                    Play and earn tokens, become a part of an evolution!
+                    Play and earn tokens, become a part of the evolution!
                   </div>
                 </div>
               </div>
