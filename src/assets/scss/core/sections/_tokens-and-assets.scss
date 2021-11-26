@@ -25,4 +25,16 @@
     width: 200px;
     height: 200px;
   }
+
+  .owl-dot {
+    span {
+      background-color: lighten(#002631, 2%) !important;
+    }
+  }
+
+  .owl-dot.active {
+    span {
+      background-color: white !important;
+    }
+  }
 }

@@ -67,4 +67,16 @@
       border: solid 1px #000;
     }
   }
+
+  .owl-dot {
+    span {
+      background-color: darken(#002631, 2%) !important;
+    }
+  }
+
+  .owl-dot.active {
+    span {
+      background-color: white !important;
+    }
+  }
 }

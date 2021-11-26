@@ -43,6 +43,12 @@
   }
 }
 
+.off-nav-is-active {
+  a.nav-actived {
+    color: #6163ff !important;
+  }
+}
+
 .site-header-inner {
   display: flex;
   justify-content: space-between;

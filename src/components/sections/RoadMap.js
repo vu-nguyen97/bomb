@@ -73,13 +73,15 @@ function RoadMap() {
     <section className="RoadMap py-5 page-section full-viewport" id="roadmap">
       <div className="container">
         <div className="RoadMap-wrapper py-3">
-          <div className="h4 mt-0 text-font text-center">Roadmap</div>
+          <div className="h4 mt-0 text-font text-center reveal-from-bottom">
+            Roadmap
+          </div>
 
           <div className="mx-5">
             <div className="row">
               {roadData.map((obj, roadId) => (
                 <div
-                  className="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12 d-flex flex-column align-items-center mb-2"
+                  className="col-xl-2 col-md-4 col-sm-6 col-12 d-flex flex-column align-items-center mb-2 reveal-from-bottom"
                   key={roadId}
                 >
                   <img src={obj.img} alt={obj.name} className="img-size" />
