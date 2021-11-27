@@ -1,9 +1,8 @@
 .RoadMap {
-  &-wrapper {
-    border-radius: 20px;
-    background-color: #2a92ae;
-    box-shadow: 0 0.125rem 0.25rem #2a92ae;
-  }
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right bottom;
+  background-image: url("../../../images/landing-page/roadmap/bg.png");
 
   .img-size {
     width: 200px;

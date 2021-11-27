@@ -70,55 +70,53 @@ function RoadMap() {
   ];
 
   return (
-    <section className="RoadMap py-5 page-section full-viewport" id="roadmap">
-      <div className="container">
-        <div className="RoadMap-wrapper py-3">
-          <div className="h4 mt-0 text-font text-center reveal-from-bottom">
-            Roadmap
-          </div>
+    <section className="RoadMap page-section full-viewport" id="roadmap">
+      <div className="RoadMap-wrapper py-3">
+        <div className="h4 mt-0 text-font text-center reveal-from-bottom">
+          Roadmap
+        </div>
 
-          <div className="mx-5">
-            <div className="row">
-              {roadData.map((obj, roadId) => (
-                <div
-                  className="col-xl-2 col-md-4 col-sm-6 col-12 d-flex flex-column align-items-center mb-2 reveal-from-bottom"
-                  key={roadId}
-                >
-                  <img src={obj.img} alt={obj.name} className="img-size" />
+        <div className="mx-5">
+          <div className="row">
+            {roadData.map((obj, roadId) => (
+              <div
+                className="col-xl-2 col-md-4 col-sm-6 col-12 d-flex flex-column align-items-center mb-2 reveal-from-bottom"
+                key={roadId}
+              >
+                <img src={obj.img} alt={obj.name} className="img-size" />
 
-                  <div className="h6 m-0 text-font">{obj.name}</div>
-                  <ul>
-                    {obj.content.map((item, id) => {
-                      let contentComp;
-                      if (typeof item !== "object") {
-                        contentComp = <li>{item}</li>;
-                      } else {
-                        contentComp = (
-                          <>
-                            <li key={id}>{Object.keys(item)[0]}</li>
+                <div className="h6 m-0 text-font">{obj.name}</div>
+                <ul>
+                  {obj.content.map((item, id) => {
+                    let contentComp;
+                    if (typeof item !== "object") {
+                      contentComp = <li>{item}</li>;
+                    } else {
+                      contentComp = (
+                        <>
+                          <li key={id}>{Object.keys(item)[0]}</li>
 
-                            {Object.values(item)[0].map((subItem, index) => {
-                              return (
-                                <div
-                                  key={index}
-                                  className="sub-content mb-1 ms-2"
-                                >
-                                  {subItem}
-                                </div>
-                              );
-                            })}
-                          </>
-                        );
-                      }
-
-                      return (
-                        <React.Fragment key={id}>{contentComp}</React.Fragment>
+                          {Object.values(item)[0].map((subItem, index) => {
+                            return (
+                              <div
+                                key={index}
+                                className="sub-content mb-1 ms-2"
+                              >
+                                {subItem}
+                              </div>
+                            );
+                          })}
+                        </>
                       );
-                    })}
-                  </ul>
-                </div>
-              ))}
-            </div>
+                    }
+
+                    return (
+                      <React.Fragment key={id}>{contentComp}</React.Fragment>
+                    );
+                  })}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
       </div>

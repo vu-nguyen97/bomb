@@ -1,0 +1,33 @@
+.Pitchdeck {
+  &-img {
+    width: 450px;
+    height: 450px;
+    object-fit: contain;
+  }
+
+  &-table {
+    th,
+    tr,
+    td {
+      color: color(base) !important;
+      border-color: lighten(#002631, 8%);
+      padding: 0.5rem;
+      font-size: 0.7rem !important;
+    }
+
+    table,
+    tbody,
+    tr,
+    th {
+      border-top: 0 !important;
+    }
+
+    th {
+      background-color: #2a92ae;
+    }
+
+    tr {
+      background-color: #296474;
+    }
+  }
+}

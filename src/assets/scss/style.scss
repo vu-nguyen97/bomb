@@ -6,6 +6,7 @@
 @import "bootstrap/scss/bootstrap.scss";
 @import "owl.carousel/dist/assets/owl.carousel.css";
 @import "owl.carousel/dist/assets/owl.theme.default.css";
+@import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css";
 /*--------------------------------------------------------------
 # Variables, functions and mixins
 --------------------------------------------------------------*/
@@ -110,6 +111,8 @@
 @import "core/sections/gameplay";
 
 @import "core/sections/road-map";
+
+@import "core/sections/pitchdeck";
 
 /*--------------------------------------------------------------
 # Features split
