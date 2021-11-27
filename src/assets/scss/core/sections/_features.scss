@@ -45,6 +45,12 @@
     }
   }
 
+  &-carousel {
+    @include media(">=1500px") {
+      margin-bottom: 6rem !important;
+    }
+  }
+
   &-item {
     width: 200px;
 

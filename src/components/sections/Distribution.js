@@ -1,7 +1,6 @@
 import React from "react";
 import DonutChat from "../../assets/images/landing-page/pitchdeck/donut-chat.png";
 import { Table, Thead, Tbody, Tr, Th, Td } from "react-super-responsive-table";
-import classNames from "classnames";
 
 const thList = [
   { title: "Allocation type", priority: 1, name: "allocation" },
@@ -12,7 +11,6 @@ const thList = [
     title: "Full locked duration (months)",
     priority: 2,
     name: "duration",
-    isTwoLines: true,
   },
   { title: "Vesting period (months)", priority: 2, name: "vesting_period" },
   { title: "Vesting type", priority: 3, name: "vesting type" },
@@ -31,21 +29,18 @@ const dataList = [
   ["Total Supply", "1,000,000,000", "100%", " ", " ", " ", " "],
 ];
 
-function Pitchdeck() {
+function Distribution() {
   return (
-    <section
-      className="Pitchdeck page-section full-viewport d-flex flex-column justify-content-end"
-      id="pitchdeck"
-    >
+    <section className="Pitchdeck full-viewport d-flex flex-column justify-content-end">
       <div className="container reveal-from-bottom" data-reveal-delay="200">
         <div className="d-flex flex-column align-items-start justify-content-center">
-          <div className="h5 m-0 text-font">Distribution planning</div>
+          <div className="h5 mb-0 text-font">Distribution planning</div>
           <img src={DonutChat} className="Pitchdeck-img" alt="donut chat" />
         </div>
       </div>
 
       <div
-        className="Pitchdeck-table w-100 reveal-from-bottom"
+        className="Pitchdeck-table container py-5 w-100 reveal-from-bottom"
         data-reveal-delay="200"
       >
         <Table
@@ -65,12 +60,7 @@ function Pitchdeck() {
             {dataList.map((data, dataId) => (
               <Tr key={dataId}>
                 {data.map((field, id) => (
-                  <Td
-                    key={id}
-                    className={classNames({ "text-truncate2": true })}
-                  >
-                    {field}
-                  </Td>
+                  <Td key={id}>{field}</Td>
                 ))}
               </Tr>
             ))}
@@ -81,4 +71,4 @@ function Pitchdeck() {
   );
 }
 
-export default Pitchdeck;
+export default Distribution;

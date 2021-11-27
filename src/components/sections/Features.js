@@ -43,7 +43,7 @@ const Features = () => {
     <section className="Features page-section" id="features">
       <div className="Features-metaverse">
         <div className="Features-metaverse-content container h-100 d-flex flex-column justify-content-around">
-          <div className="reveal-from-bottom mt-4 mb-3">
+          <div className="Features-carousel reveal-from-bottom mt-4 mb-3">
             <OwlCarousel
               className="owl-theme"
               loop={true}

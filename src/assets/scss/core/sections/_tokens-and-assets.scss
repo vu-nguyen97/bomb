@@ -4,7 +4,10 @@
     height: 200px;
     border-radius: 20px;
     background-color: #2a92ae;
-    box-shadow: 0 0.125rem 0.25rem #2a92ae;
+
+    @include media(">800px") {
+      box-shadow: 0 0.2rem 0.65rem darken(#2a92ae, 10%);
+    }
 
     &-img {
       width: 90px;

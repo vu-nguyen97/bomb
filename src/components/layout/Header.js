@@ -24,8 +24,8 @@ export const HeaderLinks = [
   { name: "Gameplay", id: "gameplay" },
   { name: "Penguin", id: "penguin" },
   { name: "Tokenomics", id: "tokenomics" },
-  { name: "Pitchdeck", id: "pitchdeck" },
   { name: "Roadmap", id: "roadmap" },
+  { name: "Pitchdeck", id: "pitchdeck" },
   // { name: "Ice Token", id: "iceToken", url: "" },
 ];
 

@@ -23,7 +23,7 @@ const TokensAndAssets = (props) => {
       <div className="container">
         <div>
           <div className="row align-items-center">
-            <div className="col-md-5 reveal-from-left">
+            <div className="col-md-5 mt-3 reveal-from-left">
               <div className="h5 text-font mt-0 reveal-from-bottom">
                 Tokens and Assets
               </div>
@@ -43,7 +43,7 @@ const TokensAndAssets = (props) => {
             </div>
 
             <div className="col-md-3"></div>
-            <div className="col-md-4 d-flex flex-column align-items-center reveal-from-right">
+            <div className="col-md-4 mt-3 d-flex flex-column align-items-center reveal-from-right">
               <img src={iceImg} className="img-size" alt="ice img" />
               <h5 className="m-0">100.000.000 ICE</h5>
               <div>Ready to distribution</div>
@@ -76,7 +76,7 @@ const TokensAndAssets = (props) => {
             >
               {listItem.map((item, id) => (
                 <div
-                  className="TokensAndAssets-item mx-auto mb-2 py-3 px-2"
+                  className="TokensAndAssets-item mx-auto mb-3 py-3 px-2"
                   key={id}
                 >
                   <div className="d-flex flex-column align-items-center">
