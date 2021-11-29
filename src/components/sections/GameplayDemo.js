@@ -8,14 +8,14 @@ const GameplayDemo = () => {
       className="GameplayDemo page-section full-viewport d-flex align-items-center"
     >
       <div
-        className="container mt-2 d-flex justify-content-center reveal-from-bottom"
+        className="d-flex justify-content-center reveal-from-bottom"
         data-reveal-delay="200"
       >
         <div className="GameplayDemo-header h5 m-0 text-center text-font">
           GAMEPLAY PREVIEW
         </div>
 
-        <img alt="gameplay" src={gameplay} className="img-bg w-100 h-100" />
+        <img alt="gameplay" src={gameplay} className="img-bg" />
       </div>
     </section>
   );

@@ -34,8 +34,10 @@
       .metaverse-bg--lower {
         flex-shrink: 0;
         position: relative;
-        height: 200px;
-        left: 0;
+        background-size: contain;
+        height: 280px;
+        left: -25%;
+        width: 155%;
         margin-bottom: 3rem;
         background-position: right center;
       }
@@ -48,6 +50,7 @@
 
       .metaverse-bg--lower {
         margin-bottom: 1.5rem !important;
+        height: 240px;
       }
     }
   }

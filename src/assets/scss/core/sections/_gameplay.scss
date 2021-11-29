@@ -32,8 +32,8 @@
     object-fit: contain;
     position: relative;
 
-    @include media(">=1200px") {
-      height: calc(100vh - 80px) !important;
+    @include media("<=768px") {
+      max-width: 180%;
     }
   }
 }
