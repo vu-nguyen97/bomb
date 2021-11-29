@@ -70,7 +70,7 @@ function RoadMap() {
   ];
 
   return (
-    <section className="RoadMap page-section full-viewport" id="roadmap">
+    <section className="RoadMap page-section" id="roadmap">
       <div className="RoadMap-wrapper py-3">
         <div className="h4 mt-0 text-font text-center reveal-from-bottom">
           Roadmap
