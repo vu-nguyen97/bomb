@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Table, Thead, Tbody, Tr, Th, Td } from "react-super-responsive-table";
 
 import { Doughnut } from "react-chartjs-2";
@@ -87,6 +87,34 @@ const options = {
 };
 
 function Distribution() {
+  const [tableTh, setTableTh] = useState(thList);
+  const [tableData, setTableData] = useState(tableDataList);
+
+  useEffect(() => {
+    if (window.innerWidth <= 640) {
+      let newTableTh = tableTh;
+      newTableTh[4].title = "Full locked duration";
+      newTableTh[5].title = "Vesting period";
+
+      let newTableData = tableDataList;
+      for (let i = 0; i < tableDataList.length; i++) {
+        newTableData[i][4] = updateData(newTableData[i][4]);
+        newTableData[i][5] = updateData(newTableData[i][5]);
+      }
+
+      setTableTh(newTableTh);
+      setTableData(newTableData);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const updateData = (value) => {
+    if (value === 1) return value + " month";
+    if (Number(value) > 1) return value + " months";
+
+    return value;
+  };
+
   return (
     <section className="Pitchdeck full-viewport d-flex flex-column justify-content-end">
       <div className="container reveal-from-bottom" data-reveal-delay="200">
@@ -110,16 +138,16 @@ function Distribution() {
           className="table table-striped table-bordered mb-0"
         >
           <Thead>
-            <Tr>
-              {thList.map((item, id) => (
+            <Tr key={tableTh[5]?.title}>
+              {tableTh.map((item, id) => (
                 <Th data-priority={item.priority} key={id}>
                   {item.title}
                 </Th>
               ))}
             </Tr>
           </Thead>
-          <Tbody>
-            {tableDataList.map((data, dataId) => (
+          <Tbody key={tableData[0]?.[5]}>
+            {tableData.map((data, dataId) => (
               <Tr key={dataId}>
                 {data.map((field, id) => (
                   <Td key={id}>{field}</Td>

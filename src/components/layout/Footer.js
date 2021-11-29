@@ -32,8 +32,10 @@ const Footer = ({ className, topOuterDivider, topDivider, ...props }) => {
           )}
         >
           <div className="d-flex flex-wrap justify-content-between align-items-center">
-            <Logo className="my-2 flex-shrink-0" width={150} />
-            <FooterNav className="my-2 mx-2 flex-shrink-0" />
+            <div className="d-flex flex-wrap align-items-center flex-grow-1">
+              <Logo className="my-2 me-3 flex-shrink-0" width={150} />
+              <FooterNav className="my-2 mx-2 flex-shrink-0" />
+            </div>
             <FooterSocial className="my-2 flex-shrink-0" />
           </div>
         </div>

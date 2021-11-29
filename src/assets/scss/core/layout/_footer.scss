@@ -70,8 +70,13 @@
 }
 
 .footer-nav {
+  margin-left: 12% !important;
   &-link:nth-child(n + 2) {
     margin-left: 2rem;
+  }
+
+  @include media("<=768px") {
+    margin-left: 5% !important;
   }
 
   @include media("<=576px") {
