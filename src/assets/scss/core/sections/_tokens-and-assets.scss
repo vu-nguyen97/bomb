@@ -1,4 +1,9 @@
 .TokensAndAssets {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  background-image: url("../../../images/landing-page/tokens-and-assets-bg.png");
+
   &-item {
     width: 180px;
     height: 200px;

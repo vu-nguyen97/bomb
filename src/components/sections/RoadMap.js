@@ -1,15 +1,21 @@
 import React from "react";
+import checkpoin1 from "../../assets/images/landing-page/roadmap/checkpoint-1.png";
+import checkpoin2 from "../../assets/images/landing-page/roadmap/checkpoint-2.png";
+import checkpoin3 from "../../assets/images/landing-page/roadmap/checkpoint-3.png";
+import checkpoin4 from "../../assets/images/landing-page/roadmap/checkpoint-4.png";
+import checkpoin5 from "../../assets/images/landing-page/roadmap/checkpoint-5.png";
+import checkpoin6 from "../../assets/images/landing-page/roadmap/checkpoint-6.png";
 
 function RoadMap() {
   const roadData = [
     {
       name: "Q4-2021",
-      img: "https://www.crabada.com/images/img-map-1.svg",
+      img: checkpoin1,
       content: ["Landing page", "Pitchdeck", "Tokenomics"],
     },
     {
       name: "Q1-2022",
-      img: "https://www.crabada.com/images/img-map-2.svg",
+      img: checkpoin2,
       content: [
         "Testnet launch gameplay",
         "Testnet launch Marketplace",
@@ -22,7 +28,7 @@ function RoadMap() {
     },
     {
       name: "Q2-2022",
-      img: "https://www.crabada.com/images/img-map-3.svg",
+      img: checkpoin3,
       content: [
         "Official Launch In-game",
         "Official Launch Marketplace",
@@ -39,7 +45,7 @@ function RoadMap() {
     },
     {
       name: "Q3-2022",
-      img: "https://www.crabada.com/images/img-map-4.svg",
+      img: checkpoin4,
       content: [
         "World map release",
         "Land first sale",
@@ -52,7 +58,7 @@ function RoadMap() {
     },
     {
       name: "Q4-2022",
-      img: "https://www.crabada.com/images/img-map-5.svg",
+      img: checkpoin5,
       content: [
         "Landlord gameplay release",
         "Penguin health system release",
@@ -61,7 +67,7 @@ function RoadMap() {
     },
     {
       name: "Q1-2023",
-      img: "https://www.crabada.com/images/img-map-1.svg",
+      img: checkpoin6,
       content: [
         "Nation War map release",
         { "Guild gameplay:": ["Warzone", "Invade mode"] },

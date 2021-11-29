@@ -1,4 +1,9 @@
 .PenguinPreview {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  background-image: url("../../../images/landing-page/penguin-preview-bg.png");
+
   .container {
     max-width: 1450px;
   }

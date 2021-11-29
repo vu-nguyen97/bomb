@@ -1,4 +1,9 @@
 .Pitchdeck {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  background-image: url("../../../images/landing-page/distribution.png");
+
   &-chart {
     max-width: 400px;
     height: 400px;

@@ -25,7 +25,7 @@ const PenguinPreview = () => {
   return (
     <section
       id="penguin"
-      className="PenguinPreview page-section full-viewport d-flex align-items-center mb-3"
+      className="PenguinPreview page-section full-viewport d-flex align-items-center"
     >
       <div className="reveal-from-bottom mx-auto" data-reveal-delay="200">
         <div className="position-relative">
