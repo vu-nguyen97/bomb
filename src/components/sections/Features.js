@@ -40,7 +40,7 @@ const featureList = [
 
 const Features = () => {
   return (
-    <section className="Features page-section" id="features">
+    <section className="Features page-section full-viewport mb-5" id="features">
       <div className="Features-metaverse">
         <div className="Features-metaverse-content container h-100 d-flex flex-column justify-content-around">
           <div className="Features-carousel reveal-from-bottom mt-4 mb-3">

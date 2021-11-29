@@ -1,6 +1,9 @@
 .Features {
   position: static;
-  min-height: calc(100vh - 80px);
+
+  @include media("<=768px") {
+    margin-bottom: 0 !important;
+  }
 
   &-metaverse {
     position: relative;
@@ -41,6 +44,10 @@
     @include media("<=576px") {
       .custom-margin {
         margin-bottom: 0 !important;
+      }
+
+      .metaverse-bg--lower {
+        margin-bottom: 1.5rem !important;
       }
     }
   }

@@ -4,20 +4,31 @@
   }
 
   &-header {
-    position: absolute;
-    top: 50px;
+    z-index: 2;
     width: 100%;
+    position: absolute;
+    top: 13%;
 
-    @include media("<=768px") {
-      top: 30px;
+    @include media("<=1700px") {
+      top: 7%;
     }
 
-    @include media("<=576px") {
-      top: 15px;
+    @include media("<=430px") {
+      top: 15%;
+      font-size: 0.65rem !important;
+    }
+
+    @include media("<=350px") {
+      top: 19%;
     }
   }
 
   .img-bg {
     object-fit: contain;
+    position: relative;
+
+    @include media(">=1200px") {
+      height: calc(100vh - 80px) !important;
+    }
   }
 }

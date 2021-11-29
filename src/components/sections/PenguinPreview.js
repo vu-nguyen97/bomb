@@ -25,14 +25,15 @@ const PenguinPreview = () => {
   return (
     <section
       id="penguin"
-      className="PenguinPreview page-section full-viewport d-flex align-items-center"
+      className="PenguinPreview page-section full-viewport d-flex align-items-center mb-3"
     >
-      <div
-        className="PenguinPreview-wrapper container mt-2 mb-3 reveal-from-bottom"
-        data-reveal-delay="200"
-      >
+      <div className="reveal-from-bottom mx-auto" data-reveal-delay="200">
         <div className="position-relative">
-          <img src={penguinPreviewBg} alt="penguin preview bg" />
+          <img
+            src={penguinPreviewBg}
+            alt="penguin preview bg"
+            className="PenguinPreview-bg"
+          />
 
           <div className="custom-position d-flex flex-wrap justify-content-center">
             <div className="h5 m-0 text-center PenguinPreview-title text-font">

@@ -8,7 +8,7 @@ const GameplayDemo = () => {
       className="GameplayDemo page-section full-viewport d-flex align-items-center"
     >
       <div
-        className="container mt-2 mb-3 d-flex justify-content-center position-relative reveal-from-bottom"
+        className="container mt-2 mb-3 d-flex justify-content-center reveal-from-bottom"
         data-reveal-delay="200"
       >
         <div className="GameplayDemo-header h5 m-0 text-center text-font">
