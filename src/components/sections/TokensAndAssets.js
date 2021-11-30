@@ -84,7 +84,7 @@ const TokensAndAssets = (props) => {
                     <img
                       src={item.img}
                       alt={item.name}
-                      className="TokensAndAssets-item-img my-2"
+                      className="TokensAndAssets-item-img"
                     />
                     <div className="TokensAndAssets-item-content text-center text-truncate">
                       {item.content}

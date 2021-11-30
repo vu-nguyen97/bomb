@@ -20,7 +20,7 @@ const CommonInfo = (props) => {
           data-reveal-delay="300"
         >
           <div className="CommonInfo-header-wrapper">
-            <img src={logo} className="img-size mx-auto" alt="ice img" />
+            <img src={logo} className="img-logo w-100 h-100" alt="ice img" />
 
             <div className="mt-2 text-white d-flex justify-content-end text-font">
               -PEGIN BEGINS-
