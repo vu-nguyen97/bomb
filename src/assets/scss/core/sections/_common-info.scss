@@ -1,10 +1,23 @@
 .CommonInfo {
   min-height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center bottom;
-  z-index: -10;
-  background-image: url("../../../images/landing-page/bg-art.png");
+
+  &-videoBg {
+    object-fit: cover;
+    z-index: -10;
+    position: absolute;
+  }
+
+  &-blackzone {
+    position: absolute;
+    height: 22%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-image: url("../../../images/landing-page/blackzone.png");
+  }
 
   &-header {
     width: 100%;

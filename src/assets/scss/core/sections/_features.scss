@@ -1,8 +1,27 @@
 .Features {
-  position: static;
+  .bg-layer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-repeat: no-repeat;
+  }
+
+  &-bg {
+    background-size: cover;
+    background-position: center top;
+    background-image: linear-gradient(to bottom, #054455, #01232c);
+  }
+
+  &-fishLayer {
+    background-size: contain;
+    background-position: left center;
+    background-image: url("../../../images/landing-page/features/fish-bg.png");
+  }
 
   @include media("<=768px") {
-    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
   }
 
   &-metaverse {
@@ -15,7 +34,6 @@
         right: 0;
         left: 45%;
         top: 28px;
-        z-index: -1;
 
         background-repeat: no-repeat;
         background-size: contain;
@@ -42,12 +60,12 @@
       }
 
       @include media("<=768px") {
-        margin-bottom: 3rem !important;
+        padding-bottom: 3rem !important;
       }
 
       @include media("<=576px") {
         .custom-margin {
-          margin-bottom: 0 !important;
+          padding-bottom: 0 !important;
         }
 
         .metaverse-bg--lower {

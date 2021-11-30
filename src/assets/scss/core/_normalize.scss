@@ -230,31 +230,6 @@ template {
   display: none;
 }
 
-.Home {
-  &-bg {
-    $margin-top: 300px;
-
-    position: absolute;
-    top: calc(100vh - #{$margin-top});
-    bottom: 0;
-    right: 0;
-    left: 0;
-    z-index: -5;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center top;
-    background-image: url("../../images/landing-page/body.png");
-
-    @include media("<=640px") {
-      top: calc(100vh - 380px);
-    }
-
-    @include media(">2300px") {
-      top: calc(100vh - 410px);
-    }
-  }
-}
-
 .container {
   max-width: 1450px !important;
 

@@ -79,14 +79,14 @@ const TokensAndAssets = (props) => {
                   className="TokensAndAssets-item mx-auto mb-3 py-3 px-2"
                   key={id}
                 >
-                  <div className="d-flex flex-column align-items-center">
+                  <div className="d-flex flex-column align-items-center justify-content-between h-100">
                     <div className="text-font">{item.name}</div>
                     <img
                       src={item.img}
                       alt={item.name}
-                      className="TokensAndAssets-item-img my-1"
+                      className="TokensAndAssets-item-img my-2"
                     />
-                    <div className="TokensAndAssets-item-content mt-2 text-center text-truncate">
+                    <div className="TokensAndAssets-item-content text-center text-truncate">
                       {item.content}
                     </div>
                   </div>
