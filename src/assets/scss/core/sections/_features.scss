@@ -6,58 +6,60 @@
   }
 
   &-metaverse {
-    position: relative;
-
-    .metaverse-bg--lower {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      left: 45%;
-      top: 0;
-      z-index: -1;
-
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: right bottom;
-      background-image: url("../../../images/landing-page/metaverse/metaverse.png");
-    }
-
-    @include media("<=768px") {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-
-      &-content {
-        justify-content: space-between !important;
-      }
+    &-content {
+      min-height: 370px;
 
       .metaverse-bg--lower {
-        flex-shrink: 0;
-        position: relative;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 45%;
+        top: 28px;
+        z-index: -1;
+
+        background-repeat: no-repeat;
         background-size: contain;
-        height: 280px;
-        left: -25%;
-        width: 155%;
-        margin-bottom: 3rem;
         background-position: right center;
-      }
-    }
-
-    @include media("<=576px") {
-      .custom-margin {
-        margin-bottom: 0 !important;
+        background-image: url("../../../images/landing-page/metaverse/metaverse.png");
       }
 
-      .metaverse-bg--lower {
-        margin-bottom: 1.5rem !important;
-        height: 240px;
+      @include media("<=900px") {
+        flex-direction: column;
+        justify-content: center;
+
+        .content {
+          width: 100%;
+        }
+
+        .metaverse-bg--lower {
+          flex-shrink: 0;
+          position: relative;
+          background-size: contain;
+          height: 240px;
+          left: 0;
+          width: 130%;
+        }
+      }
+
+      @include media("<=768px") {
+        margin-bottom: 3rem !important;
+      }
+
+      @include media("<=576px") {
+        .custom-margin {
+          margin-bottom: 0 !important;
+        }
+
+        .metaverse-bg--lower {
+          width: 150%;
+        }
       }
     }
   }
 
   &-carousel {
     @include media(">=1500px") {
-      margin-bottom: 6rem !important;
+      margin-bottom: 4rem !important;
     }
   }
 

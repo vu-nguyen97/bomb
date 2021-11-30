@@ -10,10 +10,6 @@
     border-radius: 20px;
     background-color: #2a92ae;
 
-    @include media(">800px") {
-      box-shadow: 0 0.2rem 0.65rem darken(#2a92ae, 10%);
-    }
-
     &-img {
       width: 90px;
       height: 90px;
@@ -22,10 +18,6 @@
 
     &-content {
       max-width: 160px;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
     }
   }
 

@@ -4,14 +4,14 @@
   background-position: center bottom;
   background-image: url("../../../images/landing-page/penguin-preview-bg.png");
 
-  .container {
-    max-width: 1450px;
-  }
-
   &-title {
     position: absolute;
-    top: -24px;
+    top: -16px;
     color: #9f6651;
+
+    @include media("<=1400px") {
+      top: -24px;
+    }
   }
 
   .custom-position {

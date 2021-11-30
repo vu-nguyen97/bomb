@@ -27,12 +27,12 @@ const PenguinPreview = () => {
       id="penguin"
       className="PenguinPreview page-section full-viewport d-flex align-items-center"
     >
-      <div className="reveal-from-bottom mx-auto" data-reveal-delay="200">
-        <div className="position-relative">
+      <div className="reveal-from-bottom w-100" data-reveal-delay="200">
+        <div className="position-relative w-100">
           <img
             src={penguinPreviewBg}
             alt="penguin preview bg"
-            className="PenguinPreview-bg"
+            className="PenguinPreview-bg w-100"
           />
 
           <div className="custom-position d-flex flex-wrap justify-content-center">

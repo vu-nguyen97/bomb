@@ -42,7 +42,7 @@ const Features = () => {
   return (
     <section className="Features page-section full-viewport mb-5" id="features">
       <div className="Features-metaverse">
-        <div className="Features-metaverse-content container h-100 d-flex flex-column justify-content-around">
+        <div className="Features-metaverse-carousel container h-100 d-flex flex-column justify-content-around">
           <div className="Features-carousel reveal-from-bottom mt-4 mb-3">
             <OwlCarousel
               className="owl-theme"
@@ -84,30 +84,39 @@ const Features = () => {
               ))}
             </OwlCarousel>
           </div>
+        </div>
 
-          <div className="row mb-3 custom-margin">
-            <div className="col-md-5 reveal-from-left" data-reveal-delay="200">
-              <div className="text-font h5">Bringing the metaverse to you</div>
-              <div className="mb-0">
-                <div>
-                  Explore a world where penguins are fierce warriors, fighting
-                  for glory and prosperity of their kingdoms.
+        <div className="Features-metaverse-content position-relative d-flex align-items-center">
+          <div className="container">
+            <div className="row mb-3 custom-margin">
+              <div
+                className="content col-md-5 reveal-from-left"
+                data-reveal-delay="200"
+              >
+                <div className="text-font h5">
+                  Bringing the metaverse to you
                 </div>
-                <div className="mt-4">
-                  Dungeon. Arena. Breed. Forge. Lanlord. All in one world.
-                </div>
-                <div className="mt-4">
-                  Play and earn tokens, become a part of the evolution!
+                <div className="mb-0">
+                  <div>
+                    Explore a world where penguins are fierce warriors, fighting
+                    for glory and prosperity of their kingdoms.
+                  </div>
+                  <div className="mt-4">
+                    Dungeon. Arena. Breed. Forge. Lanlord. All in one world.
+                  </div>
+                  <div className="mt-4">
+                    Play and earn tokens, become a part of the evolution!
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div
-          className="metaverse-bg--lower reveal-from-right"
-          data-reveal-delay="200"
-        />
+          <div
+            className="metaverse-bg--lower reveal-from-right"
+            data-reveal-delay="200"
+          />
+        </div>
       </div>
     </section>
   );

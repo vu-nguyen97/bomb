@@ -7,15 +7,12 @@ const GameplayDemo = () => {
       id="gameplay"
       className="GameplayDemo page-section full-viewport d-flex align-items-center"
     >
-      <div
-        className="d-flex justify-content-center reveal-from-bottom"
-        data-reveal-delay="200"
-      >
+      <div className="reveal-from-bottom w-100" data-reveal-delay="200">
         <div className="GameplayDemo-header h5 m-0 text-center text-font">
           GAMEPLAY PREVIEW
         </div>
 
-        <img alt="gameplay" src={gameplay} className="img-bg" />
+        <img alt="gameplay" src={gameplay} className="img-bg w-100" />
       </div>
     </section>
   );

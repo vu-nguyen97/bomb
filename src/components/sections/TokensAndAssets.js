@@ -8,10 +8,10 @@ import equipment from "../../assets/images/landing-page/tokens-and-assets/equipm
 
 const TokensAndAssets = (props) => {
   const listItem = [
-    { name: "ICE token", img: iceImg, content: "Govern token - ERC 21" },
-    { name: "FISH token", img: fish, content: "Ingame token - ERC 21" },
-    { name: "Penguins", img: avt1, content: "NFT assets - ERC 21" },
-    { name: "Equipments", img: equipment, content: "NFT assets - ERC 21" },
+    { name: "ICE token", img: iceImg, content: "Govern token - BEP20" },
+    { name: "FISH token", img: fish, content: "Ingame token - BEP20" },
+    { name: "Penguins", img: avt1, content: "NFT assets - BEP721" },
+    { name: "Equipments", img: equipment, content: "NFT assets - BEP721" },
     { name: "Land", img: land, content: "(Coming soon)" },
   ];
 
@@ -86,7 +86,7 @@ const TokensAndAssets = (props) => {
                       alt={item.name}
                       className="TokensAndAssets-item-img my-1"
                     />
-                    <div className="TokensAndAssets-item-content text-center">
+                    <div className="TokensAndAssets-item-content mt-2 text-center text-truncate">
                       {item.content}
                     </div>
                   </div>

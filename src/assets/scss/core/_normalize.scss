@@ -248,5 +248,17 @@ template {
     @include media("<=640px") {
       top: calc(100vh - 380px);
     }
+
+    @include media(">2300px") {
+      top: calc(100vh - 410px);
+    }
+  }
+}
+
+.container {
+  max-width: 1450px !important;
+
+  @include media(">1920px") {
+    max-width: 1550px !important;
   }
 }
