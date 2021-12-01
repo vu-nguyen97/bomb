@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Table, Thead, Tbody, Tr, Th, Td } from "react-super-responsive-table";
 
 import { Doughnut } from "react-chartjs-2";
@@ -10,27 +10,55 @@ const thList = [
   { title: "Allocation type", priority: 1, name: "allocation" },
   { title: "Tokens", priority: 1, name: "token" },
   { title: "Pecentage", priority: 2, name: "pecentage" },
-  { title: "TGE percentage", priority: 3, name: "tge" },
-  {
-    title: "Full locked duration (months)",
-    priority: 2,
-    name: "duration",
-  },
-  { title: "Vesting period (months)", priority: 2, name: "vesting_period" },
-  { title: "Vesting type", priority: 3, name: "vesting type" },
+  { title: "Vesting plan", priority: 3, name: "vesting_plan" },
 ];
 
 const tableDataList = [
-  ["Seed Round", "30,000,000", "3%", "5%", 3, 18, "Monthly"],
-  ["Private Sale", "100,000,000", "10%", "5%", 3, 24, "Monthly"],
-  ["Public Sale", "10,000,000", "1%", "100%", " ", " ", " "],
-  ["DEX Liquidity", "50,000,000", "5%", " ", 12, " ", " "],
-  ["Advisor", "30,000,000", "3%", " ", 6, 12, "Monthly"],
-  ["Community Fund", "120,000,000", "12%", "0.5%", 6, 36, "Quarterly"],
-  ["Falcon Team", "210,000,000", "21%", "3%", 12, 48, "Quarterly"],
-  ["Play To Earn", "230,000,000", "23%", "5%", " ", 60, "Quarterly"],
-  ["Staking Reward", "220,000,000", "22%", "5%", " ", 60, "Quarterly"],
-  ["Total Supply", "1,000,000,000", "100%", " ", " ", " ", " "],
+  [
+    "Seed Round",
+    "30,000,000",
+    "3%",
+    "TGE 5%, lock for 3 months, then monthly over 18 months",
+  ],
+  [
+    "Private Sale",
+    "100,000,000",
+    "10%",
+    "TGE 5%, lock for 3 months, then monthly over 24 months",
+  ],
+  ["Public Sale", "10,000,000", "1%", "100% at TGE"],
+  ["DEX Liquidity", "50,000,000", "5%", "Full locked for 12 months"],
+  [
+    "Advisor",
+    "30,000,000",
+    "3%",
+    "Lock for 6 months, then monthly over 12 months",
+  ],
+  [
+    "Community Fund",
+    "120,000,000",
+    "12%",
+    "0.5% first launch, lock for 6 months, then quarterly over 36 months",
+  ],
+  [
+    "Falcon Team",
+    "210,000,000",
+    "21%",
+    "TGE 3%, lock for 12 months, then quarterly over 48 months",
+  ],
+  [
+    "Play To Earn",
+    "230,000,000",
+    "23%",
+    "5% first launch, then quarterly over 60 months",
+  ],
+  [
+    "Staking Reward",
+    "220,000,000",
+    "22%",
+    "5% first launch, then quarterly over 60 months",
+  ],
+  ["Total Supply", "1,000,000,000", "100%", " "],
 ];
 
 const chartData = {
@@ -87,75 +115,43 @@ const options = {
 };
 
 function Distribution() {
-  const [tableTh, setTableTh] = useState(thList);
-  const [tableData, setTableData] = useState(tableDataList);
-
-  useEffect(() => {
-    if (window.innerWidth <= 640) {
-      let newTableTh = tableTh;
-      newTableTh[4].title = "Full locked duration";
-      newTableTh[5].title = "Vesting period";
-
-      let newTableData = tableDataList;
-      for (let i = 0; i < tableDataList.length; i++) {
-        newTableData[i][4] = updateData(newTableData[i][4]);
-        newTableData[i][5] = updateData(newTableData[i][5]);
-      }
-
-      setTableTh(newTableTh);
-      setTableData(newTableData);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  const updateData = (value) => {
-    if (value === 1) return value + " month";
-    if (Number(value) > 1) return value + " months";
-
-    return value;
-  };
-
   return (
-    <section className="Pitchdeck full-viewport d-flex flex-column justify-content-end">
+    <section className="Pitchdeck d-flex align-items-center justify-content-center">
       <div className="container reveal-from-bottom" data-reveal-delay="200">
-        <div className="row">
-          <div className="col-2 d-none d-md-block" />
-          <div className="col-md-6 col-xs-12">
-            <div className="h5 mb-0 text-font">Distribution planning</div>
-            <div className="Pitchdeck-chart">
+        <div className="row my-5">
+          <div className="col-lg-4 col-12 d-flex flex-column justify-content-start align-items-center">
+            <div className="h5 m-0 text-font">Distribution planning</div>
+            <div className="Pitchdeck-chart w-100">
               <Doughnut data={chartData} options={options} />
             </div>
           </div>
-        </div>
-      </div>
 
-      <div
-        className="Pitchdeck-table container py-5 w-100 reveal-from-bottom"
-        data-reveal-delay="200"
-      >
-        <Table
-          id="tech-companies-1"
-          className="table table-striped table-bordered mb-0"
-        >
-          <Thead>
-            <Tr key={tableTh[5]?.title}>
-              {tableTh.map((item, id) => (
-                <Th data-priority={item.priority} key={id}>
-                  {item.title}
-                </Th>
-              ))}
-            </Tr>
-          </Thead>
-          <Tbody key={tableData[0]?.[5]}>
-            {tableData.map((data, dataId) => (
-              <Tr key={dataId}>
-                {data.map((field, id) => (
-                  <Td key={id}>{field}</Td>
+          <div className="Pitchdeck-table col-lg-8 col-12">
+            <Table
+              id="tech-companies-1"
+              className="table table-striped table-bordered mb-0"
+            >
+              <Thead>
+                <Tr>
+                  {thList.map((item, id) => (
+                    <Th data-priority={item.priority} key={id}>
+                      {item.title}
+                    </Th>
+                  ))}
+                </Tr>
+              </Thead>
+              <Tbody>
+                {tableDataList.map((data, dataId) => (
+                  <Tr key={dataId}>
+                    {data.map((field, id) => (
+                      <Td key={id}>{field}</Td>
+                    ))}
+                  </Tr>
                 ))}
-              </Tr>
-            ))}
-          </Tbody>
-        </Table>
+              </Tbody>
+            </Table>
+          </div>
+        </div>
       </div>
     </section>
   );

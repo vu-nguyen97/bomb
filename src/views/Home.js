@@ -18,9 +18,6 @@ const Home = (props) => {
   const history = useHistory();
 
   const listenScrollEvent = useCallback(() => {
-    const listNav = document.getElementsByClassName("page-section");
-    const navItems = document.getElementsByClassName("header-nav-item");
-    const siteHeaderEl = document.getElementById("site-header");
     let isAnotherStyle = false;
 
     if (window.scrollY <= 95) {
@@ -31,6 +28,9 @@ const Home = (props) => {
       setIsShowSmoothScroll(true);
     }
 
+    const listNav = document.getElementsByClassName("page-section");
+    const navItems = document.getElementsByClassName("header-nav-item");
+    const siteHeaderEl = document.getElementById("site-header");
     if (isAnotherStyle) {
       siteHeaderEl.classList.add("another-color", "another-bg");
     } else {
