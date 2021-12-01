@@ -40,11 +40,14 @@ const featureList = [
 
 const Features = () => {
   return (
-    <section className="Features page-section full-viewport pb-5" id="features">
+    <section
+      className="Features page-section full-viewport pb-5 d-flex align-items-center justify-content-center"
+      id="features"
+    >
       <div className="Features-bg bg-layer" />
       <div className="Features-fishLayer bg-layer" />
 
-      <div className="Features-metaverse">
+      <div className="Features-metaverse h-100 w-100">
         <div className="Features-metaverse-carousel container h-100 d-flex flex-column justify-content-around">
           <div className="Features-carousel reveal-from-bottom mt-4 mb-3">
             <OwlCarousel

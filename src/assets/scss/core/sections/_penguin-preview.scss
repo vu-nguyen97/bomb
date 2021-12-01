@@ -6,21 +6,16 @@
 
   &-title {
     position: absolute;
-    top: -16px;
+    top: -4%;
     color: #9f6651;
-
-    @include media("<=1400px") {
-      top: -24px;
-    }
   }
 
-  .custom-position {
-    $content-left: 178px;
-    $content-right: 178px;
-
+  $content-left: 178px;
+  $content-right: 178px;
+  &-content {
     position: absolute;
-    top: 66px;
-    bottom: 80px;
+    top: 10%;
+    bottom: 10%;
     left: $content-left;
     right: $content-right;
 
@@ -35,18 +30,35 @@
       right: 0;
     }
 
-    @include media("<=1150px") {
-      left: calc(#{$content-left} - 30px);
-      right: calc(#{$content-right} - 30px);
+    @include media("<=1300px") {
+      left: calc(#{$content-left} - 50px);
+      right: calc(#{$content-right} - 50px);
     }
   }
 
-  .penguin-wrapper {
+  @include media("<=1100px") {
+    &-bg {
+      height: 720px;
+    }
+
+    &-content {
+      left: calc(#{$content-left} - 80px);
+      right: calc(#{$content-right} - 80px);
+    }
+  }
+
+  &-penguin {
     position: relative;
     margin: 19px 0;
-    padding: 0 16px;
     flex: 1 1 21%;
     height: calc(50% - 38px);
+
+    &-wrapper {
+      z-index: 10;
+      position: relative;
+      height: 0 !important;
+      padding-bottom: calc(100% * 5 / 6);
+    }
 
     &:hover {
       .penguin-attack {
@@ -56,13 +68,6 @@
       .penguin-gif {
         display: none !important;
       }
-    }
-
-    .penguin-canvas {
-      z-index: 10;
-      width: 100%;
-      height: 82%;
-      flex-shrink: 1;
     }
 
     .bg-slot {
@@ -100,6 +105,51 @@
     }
     .bg-slot-8 {
       background-image: url("../../../images/landing-page/penguin-preview/slot-8.png");
+    }
+  }
+
+  @include media("<=992px") {
+    &-bg,
+    .tape-bg {
+      display: none !important;
+    }
+
+    &-verticalBg {
+      display: block !important;
+    }
+
+    &-penguin {
+      flex: 1 1 34%;
+      height: calc(25% - 38px);
+    }
+  }
+
+  @include media("<=576px") {
+    padding: 1rem 0;
+
+    &-title {
+      top: 4.2rem;
+    }
+
+    &-verticalBg {
+      height: 100%;
+      position: absolute;
+      object-fit: cover;
+    }
+
+    &-content {
+      position: relative;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 5rem 0 7rem;
+    }
+
+    &-penguin {
+      flex: 1 1 51%;
+      height: calc(12.5% - 38px);
+      max-width: 350px;
     }
   }
 }

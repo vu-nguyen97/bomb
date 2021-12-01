@@ -7,7 +7,10 @@ const GameplayDemo = () => {
       id="gameplay"
       className="GameplayDemo page-section full-viewport d-flex align-items-center"
     >
-      <div className="reveal-from-bottom w-100" data-reveal-delay="200">
+      <div
+        className="reveal-from-bottom d-flex align-items-center justify-content-center w-100"
+        data-reveal-delay="200"
+      >
         <div className="GameplayDemo-header h5 m-0 text-center text-font">
           GAMEPLAY PREVIEW
         </div>

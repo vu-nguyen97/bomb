@@ -8,20 +8,7 @@
     z-index: 2;
     width: 100%;
     position: absolute;
-    top: 9%;
-
-    @include media("<=1700px") {
-      top: 7%;
-    }
-
-    @include media("<=430px") {
-      top: 15%;
-      font-size: 0.65rem !important;
-    }
-
-    @include media("<=350px") {
-      top: 19%;
-    }
+    top: 7%;
   }
 
   .img-bg {
@@ -29,7 +16,8 @@
     position: relative;
 
     @include media("<=768px") {
-      max-width: 180%;
+      max-width: 188%;
+      width: auto !important;
     }
   }
 }

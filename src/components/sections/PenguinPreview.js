@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 // import SpinePenguin from "../services/SpinePenguin";
 import tape from "../../assets/images/landing-page/penguin-preview/tape.png";
 import penguinPreviewBg from "../../assets/images/landing-page/penguin-preview/penguin-preview-bg.png";
+import verticalBg from "../../assets/images/landing-page/penguin-preview/vertical-penguin-preview-bg.png";
 import idle1 from "../../assets/gifs/idle-1.gif";
 import idle2 from "../../assets/gifs/idle-2.gif";
 import idle3 from "../../assets/gifs/idle-3.gif";
@@ -59,10 +60,16 @@ const PenguinPreview = () => {
           <img
             src={penguinPreviewBg}
             alt="penguin preview bg"
-            className="PenguinPreview-bg w-100"
+            className="PenguinPreview-bg w-100 d-none d-md-block"
           />
 
-          <div className="custom-position d-flex flex-wrap justify-content-center">
+          <img
+            src={verticalBg}
+            alt="penguin preview bg"
+            className="PenguinPreview-verticalBg w-100 d-none"
+          />
+
+          <div className="PenguinPreview-content d-flex flex-wrap justify-content-center">
             <div className="h5 m-0 text-center PenguinPreview-title text-font">
               PENGUIN PREVIEW
             </div>
@@ -72,18 +79,20 @@ const PenguinPreview = () => {
             {penguinArr.map((item, id) => (
               <div
                 key={id}
-                className="penguin-wrapper d-flex align-items-center justify-content-center"
+                className="PenguinPreview-penguin d-flex align-items-center justify-content-center"
               >
-                <img
-                  src={item}
-                  alt={`penguin-${id + 1}`}
-                  className="penguin-gif penguin-canvas"
-                />
-                <img
-                  src={penguinAttack[id]}
-                  alt={`penguin-attack-${id + 1}`}
-                  className="penguin-attack d-none penguin-canvas"
-                />
+                <div className="PenguinPreview-penguin-wrapper h-100 w-100">
+                  <img
+                    src={item}
+                    alt={`penguin-${id + 1}`}
+                    className="penguin-gif penguin-canvas"
+                  />
+                  <img
+                    src={penguinAttack[id]}
+                    alt={`penguin-attack-${id + 1}`}
+                    className="penguin-attack d-none penguin-canvas"
+                  />
+                </div>
 
                 {/* <canvas id={`penguin-${id + 1}`} className="penguin-canvas" /> */}
                 <div className={`bg-slot bg-slot-${id + 1}`} />
