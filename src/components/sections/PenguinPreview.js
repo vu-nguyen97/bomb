@@ -69,7 +69,7 @@ const PenguinPreview = () => {
             className="PenguinPreview-verticalBg w-100 d-none"
           />
 
-          <div className="PenguinPreview-content d-flex flex-wrap justify-content-center">
+          <div className="PenguinPreview-content d-flex flex-wrap justify-content-center align-items-center">
             <div className="h5 m-0 text-center PenguinPreview-title text-font">
               PENGUIN PREVIEW
             </div>

@@ -10,6 +10,20 @@
   }
 
   &-table {
+    position: relative;
+
+    table::before {
+      content: "";
+      position: absolute;
+      bottom: calc(100% - 60px);
+      width: 100%;
+      height: 300px;
+      background-image: url("../../../images/landing-page/pitchdeck/cloud.png");
+      background-size: contain;
+      background-position: center bottom;
+      background-repeat: no-repeat;
+    }
+
     th,
     tr,
     td {
@@ -36,6 +50,10 @@
     }
 
     @include media("<=640px") {
+      table::before {
+        bottom: calc(100% - 30px);
+      }
+
       tr {
         border: 0 !important;
 
@@ -52,6 +70,12 @@
           border-bottom-left-radius: 6px;
           border-bottom-right-radius: 6px;
         }
+      }
+    }
+
+    @include media("<=360px") {
+      table::before {
+        bottom: calc(100% - 15px);
       }
     }
   }

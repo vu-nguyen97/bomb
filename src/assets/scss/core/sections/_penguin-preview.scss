@@ -10,14 +10,12 @@
     color: #9f6651;
   }
 
-  $content-left: 178px;
-  $content-right: 178px;
   &-content {
     position: absolute;
     top: 10%;
     bottom: 10%;
-    left: $content-left;
-    right: $content-right;
+    left: 14%;
+    right: 14%;
 
     .tape-bg {
       z-index: 10;
@@ -29,27 +27,10 @@
       left: 0;
       right: 0;
     }
-
-    @include media("<=1300px") {
-      left: calc(#{$content-left} - 50px);
-      right: calc(#{$content-right} - 50px);
-    }
-  }
-
-  @include media("<=1100px") {
-    &-bg {
-      height: 720px;
-    }
-
-    &-content {
-      left: calc(#{$content-left} - 80px);
-      right: calc(#{$content-right} - 80px);
-    }
   }
 
   &-penguin {
     position: relative;
-    margin: 19px 0;
     flex: 1 1 21%;
     height: calc(50% - 38px);
 
@@ -116,25 +97,19 @@
 
     &-verticalBg {
       display: block !important;
+      height: 100%;
+      position: absolute;
     }
 
     &-penguin {
       flex: 1 1 34%;
       height: calc(25% - 38px);
+      margin: 2% 0;
+      min-height: 140px;
     }
-  }
-
-  @include media("<=576px") {
-    padding: 1rem 0;
 
     &-title {
-      top: 4.2rem;
-    }
-
-    &-verticalBg {
-      height: 100%;
-      position: absolute;
-      object-fit: cover;
+      top: 4%;
     }
 
     &-content {
@@ -143,13 +118,13 @@
       bottom: 0;
       left: 0;
       right: 0;
-      padding: 5rem 0 7rem;
+      padding: 13% 6% 13.5%;
     }
+  }
 
-    &-penguin {
-      flex: 1 1 51%;
-      height: calc(12.5% - 38px);
-      max-width: 350px;
+  @include media("<=500px") {
+    &-content {
+      padding: 17% 4% 13.5%;
     }
   }
 }
