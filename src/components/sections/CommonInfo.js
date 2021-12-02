@@ -12,6 +12,7 @@ const CommonInfo = (props) => {
           loop
           muted
           autoPlay
+          playsInline
           src={videoBg}
           className="CommonInfo-videoBg w-100 h-100"
         />

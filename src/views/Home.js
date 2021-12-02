@@ -14,13 +14,20 @@ import Distribution from "../components/sections/Distribution";
 
 const Home = (props) => {
   const [isShowSmoothScroll, setIsShowSmoothScroll] = useState(false);
+  const [sizeChangeHeader, setSizeChangeHeader] = useState(95);
   const isMoreInfo = props.location?.state?.isMoreInfo || false;
   const history = useHistory();
+
+  useEffect(() => {
+    if (window.innerWidth <= 500) {
+      setSizeChangeHeader(20);
+    }
+  }, []);
 
   const listenScrollEvent = useCallback(() => {
     let isAnotherStyle = false;
 
-    if (window.scrollY <= 95) {
+    if (window.scrollY <= sizeChangeHeader) {
       isAnotherStyle = false;
       setIsShowSmoothScroll(false);
     } else {
@@ -61,7 +68,7 @@ const Home = (props) => {
         navItems[activedIndex].classList.remove("nav-actived");
       }
     }
-  }, [isMoreInfo]);
+  }, [isMoreInfo, sizeChangeHeader]);
 
   useEffect(() => {
     listenScrollEvent();

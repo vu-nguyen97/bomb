@@ -105,7 +105,7 @@ const Header = ({
       <div className="container">
         <div
           className={classNames(
-            "site-header-inner",
+            "site-header-inner w-100",
             bottomDivider && "has-bottom-divider"
           )}
         >
@@ -114,6 +114,8 @@ const Header = ({
               <img src={logo} alt="logo" className="header-img w-100 h-100" />
             </Link>
           </div>
+
+          <div className="flex-grow-1" />
 
           {!hideNav && (
             <>
