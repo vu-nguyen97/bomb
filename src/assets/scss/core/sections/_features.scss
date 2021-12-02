@@ -18,6 +18,11 @@
     background-size: contain;
     background-position: left center;
     background-image: url("../../../images/landing-page/features/fish-bg.png");
+
+    @include media("<=768px") {
+      left: -300px !important;
+      right: -300px !important;
+    }
   }
 
   @include media("<=768px") {

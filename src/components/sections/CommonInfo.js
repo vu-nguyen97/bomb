@@ -3,6 +3,8 @@ import logo from "../../assets/images/landing-page/logo.png";
 import videoBg from "../../assets/videos/home-video.mp4";
 
 const CommonInfo = (props) => {
+  const totalSnow = 60;
+
   return (
     <>
       <section id="home" className="CommonInfo page-section">
@@ -26,6 +28,14 @@ const CommonInfo = (props) => {
               -PEGIN BEGINS-
             </div>
           </div>
+        </div>
+
+        <div className="CommonInfo-snow">
+          <ul className="g-snows">
+            {Array.from(Array(totalSnow).keys()).map((item, id) => (
+              <li key={id} />
+            ))}
+          </ul>
         </div>
       </section>
     </>

@@ -10,6 +10,11 @@
     height: 200px;
   }
 
+  @include media("<=992px") {
+    background-image: none;
+    background-color: #00465a;
+  }
+
   @include media("<=576px") {
     padding-top: 1rem !important;
   }
