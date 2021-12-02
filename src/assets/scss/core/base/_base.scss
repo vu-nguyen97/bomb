@@ -11,9 +11,7 @@ html {
 
 body {
   // TODO: delete background default of project
-  background: color-bg(
-    body
-  ); /* Fallback for when there is no custom background color defined. */
+  background: #054455; /* Fallback for when there is no custom background color defined. */
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }

@@ -87,7 +87,7 @@ const chartData = {
         "rgb(21, 67, 96)",
         "rgb(69, 179, 157)",
       ],
-      borderWidth: 1,
+      borderWidth: 0,
     },
   ],
 };
