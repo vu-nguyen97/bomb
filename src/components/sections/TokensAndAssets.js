@@ -45,8 +45,8 @@ const TokensAndAssets = (props) => {
             <div className="col-md-3"></div>
             <div className="col-md-4 mt-3 d-flex flex-column align-items-center reveal-from-right">
               <img src={iceImg} className="img-size" alt="ice img" />
-              <h5 className="m-0">100.000.000 ICE</h5>
-              <div>Ready to distribution</div>
+              <h5 className="m-0">1.000.000.000 ICE</h5>
+              <div>Ready for distribution</div>
             </div>
           </div>
 

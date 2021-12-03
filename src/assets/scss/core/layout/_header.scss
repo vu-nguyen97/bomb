@@ -17,6 +17,21 @@
 
   &.another-bg {
     background-color: #002631;
+    animation-name: effect;
+    animation-duration: 600ms;
+    animation-delay: -200ms;
+    animation-timing-function: ease-in-out;
+  }
+
+  @keyframes effect {
+    0% {
+      background-color: transparent;
+      opacity: 0;
+    }
+    100% {
+      background-color: #002631;
+      opacity: 1;
+    }
   }
 
   &.another-color {
@@ -53,12 +68,13 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   height: $header-height__mobile;
 }
 
 .header-logo {
-  height: 60px;
+  flex: 0 0 85px;
 
   .header-img {
     object-fit: contain;

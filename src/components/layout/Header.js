@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import { Link } from "react-router-dom";
-import logo from "../../assets/images/landing-page/logo-mini.png";
+import logo from "../../assets/images/landing-page/logo.png";
 
 const propTypes = {
   navPosition: PropTypes.string,
@@ -25,7 +25,11 @@ export const HeaderLinks = [
   { name: "Penguin", id: "penguin" },
   { name: "Tokenomics", id: "tokenomics" },
   { name: "Roadmap", id: "roadmap" },
-  { name: "Pitchdeck", id: "pitchdeck" },
+  {
+    name: "Pitchdeck",
+    id: "pitchdeck",
+    url: "https://drive.google.com/file/d/1Svjk7C-jljxnAHIaFFj9gDNrTvVyidm-/view",
+  },
   // { name: "Ice Token", id: "iceToken", url: "" },
 ];
 
@@ -90,7 +94,7 @@ const Header = ({
     const itemEl = document.getElementById(itemId);
 
     if (itemEl) {
-      const yOffset = 80; // height of fixed header
+      const yOffset = 79; // height of fixed header
       const distanceTop =
         itemEl.getBoundingClientRect().top + window.pageYOffset - yOffset;
 
@@ -115,8 +119,6 @@ const Header = ({
             </Link>
           </div>
 
-          <div className="flex-grow-1" />
-
           {!hideNav && (
             <>
               <button
@@ -140,18 +142,30 @@ const Header = ({
                       navPosition && `header-nav-${navPosition}`
                     )}
                   >
-                    {HeaderLinks.map((item, index) => (
-                      <li key={index}>
-                        <Link
-                          to={item.url || ""}
-                          onClick={() => onClickNav(item.id)}
-                          className="header-nav-item"
-                          id={`${item.id}Link`}
-                        >
-                          {item.name}
-                        </Link>
-                      </li>
-                    ))}
+                    {HeaderLinks.map((item, index) => {
+                      if (item.url) {
+                        return (
+                          <li key={index}>
+                            <a href={item.url} target="_blank" rel="noreferrer">
+                              {item.name}
+                            </a>
+                          </li>
+                        );
+                      }
+
+                      return (
+                        <li key={index}>
+                          <Link
+                            to={""}
+                            onClick={() => onClickNav(item.id)}
+                            className="header-nav-item"
+                            id={`${item.id}Link`}
+                          >
+                            {item.name}
+                          </Link>
+                        </li>
+                      );
+                    })}
                   </ul>
                 </div>
               </nav>
