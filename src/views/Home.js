@@ -98,8 +98,6 @@ const Home = (props) => {
 
   return (
     <div className="Home position-relative">
-      <div className="Home-bg" />
-
       <CommonInfo />
       {isMoreInfo ? (
         <>
