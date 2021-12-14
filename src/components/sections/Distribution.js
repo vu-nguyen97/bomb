@@ -32,7 +32,7 @@ const tableDataList = [
     "Advisor",
     "30,000,000",
     "3%",
-    "Lock for 6 months, then monthly over 12 months",
+    "TGE 3%, lock for 6 months, then monthly over 12 months",
   ],
   [
     "Community Fund",
