@@ -11,6 +11,8 @@ import GameplayDemo from "../components/sections/GameplayDemo";
 import TokensAndAssets from "../components/sections/TokensAndAssets";
 import RoadMap from "../components/sections/RoadMap";
 import Distribution from "../components/sections/Distribution";
+import joinDiscord from "../assets/images/landing-page/join-discord.png";
+import classNames from "classnames";
 
 const Home = (props) => {
   const [isShowSmoothScroll, setIsShowSmoothScroll] = useState(false);
@@ -29,9 +31,16 @@ const Home = (props) => {
 
     if (window.scrollY <= sizeChangeHeader) {
       isAnotherStyle = false;
-      setIsShowSmoothScroll(false);
     } else {
       isAnotherStyle = true;
+    }
+
+    if (
+      window.scrollY + window.innerHeight + 120 >
+      document.body.clientHeight
+    ) {
+      setIsShowSmoothScroll(false);
+    } else {
       setIsShowSmoothScroll(true);
     }
 
@@ -81,12 +90,12 @@ const Home = (props) => {
     };
   }, [listenScrollEvent]);
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
+  // const scrollToTop = () => {
+  //   window.scrollTo({
+  //     top: 0,
+  //     behavior: "smooth",
+  //   });
+  // };
 
   const handleClickMoreInfoBtn = () => {
     history.push({
@@ -115,13 +124,21 @@ const Home = (props) => {
         </>
       )}
 
-      {isShowSmoothScroll && (
-        <div className="scroll-to-top" onClick={scrollToTop}>
-          <div className="d-flex align-items-center justify-content-center h-100 cursor-pointer">
-            <i className="fas fa-angle-double-up text-dark" />
-          </div>
+      <a
+        href="https://discord.com/channels/923503591719837696/923504349144055858"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <div
+          className={classNames("scroll-to-top", {
+            show: isShowSmoothScroll,
+          })}
+          // onClick={scrollToTop}
+        >
+          <img src={joinDiscord} alt="join discord" className="h-100 w-100" />
+          <div className="joinDiscord">Join our discord</div>
         </div>
-      )}
+      </a>
     </div>
   );
 };

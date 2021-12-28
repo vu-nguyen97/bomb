@@ -49,7 +49,7 @@ const CommonInfo = () => {
 
         <div className="CommonInfo-blackzone" />
 
-        <div className="CommonInfo-downloadBtnsGroup d-flex justify-content-center">
+        <div className="CommonInfo-downloadBtnsGroup d-flex justify-content-center reveal-from-top">
           {downloadBtns.map((btn, id) => (
             <div key={id} className={btn.classnames || ""}>
               <div className="CommonInfo-downloadBtnsGroup-btnWrapper px-3 py-2 mx-3 d-flex align-items-center cursor-pointer">

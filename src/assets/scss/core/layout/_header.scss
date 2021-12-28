@@ -140,17 +140,6 @@
   display: none;
 }
 
-.scroll-to-top {
-  position: fixed;
-  right: 35px;
-  bottom: 35px;
-  height: 40px;
-  width: 40px;
-  background-color: white;
-  border-radius: 50%;
-  z-index: 1000;
-}
-
 @include media("<=992px") {
   .header-nav-toggle {
     display: block;

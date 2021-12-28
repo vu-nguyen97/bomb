@@ -12,9 +12,10 @@
     bottom: 8%;
     left: 0;
     right: 0;
+    z-index: 4;
+    padding-top: 200px;
 
     &-btnWrapper {
-      z-index: 4;
       background-color: lighten(#000, 15%);
       border-radius: 8px;
       position: relative;

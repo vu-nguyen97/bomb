@@ -631,3 +631,29 @@ img.has-shadow {
     margin: 0 !important;
   }
 }
+
+.scroll-to-top {
+  position: fixed;
+  right: 10px;
+  bottom: 15px;
+  height: 100px;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+
+  &.show {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  img {
+    object-fit: contain;
+  }
+
+  .joinDiscord {
+    position: absolute;
+    top: 30px;
+    right: 44px;
+  }
+}
