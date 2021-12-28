@@ -4,6 +4,56 @@
   &-videoBg {
     z-index: 2;
     object-fit: cover;
+    object-position: center bottom;
+  }
+
+  &-downloadBtnsGroup {
+    position: absolute;
+    bottom: 8%;
+    left: 0;
+    right: 0;
+
+    &-btnWrapper {
+      z-index: 4;
+      background-color: lighten(#000, 15%);
+      border-radius: 8px;
+      position: relative;
+
+      .logoImg {
+        width: 1.6rem;
+        height: 1.6rem;
+      }
+
+      .line-2 {
+        line-height: 25px;
+      }
+
+      .comingSoon {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.3s linear;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        color: #fff;
+        background-color: rgba(6, 7, 17, 0.5);
+        border-radius: 8px;
+      }
+
+      &:hover {
+        .btn-content,
+        .logoImg {
+          opacity: 0.3;
+        }
+
+        .comingSoon {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
   }
 
   @include media("<=768px") {
@@ -12,11 +62,46 @@
     &-videoBg {
       min-height: 600px;
     }
+
+    &-downloadBtnsGroup {
+      .line-1 {
+        font-size: 11px;
+      }
+
+      .line-2 {
+        font-size: 16px;
+      }
+    }
   }
 
   @include media("<=576px") {
     &-videoBg {
       min-height: 440px;
+    }
+
+    &-downloadBtnsGroup {
+      &-btnWrapper {
+        margin: 0 0.4rem !important;
+        padding: 0.25rem 0.6rem 0.25rem 0.5rem !important;
+        border-radius: 4px;
+
+        .line-1 {
+          font-size: 9px;
+        }
+
+        .line-2 {
+          font-size: 14px;
+        }
+
+        .logoImg {
+          width: 1.4rem;
+          height: 1.4rem;
+        }
+
+        .btn-content {
+          margin-left: 0.25rem !important;
+        }
+      }
     }
   }
 
