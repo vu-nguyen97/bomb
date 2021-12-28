@@ -17,10 +17,16 @@ import classNames from "classnames";
 const Home = (props) => {
   const [isShowSmoothScroll, setIsShowSmoothScroll] = useState(false);
   const [sizeChangeHeader, setSizeChangeHeader] = useState(95);
+  const [isMobile, setIsMobile] = useState(false);
+
   const isMoreInfo = props.location?.state?.isMoreInfo || false;
   const history = useHistory();
 
   useEffect(() => {
+    if (window.innerWidth <= 992) {
+      setIsMobile(true);
+    }
+
     if (window.innerWidth <= 500) {
       setSizeChangeHeader(20);
     }
@@ -36,8 +42,8 @@ const Home = (props) => {
     }
 
     if (
-      window.scrollY + window.innerHeight + 120 >
-      document.body.clientHeight
+      window.scrollY + window.innerHeight + 120 > document.body.clientHeight ||
+      (isMobile && window.scrollY <= sizeChangeHeader)
     ) {
       setIsShowSmoothScroll(false);
     } else {
@@ -77,7 +83,7 @@ const Home = (props) => {
         navItems[activedIndex].classList.remove("nav-actived");
       }
     }
-  }, [isMoreInfo, sizeChangeHeader]);
+  }, [isMobile, isMoreInfo, sizeChangeHeader]);
 
   useEffect(() => {
     listenScrollEvent();
@@ -136,7 +142,9 @@ const Home = (props) => {
           // onClick={scrollToTop}
         >
           <img src={joinDiscord} alt="join discord" className="h-100 w-100" />
-          <div className="joinDiscord">Join our discord</div>
+          <div className="joinDiscord d-flex align-items-center">
+            Join our discord
+          </div>
         </div>
       </a>
     </div>

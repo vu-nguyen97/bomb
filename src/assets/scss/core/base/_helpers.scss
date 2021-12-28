@@ -597,6 +597,34 @@ img.has-shadow {
   }
 }
 
+.scroll-to-top {
+  position: fixed;
+  right: 5px;
+  bottom: 0px;
+  height: 85px;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+
+  &.show {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  img {
+    object-fit: contain;
+  }
+
+  .joinDiscord {
+    position: absolute;
+    top: 0;
+    right: 8%;
+    left: 35%;
+    bottom: 16%;
+  }
+}
+
 @include media(">medium") {
   .ta-l-desktop {
     text-align: left;
@@ -630,30 +658,9 @@ img.has-shadow {
   .md-m-0 {
     margin: 0 !important;
   }
-}
 
-.scroll-to-top {
-  position: fixed;
-  right: 10px;
-  bottom: 15px;
-  height: 100px;
-  z-index: 1000;
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s, opacity 0.5s linear;
-
-  &.show {
-    visibility: visible;
-    opacity: 1;
-  }
-
-  img {
-    object-fit: contain;
-  }
-
-  .joinDiscord {
-    position: absolute;
-    top: 30px;
-    right: 44px;
+  .scroll-to-top {
+    font-size: 11px;
+    height: 60px;
   }
 }
