@@ -140,6 +140,12 @@
   display: none;
 }
 
+@include media("<=1180px") {
+  .header-nav a:not(.button) {
+    padding: 0 15px;
+  }
+}
+
 @include media("<=992px") {
   .header-nav-toggle {
     display: block;

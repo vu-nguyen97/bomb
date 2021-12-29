@@ -1,0 +1,102 @@
+@import "../../settings/layout/header";
+
+.Vesting {
+  min-height: calc(100vh - 250px);
+  padding-top: $header-height__mobile;
+  color: #dcc9c6;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-image: url("../../../images/landing-page/vesting/bg.png");
+
+  &-card {
+    width: 17rem;
+
+    &-content {
+      position: absolute;
+      top: 12%;
+      left: 0%;
+      right: 0%;
+      bottom: 12%;
+
+      .card-label {
+        color: #eeab71;
+      }
+
+      &-imgWrapper {
+        height: 10rem;
+        width: 10rem;
+        background-color: #28232c;
+        border-radius: 50%;
+
+        .ice-img {
+          height: 5rem;
+        }
+      }
+
+      .content {
+        width: 9rem;
+      }
+
+      .frameInput {
+        height: 1.6rem;
+      }
+
+      $ice_token_size: 1.8rem;
+      .claimedValue {
+        position: absolute;
+        top: 1px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: calc(100% - #{$ice_token_size});
+        color: white;
+      }
+
+      .iceToken {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        height: $ice_token_size;
+        width: $ice_token_size !important;
+        margin: auto;
+      }
+
+      .claimButton {
+        height: 3rem;
+      }
+
+      .claimText {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  @include media("<=1010px") {
+    &-card {
+      width: 15rem;
+
+      &-content {
+        &-imgWrapper {
+          width: 8.5rem;
+          height: 8.5rem;
+
+          .ice-img {
+            height: 4rem;
+          }
+
+          .custom-text-size {
+            font-size: 18px;
+            line-height: 26px;
+          }
+        }
+      }
+    }
+  }
+}

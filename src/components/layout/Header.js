@@ -30,7 +30,11 @@ export const HeaderLinks = [
     id: "pitchdeck",
     url: "https://drive.google.com/file/d/1Svjk7C-jljxnAHIaFFj9gDNrTvVyidm-/view",
   },
-  // { name: "Ice Token", id: "iceToken", url: "" },
+  {
+    name: "Vesting",
+    id: "vesting",
+    url: `${window.location.origin}/vesting`,
+  },
 ];
 
 const Header = ({

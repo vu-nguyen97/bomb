@@ -535,6 +535,10 @@ img.has-shadow {
   cursor: pointer;
 }
 
+.img-contain {
+  object-fit: contain;
+}
+
 @include media("<=medium") {
   .ta-l-mobile {
     text-align: left;

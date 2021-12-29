@@ -8,6 +8,7 @@ import LayoutDefault from "./layouts/LayoutDefault";
 
 // Views
 import Home from "./views/Home";
+import Vesting from "./views/Vesting";
 
 const App = () => {
   const childRef = useRef();
@@ -24,7 +25,13 @@ const App = () => {
       ref={childRef}
       children={() => (
         <Switch>
-          <AppRoute exact path="/" component={Home} layout={LayoutDefault} />
+          <AppRoute
+            exact
+            path="/vesting"
+            component={Vesting}
+            layout={LayoutDefault}
+          />
+          <AppRoute path="/" component={Home} layout={LayoutDefault} />
         </Switch>
       )}
     />
