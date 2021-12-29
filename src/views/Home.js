@@ -18,15 +18,15 @@ import joinDiscordOnMobile from "../assets/images/landing-page/join-discord-mini
 const Home = (props) => {
   const [isShowSmoothScroll, setIsShowSmoothScroll] = useState(false);
   const [sizeChangeHeader, setSizeChangeHeader] = useState(95);
-  const [isMobile, setIsMobile] = useState(false);
+  // const [isMobile, setIsMobile] = useState(false);
 
   const isMoreInfo = props.location?.state?.isMoreInfo || false;
   const history = useHistory();
 
   useEffect(() => {
-    if (window.innerWidth <= 992) {
-      setIsMobile(true);
-    }
+    // if (window.innerWidth <= 992) {
+    //   setIsMobile(true);
+    // }
 
     if (window.innerWidth <= 500) {
       setSizeChangeHeader(20);
@@ -43,8 +43,9 @@ const Home = (props) => {
     }
 
     if (
-      window.scrollY + window.innerHeight + 120 > document.body.clientHeight ||
-      (isMobile && window.scrollY <= sizeChangeHeader)
+      // (isMobile && window.scrollY <= sizeChangeHeader) ||
+      window.scrollY + window.innerHeight + 120 >
+      document.body.clientHeight
     ) {
       setIsShowSmoothScroll(false);
     } else {
@@ -84,7 +85,7 @@ const Home = (props) => {
         navItems[activedIndex].classList.remove("nav-actived");
       }
     }
-  }, [isMobile, isMoreInfo, sizeChangeHeader]);
+  }, [isMoreInfo, sizeChangeHeader]);
 
   useEffect(() => {
     listenScrollEvent();
