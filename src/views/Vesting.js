@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import OwlCarousel from "react-owl-carousel";
 
 import iceToken from "../assets/images/landing-page/ice.png";
@@ -11,6 +11,14 @@ const vestingData = [
     label: "PRIVATE SALE VESTING",
     icon: iceToken,
     content: "Next vesting is on 00:00 (UTC) Jan 26, 2022",
+    claimedValue: 100,
+    value: "25,350",
+    title: "/200,000 PIGU vested",
+  },
+  {
+    label: "PRIVATE SALE VESTING",
+    icon: iceToken,
+    content: "Next vesting is on 00:00 (UTC) Jan 26, 2022",
     claimedValue: 200,
     value: "25,350",
     title: "/200,000 PIGU vested",
@@ -19,7 +27,7 @@ const vestingData = [
     label: "PRIVATE SALE VESTING",
     icon: iceToken,
     content: "Next vesting is on 00:00 (UTC) Jan 26, 2022",
-    claimedValue: 2,
+    claimedValue: 300,
     value: "25,350",
     title: "/200,000 PIGU vested",
   },
@@ -27,21 +35,18 @@ const vestingData = [
     label: "PRIVATE SALE VESTING",
     icon: iceToken,
     content: "Next vesting is on 00:00 (UTC) Jan 26, 2022",
-    claimedValue: 2,
-    value: "25,350",
-    title: "/200,000 PIGU vested",
-  },
-  {
-    label: "PRIVATE SALE VESTING",
-    icon: iceToken,
-    content: "Next vesting is on 00:00 (UTC) Jan 26, 2022",
-    claimedValue: 2,
+    claimedValue: 400,
     value: "25,350",
     title: "/200,000 PIGU vested",
   },
 ];
 
 function Vesting() {
+  useEffect(() => {
+    const activedNavOnHeader = document.getElementById("vestingUrl");
+    activedNavOnHeader.classList.add("actived-vesting");
+  }, []);
+
   return (
     <div>
       <section
@@ -52,6 +57,10 @@ function Vesting() {
           <OwlCarousel
             className="owl-theme"
             loop={true}
+            dots={false}
+            autoplay={true}
+            autoplayTimeout={3000}
+            autoplayHoverPause={true}
             responsive={{
               0: {
                 items: 1,

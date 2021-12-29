@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { useHistory } from "react-router-dom";
-// import sections
-// import Cta from "../components/sections/Cta";
+import classNames from "classnames";
+
 import Features from "../components/sections/Features";
 import { HeaderLinks } from "../components/layout/Header";
 import CommonInfo from "../components/sections/CommonInfo";
@@ -11,8 +11,9 @@ import GameplayDemo from "../components/sections/GameplayDemo";
 import TokensAndAssets from "../components/sections/TokensAndAssets";
 import RoadMap from "../components/sections/RoadMap";
 import Distribution from "../components/sections/Distribution";
+
 import joinDiscord from "../assets/images/landing-page/join-discord.png";
-import classNames from "classnames";
+import joinDiscordOnMobile from "../assets/images/landing-page/join-discord-mini.png";
 
 const Home = (props) => {
   const [isShowSmoothScroll, setIsShowSmoothScroll] = useState(false);
@@ -141,10 +142,20 @@ const Home = (props) => {
           })}
           // onClick={scrollToTop}
         >
-          <img src={joinDiscord} alt="join discord" className="h-100 w-100" />
+          <img
+            src={joinDiscord}
+            alt="join discord"
+            className="d-none d-sm-block h-100 w-100"
+          />
           <div className="joinDiscord d-flex align-items-center">
-            Join our discord
+            <span className="d-none d-sm-block">Join our discord</span>
           </div>
+
+          <img
+            src={joinDiscordOnMobile}
+            alt="join discord"
+            className="d-sm-none h-100 w-100"
+          />
         </div>
       </a>
     </div>

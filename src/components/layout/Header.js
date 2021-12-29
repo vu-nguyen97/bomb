@@ -150,7 +150,12 @@ const Header = ({
                       if (item.url) {
                         return (
                           <li key={index}>
-                            <a href={item.url} target="_blank" rel="noreferrer">
+                            <a
+                              href={item.url}
+                              target="_blank"
+                              rel="noreferrer"
+                              id={`${item.id}Url`}
+                            >
                               {item.name}
                             </a>
                           </li>

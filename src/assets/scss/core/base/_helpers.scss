@@ -668,3 +668,9 @@ img.has-shadow {
     height: 60px;
   }
 }
+
+@include media("<=576px") {
+  .scroll-to-top {
+    bottom: 15px;
+  }
+}
