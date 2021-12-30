@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from "react";
+import { install } from "resize-observer";
 import { useLocation, Switch } from "react-router-dom";
 import AppRoute from "./utils/AppRoute";
 import ScrollReveal from "./utils/ScrollReveal";
@@ -11,6 +12,7 @@ import Home from "./views/Home";
 import Vesting from "./views/Vesting";
 
 const App = () => {
+  install();
   const childRef = useRef();
   let location = useLocation();
 

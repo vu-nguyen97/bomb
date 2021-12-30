@@ -8,34 +8,10 @@ import claimButton from "../assets/images/landing-page/vesting/claim-buton.png";
 
 const vestingData = [
   {
-    label: "PRIVATE SALE VESTING",
+    label: "PRIVATE SALE VESTING (Demo)",
     icon: iceToken,
     content: "Next vesting is on 00:00 (UTC) Jan 26, 2022",
     claimedValue: 100,
-    value: "25,350",
-    title: "/200,000 PIGU vested",
-  },
-  {
-    label: "PRIVATE SALE VESTING",
-    icon: iceToken,
-    content: "Next vesting is on 00:00 (UTC) Jan 26, 2022",
-    claimedValue: 200,
-    value: "25,350",
-    title: "/200,000 PIGU vested",
-  },
-  {
-    label: "PRIVATE SALE VESTING",
-    icon: iceToken,
-    content: "Next vesting is on 00:00 (UTC) Jan 26, 2022",
-    claimedValue: 300,
-    value: "25,350",
-    title: "/200,000 PIGU vested",
-  },
-  {
-    label: "PRIVATE SALE VESTING",
-    icon: iceToken,
-    content: "Next vesting is on 00:00 (UTC) Jan 26, 2022",
-    claimedValue: 400,
     value: "25,350",
     title: "/200,000 PIGU vested",
   },
@@ -47,6 +23,11 @@ function Vesting() {
     activedNavOnHeader.classList.add("actived-vesting");
   }, []);
 
+  const navClass = [
+    "custom-navs custom-nav-pre ms-2",
+    "custom-navs custom-nav-next me-2",
+  ];
+
   return (
     <div>
       <section
@@ -55,12 +36,11 @@ function Vesting() {
       >
         <div className="Vesting-carousel w-100 mb-3 reveal-from-bottom">
           <OwlCarousel
-            className="owl-theme"
-            loop={true}
+            className="owl-theme position-relative"
             dots={false}
-            autoplay={true}
-            autoplayTimeout={3000}
-            autoplayHoverPause={true}
+            nav={true}
+            navClass={navClass}
+            navText={[]}
             responsive={{
               0: {
                 items: 1,
@@ -137,7 +117,7 @@ function Vesting() {
                     </div>
                   </div>
 
-                  <div className="position-relative">
+                  <div className="position-relative cursor-pointer">
                     <img
                       className="claimButton img-contain"
                       src={claimButton}

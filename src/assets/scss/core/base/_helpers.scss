@@ -604,7 +604,7 @@ img.has-shadow {
 .scroll-to-top {
   position: fixed;
   right: 0;
-  bottom: 0px;
+  bottom: 0;
   height: 85px;
   z-index: 1000;
   visibility: hidden;
@@ -661,5 +661,11 @@ img.has-shadow {
 @include media("<=768px") {
   .md-m-0 {
     margin: 0 !important;
+  }
+}
+
+@include media("<=576px") {
+  .scroll-to-top {
+    width: 80px;
   }
 }

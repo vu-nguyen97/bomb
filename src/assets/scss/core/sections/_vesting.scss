@@ -78,6 +78,49 @@
     }
   }
 
+  &-carousel {
+    .owl-stage {
+      margin: auto;
+    }
+
+    .owl-nav {
+      margin: 0;
+    }
+
+    .custom-navs {
+      width: 4rem;
+      height: 4rem;
+      position: absolute;
+      top: calc(50% - 4rem / 2);
+      background-color: transparent;
+      border: 0;
+      background-repeat: no-repeat;
+      background-size: contain;
+      transition: opacity 0.4s;
+      -webkit-transition: opacity 0.4s;
+      -moz-transition: opacity 0.4s;
+      -ms-transition: opacity 0.4s;
+      -o-transition: opacity 0.4s;
+
+      &:hover {
+        filter: alpha(opacity=70);
+        opacity: 0.7;
+      }
+    }
+
+    .custom-nav-pre {
+      left: 0;
+      background-position: left center;
+      background-image: url("../../../images/landing-page/vesting/pre-arrow.png");
+    }
+
+    .custom-nav-next {
+      right: 0;
+      background-position: right center;
+      background-image: url("../../../images/landing-page/vesting/next-arrow.png");
+    }
+  }
+
   @include media("<=1010px") {
     &-card {
       width: 15rem;
@@ -97,6 +140,16 @@
           }
         }
       }
+    }
+  }
+
+  @include media("<=576px") {
+    .custom-nav-pre {
+      margin: 0 !important;
+    }
+
+    .custom-nav-next {
+      margin: 0 !important;
     }
   }
 }
