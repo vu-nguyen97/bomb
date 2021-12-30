@@ -66,7 +66,7 @@ function Vesting() {
         <div className="Vesting-carousel w-100 mb-3 reveal-from-bottom">
           <OwlCarousel
             className="owl-theme position-relative"
-            dots={false}
+            dots={true}
             nav={true}
             navClass={navClass}
             navText={[]}
@@ -124,7 +124,7 @@ function Vesting() {
                     </div>
                   </div>
 
-                  <div className="d-flex flex-column align-items-center">
+                  <div className="d-flex flex-column align-items-center w-100">
                     <div className="font-size-13">Claimable</div>
 
                     <div className="ms-2 position-relative">
@@ -134,15 +134,17 @@ function Vesting() {
                         alt="frame"
                       />
 
-                      <div className="claimedValue d-flex justify-content-center align-items-center ps-2">
-                        {item.claimedValue}
-                      </div>
+                      <div className="claimContent d-flex align-items-center">
+                        <div className="claimedValue flex-grow-1 d-flex justify-content-center align-items-center">
+                          {item.claimedValue}
+                        </div>
 
-                      <img
-                        className="iceToken img-contain"
-                        src={iceToken}
-                        alt="ice token"
-                      />
+                        <img
+                          className="iceToken img-contain"
+                          src={iceToken}
+                          alt="ice token"
+                        />
+                      </div>
                     </div>
                   </div>
 
