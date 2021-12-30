@@ -83,6 +83,10 @@
   color: color(success);
 }
 
+.text-orange {
+  color: #f7f1d8;
+}
+
 .invert-color {
   .text-color-high {
     color: color(high-contrast-inverse);
@@ -521,6 +525,9 @@ img.has-shadow {
 .font-size-13 {
   font-size: 13px;
 }
+.font-size-14 {
+  font-size: 14px;
+}
 .font-size-22 {
   font-size: 22px;
 }
@@ -537,6 +544,9 @@ img.has-shadow {
 
 .img-contain {
   object-fit: contain;
+}
+.img-cover {
+  object-fit: cover;
 }
 
 @include media("<=medium") {

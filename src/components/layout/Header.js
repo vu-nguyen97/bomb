@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/landing-page/logo.png";
+import btnPlay from "../../assets/images/landing-page/btn-play.png";
+import iconPlay from "../../assets/images/landing-page/icon-play.png";
 
 const propTypes = {
   navPosition: PropTypes.string,
@@ -29,17 +31,18 @@ export const HeaderLinks = [
     name: "Vesting",
     id: "vesting",
     url: `${window.location.origin}/vesting`,
-    isNewTab: false,
   },
   {
     name: "Pitchdeck",
     id: "pitchdeck",
     url: "https://drive.google.com/file/d/1Svjk7C-jljxnAHIaFFj9gDNrTvVyidm-/view",
+    isNewTab: true,
   },
   {
     name: "Whitepaper",
     id: "whitepaper",
     url: "https://whitepaper.piguland.com/",
+    isNewTab: true,
   },
 ];
 
@@ -123,27 +126,20 @@ const Header = ({
             bottomDivider && "has-bottom-divider"
           )}
         >
-          <div className="header-logo">
-            <Link to="/">
-              <img src={logo} alt="logo" className="header-img w-100 h-100" />
-            </Link>
-          </div>
+          <div className="d-flex align-items-center flex-grow-1 justify-content-start">
+            <div className="header-logo">
+              <Link to="/">
+                <img src={logo} alt="logo" className="header-img w-100 h-100" />
+              </Link>
+            </div>
 
-          {!hideNav && (
-            <>
-              <button
-                ref={hamburger}
-                className="header-nav-toggle"
-                onClick={isActive ? closeMenu : openMenu}
-              >
-                <span className="screen-reader">Menu</span>
-                <span className="hamburger">
-                  <span className="hamburger-inner"></span>
-                </span>
-              </button>
+            {!hideNav && (
               <nav
                 ref={nav}
-                className={classNames("header-nav", isActive && "is-active")}
+                className={classNames(
+                  "header-nav ms-4",
+                  isActive && "is-active"
+                )}
               >
                 <div className="header-nav-inner">
                   <ul
@@ -158,7 +154,7 @@ const Header = ({
                           <li key={index}>
                             <a
                               href={item.url}
-                              target={!item.isNewTab ? "_self" : "_blank"}
+                              target={item.isNewTab ? "_blank" : "_self"}
                               rel="noreferrer"
                               id={`${item.id}Url`}
                             >
@@ -184,8 +180,37 @@ const Header = ({
                   </ul>
                 </div>
               </nav>
-            </>
-          )}
+            )}
+          </div>
+
+          <div className="playNowContainer position-relative d-none d-lg-block cursor-pointer">
+            <img
+              src={btnPlay}
+              className="btnPlay img-contain w-100"
+              alt="wood"
+            />
+
+            <div className="playNowContent d-flex align-items-center">
+              <img
+                src={iconPlay}
+                className="h-100 img-contain"
+                alt="icon play"
+              />
+
+              <div className="playNowText text-orange text-font">Play now</div>
+            </div>
+          </div>
+
+          <button
+            ref={hamburger}
+            className="header-nav-toggle"
+            onClick={isActive ? closeMenu : openMenu}
+          >
+            <span className="screen-reader">Menu</span>
+            <span className="hamburger">
+              <span className="hamburger-inner"></span>
+            </span>
+          </button>
         </div>
       </div>
     </header>

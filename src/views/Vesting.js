@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import OwlCarousel from "react-owl-carousel";
 
 import iceToken from "../assets/images/landing-page/ice.png";
@@ -18,10 +18,39 @@ const vestingData = [
 ];
 
 function Vesting() {
+  const [sizeChangeHeader, setSizeChangeHeader] = useState(95);
+
   useEffect(() => {
-    const activedNavOnHeader = document.getElementById("vestingUrl");
-    activedNavOnHeader.classList.add("actived-vesting");
+    if (window.innerWidth <= 500) {
+      setSizeChangeHeader(20);
+    }
+
+    document.getElementById("vestingUrl").classList.add("actived-vesting");
   }, []);
+
+  const listenScrollEvent = useCallback(() => {
+    let isAnotherStyle = false;
+
+    if (window.scrollY <= sizeChangeHeader) {
+      isAnotherStyle = false;
+    } else {
+      isAnotherStyle = true;
+    }
+
+    const siteHeaderEl = document.getElementById("site-header");
+    if (isAnotherStyle) {
+      siteHeaderEl.classList.add("another-color", "another-bg");
+    } else {
+      siteHeaderEl.classList.remove("another-color", "another-bg");
+    }
+  }, [sizeChangeHeader]);
+
+  useEffect(() => {
+    window.addEventListener("scroll", listenScrollEvent);
+    return () => {
+      window.removeEventListener("scroll", listenScrollEvent);
+    };
+  }, [listenScrollEvent]);
 
   const navClass = [
     "custom-navs custom-nav-pre ms-2",

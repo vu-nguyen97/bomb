@@ -5,6 +5,26 @@
   z-index: 20 !important;
   background-color: color-bg(header);
 
+  .playNowContainer {
+    .btnPlay {
+      height: 60px;
+    }
+
+    .playNowContent {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 10%;
+      right: 0;
+      height: 34px;
+      margin: auto;
+    }
+
+    .playNowText {
+      margin-left: 8px;
+    }
+  }
+
   + .site-content {
     .section:first-of-type {
       padding-top: $header-height__mobile;
@@ -50,6 +70,10 @@
   .actived-vesting {
     color: #3aefff !important;
   }
+
+  .container {
+    max-width: 1200px !important;
+  }
 }
 
 .site-header.another-bg {
@@ -90,8 +114,6 @@
 }
 
 .header-nav {
-  flex-grow: 1;
-
   .header-nav-inner {
     display: flex;
     flex-grow: 1;
@@ -151,47 +173,47 @@
 @include media("<=992px") {
   .header-nav-toggle {
     display: block;
+  }
 
-    // Header navigation when the hamburger is a previous sibling
-    + .header-nav {
+  .header-nav {
+    margin: 0 !important;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: 9999;
+    background: color-bg(menu-mobile);
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease-in-out, opacity 0.15s;
+
+    &.is-active {
+      opacity: 1;
+    }
+
+    .header-nav-inner {
       flex-direction: column;
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 100%;
-      z-index: 9999;
-      background: color-bg(menu-mobile);
-      max-height: 0;
-      opacity: 0;
-      overflow: hidden;
-      transition: max-height 0.25s ease-in-out, opacity 0.15s;
+      padding: $header-nav--padding-v__mobile;
+    }
 
-      &.is-active {
-        opacity: 1;
+    ul {
+      display: block;
+      text-align: center;
+
+      a:not(.button) {
+        display: inline-flex;
+        @include anchor-aspect(header-mobile);
+        padding-top: $header-nav--padding-v__mobile / 2;
+        padding-bottom: $header-nav--padding-v__mobile / 2;
       }
+    }
 
-      .header-nav-inner {
-        flex-direction: column;
-        padding: $header-nav--padding-v__mobile;
-      }
-
-      ul {
-        display: block;
-        text-align: center;
-
-        a:not(.button) {
-          display: inline-flex;
-          @include anchor-aspect(header-mobile);
-          padding-top: $header-nav--padding-v__mobile / 2;
-          padding-bottom: $header-nav--padding-v__mobile / 2;
-        }
-      }
-
-      a.button {
-        margin-left: 0;
-        margin-top: $header-nav--padding-v__mobile / 2;
-        margin-bottom: $header-nav--padding-v__mobile / 2;
-      }
+    a.button {
+      margin-left: 0;
+      margin-top: $header-nav--padding-v__mobile / 2;
+      margin-bottom: $header-nav--padding-v__mobile / 2;
     }
   }
 }

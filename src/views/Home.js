@@ -116,7 +116,9 @@ const Home = (props) => {
             className="d-none d-sm-block h-100 w-100"
           />
           <div className="joinDiscord d-flex align-items-center">
-            <span className="d-none d-sm-block">Join our discord</span>
+            <span className="d-none d-sm-block text-orange">
+              Join our discord
+            </span>
           </div>
 
           <img
