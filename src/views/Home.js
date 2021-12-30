@@ -3,7 +3,6 @@ import { useHistory } from "react-router-dom";
 import classNames from "classnames";
 
 import Features from "../components/sections/Features";
-import { HeaderLinks } from "../components/layout/Header";
 import CommonInfo from "../components/sections/CommonInfo";
 import FundInfo from "../components/sections/FundInfo";
 import PenguinPreview from "../components/sections/PenguinPreview";
@@ -18,19 +17,17 @@ import joinDiscordOnMobile from "../assets/images/landing-page/join-discord-mini
 const Home = (props) => {
   const [isShowSmoothScroll, setIsShowSmoothScroll] = useState(false);
   const [sizeChangeHeader, setSizeChangeHeader] = useState(95);
-  // const [isMobile, setIsMobile] = useState(false);
 
   const isMoreInfo = props.location?.state?.isMoreInfo || false;
   const history = useHistory();
 
   useEffect(() => {
-    // if (window.innerWidth <= 992) {
-    //   setIsMobile(true);
-    // }
-
     if (window.innerWidth <= 500) {
       setSizeChangeHeader(20);
     }
+
+    document.getElementById("vestingUrl").classList.remove("actived-vesting");
+    document.getElementById("homeLink").classList.add("nav-actived");
   }, []);
 
   const listenScrollEvent = useCallback(() => {
@@ -43,7 +40,6 @@ const Home = (props) => {
     }
 
     if (
-      // (isMobile && window.scrollY <= sizeChangeHeader) ||
       window.scrollY + window.innerHeight + 120 >
       document.body.clientHeight
     ) {
@@ -52,7 +48,6 @@ const Home = (props) => {
       setIsShowSmoothScroll(true);
     }
 
-    const listNav = document.getElementsByClassName("page-section");
     const navItems = document.getElementsByClassName("header-nav-item");
     const siteHeaderEl = document.getElementById("site-header");
     if (isAnotherStyle) {
@@ -66,25 +61,6 @@ const Home = (props) => {
         element.classList.remove("nav-actived");
       });
     }
-
-    for (let i = 0; i < Object.keys(listNav).length; i++) {
-      const currentElTop = listNav[i].getBoundingClientRect().top;
-      const nextElTop =
-        i === Object.keys(listNav).length - 1
-          ? Infinity
-          : listNav[i + 1].getBoundingClientRect().top;
-
-      const activedIndex = HeaderLinks.findIndex(
-        (item) => item.id === listNav[i].id
-      );
-
-      if (activedIndex === -1) continue;
-      if (currentElTop <= 80 && nextElTop > 80) {
-        navItems[activedIndex].classList.add("nav-actived");
-      } else {
-        navItems[activedIndex].classList.remove("nav-actived");
-      }
-    }
   }, [isMoreInfo, sizeChangeHeader]);
 
   useEffect(() => {
@@ -97,13 +73,6 @@ const Home = (props) => {
       window.removeEventListener("scroll", listenScrollEvent);
     };
   }, [listenScrollEvent]);
-
-  // const scrollToTop = () => {
-  //   window.scrollTo({
-  //     top: 0,
-  //     behavior: "smooth",
-  //   });
-  // };
 
   const handleClickMoreInfoBtn = () => {
     history.push({
@@ -128,7 +97,6 @@ const Home = (props) => {
           <TokensAndAssets onClickMoreInfoBtn={handleClickMoreInfoBtn} />
           <Distribution />
           <RoadMap />
-          {/* <Cta /> */}
         </>
       )}
 
@@ -141,7 +109,6 @@ const Home = (props) => {
           className={classNames("scroll-to-top", {
             show: isShowSmoothScroll,
           })}
-          // onClick={scrollToTop}
         >
           <img
             src={joinDiscord}

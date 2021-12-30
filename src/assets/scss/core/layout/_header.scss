@@ -66,6 +66,10 @@
   a.nav-actived {
     color: #31d3ff !important;
   }
+
+  .site-header {
+    background-color: #002631;
+  }
 }
 
 .site-header-inner {
@@ -142,12 +146,6 @@
 
 .header-nav-toggle {
   display: none;
-}
-
-@include media("<=1180px") {
-  .header-nav a:not(.button) {
-    padding: 0 15px;
-  }
 }
 
 @include media("<=992px") {

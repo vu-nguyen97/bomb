@@ -20,20 +20,26 @@ const defaultProps = {
 
 export const HeaderLinks = [
   { name: "Home", id: "home" },
-  { name: "Features", id: "features" },
-  { name: "Gameplay", id: "gameplay" },
-  { name: "Penguin", id: "penguin" },
-  { name: "Tokenomics", id: "tokenomics" },
-  { name: "Roadmap", id: "roadmap" },
+  // { name: "Features", id: "features" },
+  // { name: "Gameplay", id: "gameplay" },
+  // { name: "Penguin", id: "penguin" },
+  // { name: "Tokenomics", id: "tokenomics" },
+  // { name: "Roadmap", id: "roadmap" },
+  {
+    name: "Vesting",
+    id: "vesting",
+    url: `${window.location.origin}/vesting`,
+    isNewTab: false,
+  },
   {
     name: "Pitchdeck",
     id: "pitchdeck",
     url: "https://drive.google.com/file/d/1Svjk7C-jljxnAHIaFFj9gDNrTvVyidm-/view",
   },
   {
-    name: "Vesting",
-    id: "vesting",
-    url: `${window.location.origin}/vesting`,
+    name: "Whitepaper",
+    id: "whitepaper",
+    url: "https://whitepaper.piguland.com/",
   },
 ];
 
@@ -152,7 +158,7 @@ const Header = ({
                           <li key={index}>
                             <a
                               href={item.url}
-                              target="_blank"
+                              target={!item.isNewTab ? "_self" : "_blank"}
                               rel="noreferrer"
                               id={`${item.id}Url`}
                             >

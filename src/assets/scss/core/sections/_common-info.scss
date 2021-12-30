@@ -9,7 +9,7 @@
 
   &-downloadBtnsGroup {
     position: absolute;
-    bottom: 8%;
+    bottom: 6%;
     left: 0;
     right: 0;
     z-index: 4;
@@ -21,12 +21,12 @@
       position: relative;
 
       .logoImg {
-        width: 1.6rem;
-        height: 1.6rem;
+        width: 2rem;
+        height: 2rem;
       }
 
-      .line-2 {
-        line-height: 25px;
+      .btnLabel {
+        line-height: 28px;
       }
 
       .comingSoon {
@@ -65,11 +65,7 @@
     }
 
     &-downloadBtnsGroup {
-      .line-1 {
-        font-size: 11px;
-      }
-
-      .line-2 {
+      .btnLabel {
         font-size: 16px;
       }
     }
@@ -77,34 +73,36 @@
 
   @include media("<=576px") {
     &-videoBg {
-      min-height: 440px;
+      min-height: 500px;
     }
 
     &-downloadBtnsGroup {
-      bottom: 2%;
+      bottom: 3%;
 
       &-btnWrapper {
         margin: 0 0.4rem !important;
         padding: 0.25rem 0.6rem 0.25rem 0.5rem !important;
         border-radius: 4px;
 
-        .line-1 {
-          font-size: 9px;
-        }
-
-        .line-2 {
-          font-size: 14px;
+        .btnLabel {
+          font-size: 12px;
         }
 
         .logoImg {
-          width: 1.4rem;
-          height: 1.4rem;
+          width: 1.1rem;
+          height: 1.1rem;
         }
 
         .btn-content {
           margin-left: 0.25rem !important;
         }
       }
+    }
+  }
+
+  @include media("<=340px") {
+    &-videoBg {
+      min-height: 440px;
     }
   }
 

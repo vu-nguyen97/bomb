@@ -3,7 +3,7 @@ import React from "react";
 import logo from "../../assets/images/landing-page/logo.png";
 import apple from "../../assets/images/landing-page/common-info/apple.png";
 import chPlay from "../../assets/images/landing-page/common-info/ch-play.png";
-import windowLogo from "../../assets/images/landing-page/common-info/window.png";
+import playNow from "../../assets/images/landing-page/common-info/play-now.png";
 
 import videoBg from "../../assets/videos/home-video.mp4";
 
@@ -11,22 +11,19 @@ const downloadBtns = [
   {
     name: "apple",
     icon: apple,
-    line1: "Download on the",
-    line2: "App Store",
+    label: "App Store",
     isComingSoon: true,
   },
   {
     name: "ch play",
     icon: chPlay,
-    line1: "Get it on",
-    line2: "Google Play",
+    label: "Google Play",
     isComingSoon: true,
   },
   {
     name: "window",
-    icon: windowLogo,
-    line1: "Download the",
-    line2: "PC version",
+    icon: playNow,
+    label: "Play now",
     isComingSoon: true,
     classnames: "d-none d-lg-block",
   },
@@ -55,11 +52,8 @@ const CommonInfo = () => {
               <div className="CommonInfo-downloadBtnsGroup-btnWrapper px-3 py-2 mx-3 d-flex align-items-center cursor-pointer">
                 <img src={btn.icon} alt={btn.name} className="logoImg" />
                 <div className="btn-content ms-2">
-                  <div className="line-1 font-size-12 text-truncate">
-                    {btn.line1}
-                  </div>
-                  <div className="line-2 font-size-22 text-truncate">
-                    {btn.line2}
+                  <div className="btnLabel font-size-22 text-truncate">
+                    {btn.label}
                   </div>
                 </div>
                 {btn.isComingSoon && (
