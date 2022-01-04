@@ -28,7 +28,7 @@ const CommonInfo = () => {
             <img src={logo} className="img-logo w-100 h-100" alt="ice img" />
 
             <div className="mt-2 text-white d-flex justify-content-end text-font">
-              -PEGIN BEGINS-
+              -PIGU BEGINS-
             </div>
           </div>
         </div>
