@@ -50,7 +50,10 @@ const TokensAndAssets = (props) => {
             </div>
           </div>
 
-          <div className="my-5 reveal-from-bottom" data-reveal-delay="300">
+          <div
+            className="mt-4 mt-md-5 reveal-from-bottom"
+            data-reveal-delay="300"
+          >
             <OwlCarousel
               className="owl-theme"
               loop={true}
@@ -76,7 +79,7 @@ const TokensAndAssets = (props) => {
             >
               {listItem.map((item, id) => (
                 <div
-                  className="TokensAndAssets-item mx-auto mb-3 py-3 px-2"
+                  className="TokensAndAssets-item mx-auto mb-1 py-3 px-2"
                   key={id}
                 >
                   <div className="d-flex flex-column align-items-center justify-content-between h-100">

@@ -127,17 +127,23 @@ const options = {
 
 function Distribution() {
   return (
-    <section className="Pitchdeck d-flex align-items-center justify-content-center">
+    <section className="Distribution d-flex align-items-center justify-content-center">
       <div className="container reveal-from-bottom" data-reveal-delay="200">
-        <div className="row my-5">
-          <div className="col-lg-4 col-12 d-flex flex-column justify-content-start align-items-center">
-            <div className="h5 m-0 text-font">Distribution planning</div>
-            <div className="Pitchdeck-chart w-100">
-              <Doughnut data={chartData} options={options} />
+        <div className="Distribution-wrapper row mt-4 mb-5">
+          <div className="col-lg-4 col-12">
+            <div className="d-flex flex-column justify-content-start align-items-center position-relative">
+              <div className="Distribution-header">
+                <div className="h5 m-0 text-font text-center">
+                  Distribution planning
+                </div>
+              </div>
+              <div className="Distribution-chart w-100">
+                <Doughnut data={chartData} options={options} />
+              </div>
             </div>
           </div>
 
-          <div className="Pitchdeck-table col-lg-8 col-12">
+          <div className="Distribution-table col-lg-8 col-12">
             <Table
               id="tech-companies-1"
               className="table table-striped table-bordered mb-0"

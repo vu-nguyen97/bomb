@@ -1,5 +1,5 @@
 import React from "react";
-import gameplay from "../../assets/images/landing-page/game-preview/gameplay.png";
+// import gameplay from "../../assets/images/landing-page/game-preview/gameplay.png";
 
 const GameplayDemo = () => {
   return (
@@ -15,7 +15,7 @@ const GameplayDemo = () => {
           GAMEPLAY PREVIEW
         </div>
 
-        <img alt="gameplay" src={gameplay} className="img-bg w-100" />
+        {/* <img alt="gameplay" src={gameplay} className="img-bg w-100" /> */}
       </div>
     </section>
   );

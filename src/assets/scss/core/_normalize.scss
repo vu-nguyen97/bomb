@@ -1,3 +1,5 @@
+@import "../settings/base/widths-and-spacing";
+
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -231,9 +233,9 @@ template {
 }
 
 .container {
-  max-width: 1450px !important;
+  max-width: $container--width-boxed !important;
 
   @include media(">1920px") {
-    max-width: 1550px !important;
+    max-width: $container--width-boxed_large !important;
   }
 }

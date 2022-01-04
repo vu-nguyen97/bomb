@@ -1,5 +1,5 @@
 .RoadMap {
-  min-height: calc(100vh - 80px - 250px);
+  min-height: calc(min(100vh - 80px - 250px, 1120px));
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right bottom;

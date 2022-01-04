@@ -33,7 +33,7 @@
 }
 
 .full-viewport {
-  min-height: calc(100vh - 80px);
+  min-height: calc(min(100vh - 80px, 1080px));
   width: 100%;
 
   @include media("<=1025px") {

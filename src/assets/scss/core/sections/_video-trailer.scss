@@ -1,0 +1,27 @@
+@import "../../settings/base/widths-and-spacing";
+
+.VideoTrailer {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  background-image: linear-gradient(to bottom, #01232c, #175a6c);
+
+  .custom-max-width {
+    @include media(">=1000px") {
+      margin: 2rem 0 3rem;
+    }
+  }
+
+  &-videoWrapper {
+    padding-bottom: 56.25%;
+    position: relative;
+
+    &-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}

@@ -1,8 +1,25 @@
-.Pitchdeck {
+.Distribution {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;
   background-image: linear-gradient(to bottom, #42cbe6, #42cce8);
+
+  &-wrapper {
+    @include media(">1600px") {
+      margin-bottom: 6rem !important;
+    }
+  }
+
+  &-header {
+    position: absolute;
+    top: 8px;
+    right: 0;
+    left: 0;
+
+    @include media("<992px") {
+      top: 25px;
+    }
+  }
 
   &-chart {
     max-width: 400px;
