@@ -51,7 +51,7 @@ function RoadMap() {
         "Land first sale",
         "Demo landlord gameplay",
         "Tournament kickstart",
-        "ICE staking",
+        "PIGU staking",
         "1 versus all mode (Arena)",
         "In-game social features",
       ],

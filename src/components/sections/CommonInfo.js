@@ -25,7 +25,7 @@ const CommonInfo = () => {
           data-reveal-delay="300"
         >
           <div className="CommonInfo-header-wrapper">
-            <img src={logo} className="img-logo w-100 h-100" alt="ice img" />
+            <img src={logo} className="img-logo w-100 h-100" alt="logo img" />
 
             <div className="mt-2 text-white d-flex justify-content-end text-font">
               -PIGU BEGINS-

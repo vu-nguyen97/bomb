@@ -21,7 +21,7 @@ const defaultProps = {
 };
 
 export const HeaderLinks = [
-  { name: "Home", id: "home" },
+  { name: "Home", id: "home", url: "/" },
   // { name: "Features", id: "features" },
   // { name: "Gameplay", id: "gameplay" },
   // { name: "Penguin", id: "penguin" },
@@ -167,10 +167,9 @@ const Header = ({
                       return (
                         <li key={index}>
                           <Link
-                            to={""}
+                            to=""
                             onClick={() => onClickNav(item.id)}
                             className="header-nav-item"
-                            id={`${item.id}Link`}
                           >
                             {item.name}
                           </Link>

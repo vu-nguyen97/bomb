@@ -26,8 +26,8 @@ const Home = (props) => {
       setSizeChangeHeader(20);
     }
 
-    document.getElementById("vestingUrl").classList.remove("actived-vesting");
-    document.getElementById("homeLink").classList.add("nav-actived");
+    document.getElementById("vestingUrl")?.classList.remove("actived-vesting");
+    document.getElementById("homeUrl")?.classList.add("nav-actived");
   }, []);
 
   const listenScrollEvent = useCallback(() => {
@@ -48,12 +48,12 @@ const Home = (props) => {
       setIsShowSmoothScroll(true);
     }
 
-    const navItems = document.getElementsByClassName("header-nav-item");
+    const navItems = document.getElementsByClassName("header-nav-item") || [];
     const siteHeaderEl = document.getElementById("site-header");
     if (isAnotherStyle) {
-      siteHeaderEl.classList.add("another-color", "another-bg");
+      siteHeaderEl?.classList.add("another-color", "another-bg");
     } else {
-      siteHeaderEl.classList.remove("another-color", "another-bg");
+      siteHeaderEl?.classList.remove("another-color", "another-bg");
     }
 
     if (isMoreInfo) {

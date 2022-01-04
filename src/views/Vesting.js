@@ -142,7 +142,7 @@ function Vesting() {
                         <img
                           className="iceToken img-contain"
                           src={iceToken}
-                          alt="ice token"
+                          alt="pigu token"
                         />
                       </div>
                     </div>

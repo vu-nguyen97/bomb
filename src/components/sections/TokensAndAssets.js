@@ -8,7 +8,7 @@ import equipment from "../../assets/images/landing-page/tokens-and-assets/equipm
 
 const TokensAndAssets = (props) => {
   const listItem = [
-    { name: "ICE token", img: iceImg, content: "Govern token - BEP20" },
+    { name: "PIGU token", img: iceImg, content: "Govern token - BEP20" },
     { name: "FISH token", img: fish, content: "Ingame token - BEP20" },
     { name: "Penguins", img: avt1, content: "NFT assets - BEP721" },
     { name: "Equipments", img: equipment, content: "NFT assets - BEP721" },
@@ -29,7 +29,7 @@ const TokensAndAssets = (props) => {
               </div>
 
               <div className="m-0">
-                Be a part of the evolution of Penguin World with ICE, our
+                Be a part of the evolution of Penguin World with PIGU, our
                 governance token. Not only does it allows the owner to receive
                 valuable rewards but also to obtain the rights to decide upon
                 the future of the game.
@@ -44,8 +44,8 @@ const TokensAndAssets = (props) => {
 
             <div className="col-md-3"></div>
             <div className="col-md-4 mt-3 d-flex flex-column align-items-center reveal-from-right">
-              <img src={iceImg} className="img-size" alt="ice img" />
-              <h5 className="m-0">1.000.000.000 ICE</h5>
+              <img src={iceImg} className="img-size" alt="pigu img" />
+              <h5 className="m-0">1.000.000.000 PIGU</h5>
               <div>Ready for distribution</div>
             </div>
           </div>
