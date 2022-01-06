@@ -33,11 +33,11 @@
 }
 
 .full-viewport {
-  min-height: calc(min(100vh - 80px, 1080px));
+  min-height: calc(min(100vh - #{$header-height__mobile}, 1080px));
   width: 100%;
 
   @include media("<=1025px") {
-    min-height: calc(min(100vh - 80px, 700px));
+    min-height: calc(min(100vh - #{$header-height__mobile}, 700px));
   }
 
   @include media("<=768px") {

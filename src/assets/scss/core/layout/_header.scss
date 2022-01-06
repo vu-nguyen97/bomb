@@ -1,3 +1,6 @@
+$sticky_header_bg: #23243f;
+$actived_nav_color: #f1b01a;
+
 .site-header {
   position: fixed !important;
   top: 0;
@@ -5,23 +8,22 @@
   z-index: 20 !important;
   background-color: color-bg(header);
 
-  .playNowContainer {
-    .btnPlay {
-      height: 60px;
-    }
+  .container {
+    max-width: 1200px !important;
+  }
 
+  .playNowContainer {
     .playNowContent {
       position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 10%;
+      top: 15px;
+      left: 0;
       right: 0;
-      height: 34px;
-      margin: auto;
-    }
 
-    .playNowText {
-      margin-left: 8px;
+      $border_color: rgba(137, 48, 20, 0.58);
+      & > div {
+        text-shadow: -2px 0 $border_color, 0 2px $border_color,
+          2px 0 $border_color, 0 -2px $border_color;
+      }
     }
   }
 
@@ -31,17 +33,28 @@
     }
   }
 
-  .brand {
-    margin-right: $header-nav--padding-h;
+  a.nav-actived,
+  a:hover,
+  .actived-vesting {
+    color: $actived_nav_color !important;
   }
 
   &.another-bg {
-    background-color: #002631;
+    background-color: $sticky_header_bg;
     animation-name: effect;
     animation-duration: 600ms;
     animation-delay: -200ms;
     animation-timing-function: ease-in-out;
   }
+
+  // &.another-color {
+  //   a {
+  //     color: get-color(light, 4) !important;
+  //     &:hover {
+  //       color: $sticky_header_bg !important;
+  //     }
+  //   }
+  // }
 
   @keyframes effect {
     0% {
@@ -49,50 +62,22 @@
       opacity: 0;
     }
     100% {
-      background-color: #002631;
+      background-color: $sticky_header_bg;
       opacity: 1;
     }
-  }
-
-  &.another-color {
-    a {
-      color: get-color(light, 4) !important;
-      &:hover {
-        color: #002631 !important;
-      }
-    }
-  }
-
-  a.nav-actived {
-    color: #002631 !important;
-  }
-
-  .actived-vesting {
-    color: #3aefff !important;
-  }
-
-  .container {
-    max-width: 1200px !important;
   }
 }
 
 .site-header.another-bg {
-  a:hover {
-    color: #31d3ff !important;
-  }
-
+  a:hover,
   a.nav-actived {
-    color: #31d3ff !important;
+    color: $actived_nav_color !important;
   }
 }
 
 .off-nav-is-active {
-  a.nav-actived {
-    color: #31d3ff !important;
-  }
-
   .site-header {
-    background-color: #002631;
+    background-color: $sticky_header_bg;
   }
 }
 
@@ -106,7 +91,7 @@
 }
 
 .header-logo {
-  flex: 0 0 85px;
+  flex: 0 0 150px;
 
   .header-img {
     object-fit: contain;

@@ -2,9 +2,8 @@ import React, { useState, useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import { Link } from "react-router-dom";
-import logo from "../../assets/images/landing-page/logo.png";
-import btnPlay from "../../assets/images/landing-page/btn-play.png";
-import iconPlay from "../../assets/images/landing-page/icon-play.png";
+import logo from "../../assets/images/logos/logo.png";
+import btnPlay from "../../assets/images/header/btn-play.png";
 
 const propTypes = {
   navPosition: PropTypes.string,
@@ -153,6 +152,7 @@ const Header = ({
                         return (
                           <li key={index}>
                             <a
+                              className="text-uppercase"
                               href={item.url}
                               target={item.isNewTab ? "_blank" : "_self"}
                               rel="noreferrer"
@@ -166,13 +166,12 @@ const Header = ({
 
                       return (
                         <li key={index}>
-                          <Link
-                            to=""
+                          <div
                             onClick={() => onClickNav(item.id)}
-                            className="header-nav-item"
+                            className="header-nav-item text-uppercase"
                           >
                             {item.name}
-                          </Link>
+                          </div>
                         </li>
                       );
                     })}
@@ -182,21 +181,16 @@ const Header = ({
             )}
           </div>
 
-          <div className="playNowContainer position-relative d-none d-lg-block cursor-pointer">
+          <div className="playNowContainer h-100 position-relative d-none d-lg-block cursor-pointer">
             <img
               src={btnPlay}
-              className="btnPlay img-contain w-100"
+              className="btnPlay img-contain h-100 w-100"
               alt="wood"
             />
 
-            <div className="playNowContent d-flex align-items-center">
-              <img
-                src={iconPlay}
-                className="h-100 img-contain"
-                alt="icon play"
-              />
-
-              <div className="playNowText text-orange text-font">Play now</div>
+            <div className="playNowContent text-uppercase text-center">
+              <div>Play</div>
+              <div>now</div>
             </div>
           </div>
 
