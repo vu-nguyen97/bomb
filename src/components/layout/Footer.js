@@ -31,7 +31,7 @@ const Footer = ({ className, topOuterDivider, topDivider, ...props }) => {
               className="col-lg-3 col-12 Footer-logo d-flex justify-content-start align-items-center"
               width={300}
             />
-            <FooterNav className="col-lg-6 col-12 ps-lg-5" />
+            <FooterNav className="col-lg-6 col-12 ps-xxl-5" />
             <FooterSocial className="col-lg-3 col-12 d-flex justify-content-end align-items-center" />
           </div>
         </div>

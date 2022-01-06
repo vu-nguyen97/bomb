@@ -12,16 +12,24 @@
 
     .social-margin:nth-child(n + 2) {
       margin-left: 1.6rem;
+
+      @include media("<1440px", ">=992px") {
+        margin-left: 1rem;
+      }
     }
   }
 
   &-nav {
     &-link:nth-child(n + 2) {
       margin-left: 2rem;
+
+      @include media("<1440px") {
+        margin-left: 1rem;
+      }
     }
   }
 
-  @include media("<=992px") {
+  @include media("<992px") {
     height: auto;
 
     &-logo {

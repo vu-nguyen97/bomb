@@ -13,6 +13,7 @@ const FooterNav = ({ className, ...props }) => {
       {HeaderLinks.map((item, id) => (
         <div className="Footer-nav-link" key={id}>
           <a
+            className="text-uppercase"
             href={item.url}
             target={item.isNewTab ? "_blank" : "_self"}
             rel="noreferrer"
