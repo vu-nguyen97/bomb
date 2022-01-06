@@ -1,25 +1,21 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { useHistory } from "react-router-dom";
 import classNames from "classnames";
 
-import Features from "../components/sections/Features";
+// import Features from "../components/sections/Features";
 import CommonInfo from "../components/sections/CommonInfo";
-import FundInfo from "../components/sections/FundInfo";
-import PenguinPreview from "../components/sections/PenguinPreview";
-import TokensAndAssets from "../components/sections/TokensAndAssets";
-import RoadMap from "../components/sections/RoadMap";
-import Distribution from "../components/sections/Distribution";
+// import PenguinPreview from "../components/sections/PenguinPreview";
+// import TokensAndAssets from "../components/sections/TokensAndAssets";
+// import RoadMap from "../components/sections/RoadMap";
+// import Distribution from "../components/sections/Distribution";
 
 import joinDiscord from "../assets/images/landing-page/join-discord.png";
 import joinDiscordOnMobile from "../assets/images/landing-page/join-discord-mini.png";
-import VideoTrailer from "../components/sections/VideoTrailer";
 
 const Home = (props) => {
   const [isShowSmoothScroll, setIsShowSmoothScroll] = useState(false);
   const [sizeChangeHeader, setSizeChangeHeader] = useState(95);
 
   const isMoreInfo = props.location?.state?.isMoreInfo || false;
-  const history = useHistory();
 
   useEffect(() => {
     if (window.innerWidth <= 500) {
@@ -74,31 +70,14 @@ const Home = (props) => {
     };
   }, [listenScrollEvent]);
 
-  const handleClickMoreInfoBtn = () => {
-    history.push({
-      pathname: "",
-      state: { isMoreInfo: true },
-    });
-    document.getElementById("home").scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <div className="Home position-relative">
       <CommonInfo />
-      {isMoreInfo ? (
-        <>
-          <FundInfo />
-        </>
-      ) : (
-        <>
-          <Features />
-          <VideoTrailer />
-          <PenguinPreview />
-          <TokensAndAssets onClickMoreInfoBtn={handleClickMoreInfoBtn} />
-          <Distribution />
-          <RoadMap />
-        </>
-      )}
+      {/* <Features />
+      <PenguinPreview />
+      <TokensAndAssets />
+      <Distribution />
+      <RoadMap /> */}
 
       <a
         href="https://discord.com/channels/923503591719837696/923504349144055858"
