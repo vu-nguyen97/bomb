@@ -1,87 +1,47 @@
-.site-footer {
+.Footer {
   height: 250px;
   position: relative;
   background-size: cover;
   background-image: url("../../../images/landing-page/footer/footer-bg.png");
 
-  &::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: color-bg(footer);
-    z-index: -3;
-  }
-}
+  &-social {
+    img {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
 
-.footer-blocks {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -($footer-block--padding_h / 2);
-  margin-left: -($footer-block--padding_h / 2);
-  margin-top: -($footer-block--padding_v / 2);
-
-  &:last-of-type {
-    margin-bottom: -($footer-block--padding_v / 2) + $footer-blocks--padding;
-  }
-
-  &:not(:last-of-type) {
-    margin-bottom: ($footer-block--padding_v / 2);
-  }
-}
-
-.footer-block {
-  flex-grow: 1;
-  flex-basis: $footer-block--min-width;
-  box-sizing: content-box;
-  padding: $footer-block--padding_v / 2 $footer-block--padding_h / 2;
-
-  * {
-    box-sizing: border-box;
-  }
-
-  ul li {
-    &:not(:last-child) {
-      margin-bottom: $footer-block-list-padding;
+    .social-margin:nth-child(n + 2) {
+      margin-left: 1.6rem;
     }
   }
 
-  a {
-    @include anchor-aspect(footer-block);
-    @include font-weight(footer-block-link);
-    text-transform: $link-footer-block--transform;
-
-    .invert-color & {
-      @include anchor-aspect(footer-block, inverse);
+  &-nav {
+    &-link:nth-child(n + 2) {
+      margin-left: 2rem;
     }
   }
-}
 
-.footer-social {
-  img {
-    width: 1.5rem;
-    height: 1.5rem;
-  }
+  @include media("<=992px") {
+    height: auto;
 
-  .social-margin:nth-child(n + 2) {
-    margin-left: 0.6rem;
-  }
-}
+    &-logo {
+      margin-top: 1.5rem;
+      justify-content: center !important;
+    }
 
-.footer-nav {
-  margin-left: 12% !important;
-  &-link:nth-child(n + 2) {
-    margin-left: 2rem;
-  }
+    &-nav {
+      margin: 0.5rem 0 1rem;
+      flex-wrap: wrap;
+      justify-content: center !important;
 
-  @include media("<=768px") {
-    margin-left: 5% !important;
-  }
+      &-link {
+        margin: 0 0.5rem !important;
+      }
+    }
 
-  @include media("<=576px") {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    &-social {
+      margin-bottom: 1.5rem;
+      justify-content: center !important;
+    }
   }
 }

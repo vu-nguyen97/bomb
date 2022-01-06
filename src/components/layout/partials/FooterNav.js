@@ -3,12 +3,15 @@ import classNames from "classnames";
 import { HeaderLinks } from "../Header";
 
 const FooterNav = ({ className, ...props }) => {
-  const classes = classNames("footer-nav text-font d-flex", className);
+  const classes = classNames(
+    "Footer-nav text-font d-flex align-items-center",
+    className
+  );
 
   return (
-    <nav {...props} className={classes}>
+    <div {...props} className={classes}>
       {HeaderLinks.map((item, id) => (
-        <div className="footer-nav-link" key={id}>
+        <div className="Footer-nav-link" key={id}>
           <a
             href={item.url}
             target={item.isNewTab ? "_blank" : "_self"}
@@ -18,7 +21,7 @@ const FooterNav = ({ className, ...props }) => {
           </a>
         </div>
       ))}
-    </nav>
+    </div>
   );
 };
 

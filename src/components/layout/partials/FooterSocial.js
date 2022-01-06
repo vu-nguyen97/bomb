@@ -1,27 +1,21 @@
 import React from "react";
 import classNames from "classnames";
-import fb from "../../../assets/images/landing-page/footer/fb.png";
-import discord from "../../../assets/images/landing-page/footer/discord.png";
-import telegram from "../../../assets/images/landing-page/footer/telegram.png";
-import twitter from "../../../assets/images/landing-page/footer/twitter.png";
-import youtube from "../../../assets/images/landing-page/footer/youtube.png";
+import fb from "../../../assets/images/footer/icon-facebook.png";
+import discord from "../../../assets/images/footer/icon-discord.png";
+import telegram from "../../../assets/images/footer/icon-tele.png";
+import instagram from "../../../assets/images/footer/icon-insta.png";
 
 const FooterSocial = ({ className }) => {
-  const classes = classNames("footer-social", className);
+  const classes = classNames("Footer-social", className);
   const listIcon = [
-    { name: "fb", icon: fb, url: "https://www.facebook.com/PiguLand/" },
+    { name: "fb", icon: fb, url: "" },
+    { name: "instagram", icon: instagram, url: "" },
     {
       name: "discord",
       icon: discord,
-      url: "https://discord.com/channels/923503591719837696/923504349144055858",
+      url: "",
     },
-    { name: "twitter", icon: twitter, url: "https://twitter.com/Pigu_Land" },
-    { name: "telegram", icon: telegram, url: "https://t.me/PiguLandChannel" },
-    {
-      name: "youtube",
-      icon: youtube,
-      url: "https://www.youtube.com/channel/UCrQ0_fEIbYR3Wi_-tOYfCzA",
-    },
+    { name: "telegram", icon: telegram, url: "" },
   ];
 
   return (
