@@ -1,10 +1,10 @@
 import React from "react";
-import checkpoin1 from "../../assets/images/landing-page/roadmap/checkpoint-1.png";
-import checkpoin2 from "../../assets/images/landing-page/roadmap/checkpoint-2.png";
-import checkpoin3 from "../../assets/images/landing-page/roadmap/checkpoint-3.png";
-import checkpoin4 from "../../assets/images/landing-page/roadmap/checkpoint-4.png";
-import checkpoin5 from "../../assets/images/landing-page/roadmap/checkpoint-5.png";
-import checkpoin6 from "../../assets/images/landing-page/roadmap/checkpoint-6.png";
+import checkpoin1 from "../../assets/images/roadmap/roadmap-icon-1.png";
+import checkpoin2 from "../../assets/images/roadmap/roadmap-icon-2.png";
+import checkpoin3 from "../../assets/images/roadmap/roadmap-icon-3.png";
+import checkpoin4 from "../../assets/images/roadmap/roadmap-icon-4.png";
+import checkpoin5 from "../../assets/images/roadmap/roadmap-icon-5.png";
+import checkpoin6 from "../../assets/images/roadmap/roadmap-icon-6.png";
 
 function RoadMap() {
   const roadData = [
@@ -20,7 +20,7 @@ function RoadMap() {
         "Testnet launch gameplay",
         "Testnet launch Marketplace",
         "IDO",
-        "Genesis Penguin first sale",
+        "NFT Items Box first sale",
         "Community bootstrap",
         "Whitepaper",
         "Airdrop campaign",
@@ -32,14 +32,10 @@ function RoadMap() {
       content: [
         "Official Launch In-game",
         "Official Launch Marketplace",
-        "Breeding Penguin release",
-        "Forging Equipment release",
+        "New League release",
+        "Craft Consumable Item release",
         {
-          "Play to earn:": [
-            "Daily quest",
-            "Dungeon gameplay",
-            "Arena gameplay",
-          ],
+          "Play to earn:": ["Daily quest", "Farm gameplay", "Boom PVP & PVE"],
         },
       ],
     },
@@ -51,8 +47,8 @@ function RoadMap() {
         "Land first sale",
         "Demo landlord gameplay",
         "Tournament kickstart",
-        "PIGU staking",
-        "1 versus all mode (Arena)",
+        "PXC staking",
+        "Pet racing arena release",
         "In-game social features",
       ],
     },
@@ -60,9 +56,9 @@ function RoadMap() {
       name: "Q4-2022",
       img: checkpoin5,
       content: [
-        "Landlord gameplay release",
-        "Penguin health system release",
-        "Penguin’s Jobs release",
+        "Dungeon & Campaign release",
+        "Craft Equipment Item release",
+        "World Jobs release",
       ],
     },
     {
@@ -77,22 +73,28 @@ function RoadMap() {
 
   return (
     <section className="RoadMap page-section" id="roadmap">
-      <div className="RoadMap-wrapper py-3">
-        <div className="h4 mt-0 text-font text-center reveal-from-bottom">
-          Roadmap
+      <div className="py-3">
+        <div className="RoadMap-title h4 mt-0 text-font text-center reveal-from-bottom">
+          ROAD MAP
         </div>
 
-        <div className="mx-5">
+        <div className="RoadMap-wrapper mx-5">
           <div className="row">
             {roadData.map((obj, roadId) => (
               <div
-                className="col-xl-2 col-md-4 col-sm-6 col-12 d-flex flex-column align-items-center mb-2 reveal-from-bottom"
+                className="RoadMap-content col-xl-2 col-md-4 col-sm-6 col-12 d-flex flex-column align-items-center mb-2 reveal-from-bottom"
                 key={roadId}
               >
-                <img src={obj.img} alt={obj.name} className="img-size" />
+                <img
+                  src={obj.img}
+                  alt={obj.name}
+                  className={`img-size tree-${roadId + 1} img-contain mb-3`}
+                />
 
-                <div className="h6 m-0 text-font">{obj.name}</div>
-                <ul>
+                <div className="RoadMap-content-title font-size-16 mb-3 text-font">
+                  {obj.name}
+                </div>
+                <ul className="RoadMap-content-line text-font font-size-9">
                   {obj.content.map((item, id) => {
                     let contentComp;
                     if (typeof item !== "object") {
@@ -108,7 +110,7 @@ function RoadMap() {
                                 key={index}
                                 className="sub-content mb-1 ms-2"
                               >
-                                {subItem}
+                                - {subItem}
                               </div>
                             );
                           })}

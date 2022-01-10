@@ -1,21 +1,69 @@
 .RoadMap {
-  min-height: calc(min(100vh - #{$header-height__mobile} - 250px, 1120px));
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: right bottom;
-  background-image: url("../../../images/landing-page/roadmap/bg.png");
+  min-height: calc(min(100vh - #{$header-height__desktop} - 250px, 1120px));
+  // background-repeat: no-repeat;
+  // background-size: contain;
+  // background-position: center bottom;
+  // background-image: url("../../../images/partern-pixel.png");
+
+  &-title {
+    color: #20d6c7;
+    text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.32);
+  }
 
   .img-size {
-    width: 200px;
-    height: 200px;
+    height: 230px;
+    object-position: center bottom;
+
+    &.tree-1 {
+      width: 70px;
+    }
+
+    &.tree-2 {
+      width: 100px;
+    }
+
+    &.tree-3,
+    &.tree-4 {
+      width: 130px;
+    }
+
+    &.tree-5,
+    &.tree-6 {
+      width: 100%;
+    }
+  }
+
+  &-content {
+    &-title {
+      color: #8eb146;
+    }
   }
 
   @include media("<=992px") {
-    background-image: none;
-    background-color: #00465a;
+    .img-size {
+      &.tree-1,
+      &.tree-2,
+      &.tree-3 {
+        height: 160px;
+      }
+    }
   }
 
-  @include media("<=576px") {
-    padding-top: 1rem !important;
+  @include media("<=768px") {
+    &-wrapper {
+      margin-left: 1rem !important;
+      margin-right: 1rem !important;
+    }
+
+    .img-size {
+      &.tree-1,
+      &.tree-2 {
+        height: 140px;
+      }
+
+      &.tree-4 {
+        height: 160px;
+      }
+    }
   }
 }

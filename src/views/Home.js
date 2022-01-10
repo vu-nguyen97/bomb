@@ -5,7 +5,7 @@ import Features from "../components/sections/Features";
 import CommonInfo from "../components/sections/CommonInfo";
 // import PenguinPreview from "../components/sections/PenguinPreview";
 // import TokensAndAssets from "../components/sections/TokensAndAssets";
-// import RoadMap from "../components/sections/RoadMap";
+import RoadMap from "../components/sections/RoadMap";
 // import Distribution from "../components/sections/Distribution";
 
 import joinDiscord from "../assets/images/landing-page/join-discord.png";
@@ -74,10 +74,10 @@ const Home = (props) => {
     <div className="Home position-relative">
       <CommonInfo />
       <Features />
+      <RoadMap />
       {/* <PenguinPreview />
       <TokensAndAssets />
-      <Distribution />
-      <RoadMap /> */}
+      <Distribution /> */}
 
       <a
         href="https://discord.com/channels/923503591719837696/923504349144055858"
