@@ -1,88 +1,54 @@
 .Features {
-  .bg-layer {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-repeat: no-repeat;
-  }
-
-  &-bg {
-    background-size: cover;
-    background-position: center top;
-    background-image: linear-gradient(to bottom, #054455, #01232c);
-  }
-
-  &-fishLayer {
-    background-size: contain;
-    background-position: left center;
-    background-image: url("../../../images/landing-page/features/fish-bg.png");
-
-    @include media("<=768px") {
-      left: -300px !important;
-      right: -300px !important;
-    }
-  }
-
-  @include media("<=768px") {
-    padding-bottom: 0 !important;
-  }
-
-  &-metaverse {
-    &-content {
-      min-height: 370px;
-
-      .metaverse-bg--lower {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        left: 45%;
-        top: 28px;
-
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: right center;
-        background-image: url("../../../images/landing-page/metaverse/metaverse.png");
-      }
-
-      @include media("<=900px") {
-        flex-direction: column;
-        justify-content: center;
-
-        .content {
-          width: 100%;
-        }
-
-        .metaverse-bg--lower {
-          flex-shrink: 0;
-          position: relative;
-          background-size: contain;
-          height: 240px;
-          left: 0;
-          width: 130%;
-        }
-      }
-
-      @include media("<=768px") {
-        padding-bottom: 3rem !important;
-      }
-
-      @include media("<=576px") {
-        .custom-margin {
-          padding-bottom: 0 !important;
-        }
-
-        .metaverse-bg--lower {
-          width: 150%;
-        }
-      }
-    }
-  }
+  $carousel_height: 480px;
 
   &-carousel {
-    @include media(">=1500px") {
-      margin-bottom: 4rem !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: $carousel_height;
+  }
+
+  &-park {
+    padding-top: calc(#{$carousel_height} - 150px);
+
+    &-pixel {
+      position: absolute;
+      top: calc(#{$carousel_height} - 150px + 23px);
+      left: 0;
+      right: 0;
+      z-index: -1;
+      height: 16%;
+
+      img {
+        object-position: center top;
+      }
+    }
+  }
+
+  &-contentUpper,
+  &-contentLower {
+    position: absolute;
+    left: 8%;
+    right: 0;
+  }
+
+  &-contentUpper {
+    bottom: 0;
+
+    .custom-text {
+      $border_color: #171c29;
+      text-shadow: -2px 0 $border_color, 0 2px $border_color,
+        2px 0 $border_color, 0 -2px $border_color;
+    }
+  }
+
+  &-contentLower {
+    top: 0;
+    max-width: 35%;
+
+    @include media("<=992px") {
+      max-width: 84%;
     }
   }
 
@@ -90,20 +56,7 @@
     width: 200px;
 
     &-img {
-      object-fit: contain;
       height: 230px;
-    }
-  }
-
-  .owl-dot {
-    span {
-      background-color: darken(#002631, 2%) !important;
-    }
-  }
-
-  .owl-dot.active {
-    span {
-      background-color: white !important;
     }
   }
 }

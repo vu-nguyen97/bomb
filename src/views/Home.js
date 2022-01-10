@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import classNames from "classnames";
 
-// import Features from "../components/sections/Features";
+import Features from "../components/sections/Features";
 import CommonInfo from "../components/sections/CommonInfo";
 // import PenguinPreview from "../components/sections/PenguinPreview";
 // import TokensAndAssets from "../components/sections/TokensAndAssets";
@@ -73,8 +73,8 @@ const Home = (props) => {
   return (
     <div className="Home position-relative">
       <CommonInfo />
-      {/* <Features />
-      <PenguinPreview />
+      <Features />
+      {/* <PenguinPreview />
       <TokensAndAssets />
       <Distribution />
       <RoadMap /> */}

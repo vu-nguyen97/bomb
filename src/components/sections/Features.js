@@ -1,127 +1,131 @@
 import React from "react";
-import dungeon from "../../assets/images/landing-page/features/dungeon.png";
-import arena from "../../assets/images/landing-page/features/arena.png";
-import breeding from "../../assets/images/landing-page/features/breeding.png";
-import forging from "../../assets/images/landing-page/features/forging.png";
-import landlord from "../../assets/images/landing-page/features/landlord.png";
 import OwlCarousel from "react-owl-carousel";
+
+import resourceFarm from "../../assets/images/features/icon-farm.png";
+import forging from "../../assets/images/features/icon-Forge.png";
+import iconPVP from "../../assets/images/features/icon-PVP.png";
+import iconPVE from "../../assets/images/features/icon-PVE.png";
+import challenger from "../../assets/images/features/icon-challenger.png";
+
+import parkUpper from "../../assets/images/features/park1.png";
+import parkLower from "../../assets/images/features/park2.png";
+import parternPixel from "../../assets/images/partern-pixel.png";
 
 const featureList = [
   {
-    name: "Dungeon",
-    img: dungeon,
-    content:
-      "Raid dungeons ,defeat powerful monsters and hunt for valuable treasures.",
+    name: "Resource Farm",
+    img: resourceFarm,
+    content: "Farming from land and gainresource foranything.",
   },
   {
-    name: "Arena",
-    img: arena,
-    content:
-      "Put your strategical mind to the test by forming your own teams of penguins in a fight for glory against other players.",
-  },
-  {
-    name: "Breeding",
-    img: breeding,
-    content: "Get your penguin a mate and make a whole new generation.",
-  },
-  {
-    name: "Forging",
+    name: "Craft",
     img: forging,
-    content: "Forge powerful equipments and bring them into the battle.",
+    content: "Crafting consum and powerful equipment items.",
   },
   {
-    name: "Landlord",
-    img: landlord,
+    name: "PLAY TOGETHER",
+    img: iconPVP,
+    content: "Play with friends as ally or against each other in fight.",
+  },
+  {
+    name: "Dungeon & Campaign",
+    img: iconPVE,
     content:
-      "Get your own plot of land and become a true king in your kingdom.",
-    title: "(Coming soon)",
+      "Raid dungeons, deafeat powerful monsters and hunt for valuable treasures.",
+  },
+  {
+    name: "SEASON CHALLENGER",
+    img: challenger,
+    content: "Completed Season Challenge to claim limited season reward",
   },
 ];
 
 const Features = () => {
   return (
-    <section
-      className="Features page-section full-viewport pb-5 d-flex align-items-center justify-content-center"
-      id="features"
-    >
-      <div className="Features-bg bg-layer" />
-      <div className="Features-fishLayer bg-layer" />
-
-      <div className="Features-metaverse h-100 w-100">
-        <div className="Features-metaverse-carousel container h-100 d-flex flex-column justify-content-around">
-          <div className="Features-carousel reveal-from-bottom mt-4 mb-3">
-            <OwlCarousel
-              className="owl-theme"
-              loop={true}
-              margin={10}
-              dots={true}
-              responsive={{
-                0: {
-                  items: 1,
-                },
-                545: {
-                  items: 2,
-                },
-                790: {
-                  items: 3,
-                },
-                1048: {
-                  items: 4,
-                },
-                1535: {
-                  items: 5,
-                },
-              }}
-            >
-              {featureList.map((item, id) => (
-                <div className="Features-item mx-auto" key={id}>
-                  <div className="d-flex flex-column align-items-center">
-                    <div className="img-wrapper">
-                      <img
-                        src={item.img}
-                        alt={item.name}
-                        className="Features-item-img"
-                      />
-                    </div>
-                    <div className="h5 mt-0 mb-2 text-font">{item.name}</div>
-                    <div className="px-1 text-center">{item.content}</div>
-                  </div>
+    <section className="Features page-section" id="features">
+      <div className="Features-carousel">
+        <OwlCarousel
+          className="owl-theme"
+          loop={true}
+          margin={10}
+          dots={false}
+          responsive={{
+            0: {
+              items: 1,
+            },
+            545: {
+              items: 2,
+            },
+            790: {
+              items: 3,
+            },
+            1048: {
+              items: 4,
+            },
+            1535: {
+              items: 5,
+            },
+          }}
+        >
+          {featureList.map((item, id) => (
+            <div className="Features-item mx-auto text-font" key={id}>
+              <div className="d-flex flex-column align-items-center">
+                <div className="img-wrapper">
+                  <img
+                    src={item.img}
+                    alt={item.name}
+                    className="Features-item-img img-contain"
+                  />
                 </div>
-              ))}
-            </OwlCarousel>
-          </div>
-        </div>
-
-        <div className="Features-metaverse-content position-relative d-flex align-items-center">
-          <div className="container">
-            <div className="row mb-3 custom-margin">
-              <div
-                className="content col-md-5 reveal-from-left"
-                data-reveal-delay="200"
-              >
-                <div className="text-font h5">
-                  Bringing the metaverse to you
+                <div className="h5 mt-0 mb-2 text-center text-orange">
+                  {item.name}
                 </div>
-                <div className="mb-0">
-                  <div>
-                    Explore a world where penguins are fierce warriors, fighting
-                    for glory and prosperity of their kingdoms.
-                  </div>
-                  <div className="mt-4">
-                    Dungeon. Arena. Breed. Forge. Lanlord. All in one world.
-                  </div>
-                  <div className="mt-4">
-                    Play and earn tokens, become a part of the evolution!
-                  </div>
+                <div className="px-1 text-center font-size-12">
+                  {item.content}
                 </div>
               </div>
             </div>
+          ))}
+        </OwlCarousel>
+      </div>
+
+      <div className="Features-park position-relative">
+        <div className="Features-park-pixel">
+          <img
+            src={parternPixel}
+            alt="partern pixel"
+            className="img-cover h-100 w-100"
+          />
+        </div>
+
+        <img src={parkUpper} className="w-100 img-contain" alt="park upper" />
+
+        <div className="Features-contentUpper text-font">
+          <div className="font-size-18">Bring to you</div>
+          <div className="mt-3 h5 text-orange custom-text">
+            <div>CLASSIC</div>
+            <div>METAVERSE</div>
+            <div>WORLD!</div>
+          </div>
+        </div>
+      </div>
+
+      <div className="position-relative">
+        <img src={parkLower} className="w-100 img-contain" alt="park lower" />
+
+        <div className="Features-contentLower text-font">
+          <div className="font-size-18">Dear Friends!</div>
+
+          <div className="mt-3">
+            I'm waiting for you guys to join our world.
+          </div>
+          <div>Where we can farm, play, earn and get fun together.</div>
+          <div className="mt-3">Farm. Forge. Arena. Dungeon. Hunt.</div>
+          <div className="mt-3">
+            All in one world Send this call to the world.
           </div>
 
-          <div
-            className="metaverse-bg--lower reveal-from-right"
-            data-reveal-delay="200"
-          />
+          <div className="mt-5 text-end font-size-18">Uncle Qwan</div>
         </div>
       </div>
     </section>

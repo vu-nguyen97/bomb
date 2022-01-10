@@ -7,7 +7,6 @@ $palette: (
     2: #ffffff,
     3: #717d86,
     4: #9ca9b3,
-    5: #dbeae8,
   ),
   dark: (
     1: #151719,
@@ -36,7 +35,7 @@ $palette: (
 // Base typography: color
 $color: (
   heading: get-color(light, 2),
-  base: get-color(light, 5),
+  base: get-color(light, 2),
   high-contrast: get-color(light, 1),
   mid-contrast: get-color(light, 2),
   low-contrast: get-color(light, 3),
@@ -83,7 +82,7 @@ $icon--color: (
   social-inverse: null,
   // social icons
   social-hover-inverse: null
-    // social icons (:hover),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+    // social icons (:hover),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 );
 
 // Misc elements: background color
