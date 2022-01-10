@@ -4,7 +4,7 @@ import classNames from "classnames";
 import Features from "../components/sections/Features";
 import CommonInfo from "../components/sections/CommonInfo";
 // import PenguinPreview from "../components/sections/PenguinPreview";
-// import TokensAndAssets from "../components/sections/TokensAndAssets";
+import TokensAndAssets from "../components/sections/TokensAndAssets";
 import RoadMap from "../components/sections/RoadMap";
 // import Distribution from "../components/sections/Distribution";
 
@@ -74,9 +74,9 @@ const Home = (props) => {
     <div className="Home position-relative">
       <CommonInfo />
       <Features />
+      <TokensAndAssets />
       <RoadMap />
       {/* <PenguinPreview />
-      <TokensAndAssets />
       <Distribution /> */}
 
       <a

@@ -1,22 +1,36 @@
 .TokensAndAssets {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center bottom;
-  background-image: linear-gradient(to bottom, #3baac4, #42cbe6);
-
   &-item {
-    width: 180px;
-    height: 200px;
-    border-radius: 20px;
-    background-color: #2a92ae;
-
     &-img {
-      height: 100px;
-      object-fit: contain;
+      height: 240px;
+      width: calc((240px * 258) / 362) !important;
+    }
+
+    &-title {
+      position: absolute;
+      top: 8%;
+      right: 12%;
     }
 
     &-content {
-      max-width: 160px;
+      position: absolute;
+      bottom: 8%;
+      left: 12%;
+    }
+
+    .color-1 {
+      color: #38365f;
+    }
+    .color-2 {
+      color: #733e17;
+    }
+    .color-3 {
+      color: #4e2839;
+    }
+    .color-4 {
+      color: #764040;
+    }
+    .color-5 {
+      color: #315149;
     }
   }
 
@@ -27,7 +41,7 @@
 
   .owl-dot {
     span {
-      background-color: lighten(#002631, 2%) !important;
+      background-color: #0b0c32 !important;
     }
   }
 

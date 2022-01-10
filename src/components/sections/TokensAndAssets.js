@@ -1,18 +1,20 @@
 import React from "react";
 import OwlCarousel from "react-owl-carousel";
-import iceImg from "../../assets/images/landing-page/tokens-and-assets/ice.png";
-import land from "../../assets/images/landing-page/tokens-and-assets/land.png";
-import avt1 from "../../assets/images/landing-page/tokens-and-assets/penguin.png";
-import fish from "../../assets/images/landing-page/tokens-and-assets/fish.png";
-import equipment from "../../assets/images/landing-page/tokens-and-assets/equipment.png";
 
-const TokensAndAssets = (props) => {
+import pxc from "../../assets/images/tokens-and-assets/PXC.png";
+import pxg from "../../assets/images/tokens-and-assets/PXG.png";
+import item from "../../assets/images/tokens-and-assets/item.png";
+import pet from "../../assets/images/tokens-and-assets/pet.png";
+import land from "../../assets/images/tokens-and-assets/land.png";
+import bigPXC from "../../assets/images/tokens-and-assets/big-PXC.png";
+
+const TokensAndAssets = () => {
   const listItem = [
-    { name: "PIGU token", img: iceImg, content: "Govern token - BEP20" },
-    { name: "FISH token", img: fish, content: "Ingame token - BEP20" },
-    { name: "Penguins", img: avt1, content: "NFT assets - BEP721" },
-    { name: "Equipments", img: equipment, content: "NFT assets - BEP721" },
-    { name: "Land", img: land, content: "(Coming soon)" },
+    { name: "PXC", img: pxc, content: "BEP20", title: "Govem Token" },
+    { name: "PXG", img: pxg, content: "BEP20", title: "Ingame Token" },
+    { name: "Equipments", img: item, content: "BEP20", title: "NFT-Asset" },
+    { name: "Pet", img: pet, content: "BEP20", title: "NFT-Asset" },
+    { name: "Home Land", img: land, content: "BEP20", title: "NFT-Asset" },
   ];
 
   return (
@@ -22,42 +24,35 @@ const TokensAndAssets = (props) => {
     >
       <div className="container">
         <div>
-          <div className="row align-items-center">
-            <div className="col-md-5 mt-3 reveal-from-left">
-              <div className="h5 text-font mt-0 reveal-from-bottom">
+          <div className="row align-items-center text-font">
+            <div className="col-lg-5 col-md-6 mt-4 reveal-from-left">
+              <div className="text-blue h5 mt-0 reveal-from-bottom text-uppercase">
                 Tokens and Assets
               </div>
 
-              <div className="m-0">
-                Be a part of the evolution of Penguin World with PIGU, our
-                governance token. Not only does it allows the owner to receive
-                valuable rewards but also to obtain the rights to decide upon
-                the future of the game.
+              <div className="m-0 font-size-10">
+                Be a part of the evolution of Pixel Metaverse World with PXC,
+                our governance token. Not only does it allows the owner to
+                receive valuable rewards but also to obtain the rights to decide
+                upon the future of the game.
               </div>
-              {/* <button
-                className="btn btn-outline-primary mt-3"
-                onClick={props.onClickMoreInfoBtn}
-              >
-                More info
-              </button> */}
             </div>
 
-            <div className="col-md-3"></div>
-            <div className="col-md-4 mt-3 d-flex flex-column align-items-center reveal-from-right">
-              <img src={iceImg} className="img-size" alt="pigu img" />
-              <h5 className="m-0">1.000.000.000 PIGU</h5>
-              <div>Ready for distribution</div>
+            <div className="col-lg-2 d-none d-lg-block" />
+            <div className="col-lg-5 col-md-6 mt-4 d-flex flex-column align-items-center reveal-from-right">
+              <img src={bigPXC} className="img-size" alt="pixel img" />
+              <h5 className="m-0 text-blue">1.000.000.000 PXC</h5>
+              <div className="font-size-10 mt-2">Ready for distribution</div>
             </div>
           </div>
 
           <div
-            className="mt-4 mt-md-5 reveal-from-bottom"
+            className="mt-4 mt-md-5 reveal-from-bottom mb-3"
             data-reveal-delay="300"
           >
             <OwlCarousel
               className="owl-theme"
               loop={true}
-              margin={10}
               dots={true}
               responsive={{
                 0: {
@@ -72,25 +67,31 @@ const TokensAndAssets = (props) => {
                 820: {
                   items: 4,
                 },
-                1000: {
+                1020: {
                   items: 5,
                 },
               }}
             >
               {listItem.map((item, id) => (
-                <div
-                  className="TokensAndAssets-item mx-auto mb-1 py-3 px-2"
-                  key={id}
-                >
-                  <div className="d-flex flex-column align-items-center justify-content-between h-100">
-                    <div className="text-font">{item.name}</div>
+                <div className="TokensAndAssets-item text-font" key={id}>
+                  <div className="TokensAndAssets-item-img position-relative mx-auto">
                     <img
                       src={item.img}
                       alt={item.name}
-                      className="TokensAndAssets-item-img"
+                      className="w-100 h-100 img-contain"
                     />
-                    <div className="TokensAndAssets-item-content text-center text-truncate">
-                      {item.content}
+                    <div
+                      className={`TokensAndAssets-item-title text-uppercase font-size-10 color-${
+                        id + 1
+                      }`}
+                    >
+                      {item.name}
+                    </div>
+                    <div
+                      className={`TokensAndAssets-item-content color-${id + 1}`}
+                    >
+                      <div className="font-size-10">{item.content}</div>
+                      <div className="font-size-8">{item.title}</div>
                     </div>
                   </div>
                 </div>
