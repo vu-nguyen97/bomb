@@ -11,19 +11,6 @@
 
   &-park {
     padding-top: calc(#{$carousel_height} - 150px);
-
-    &-pixel {
-      position: absolute;
-      top: calc(#{$carousel_height} - 150px + 23px);
-      left: 0;
-      right: 0;
-      z-index: -1;
-      height: 16%;
-
-      img {
-        object-position: center top;
-      }
-    }
   }
 
   &-contentUpper,
@@ -46,17 +33,33 @@
   &-contentLower {
     top: 0;
     max-width: 35%;
-
-    @include media("<=992px") {
-      max-width: 84%;
-    }
   }
 
   &-item {
     width: 200px;
 
+    &-name {
+      height: 60px;
+    }
+
     &-img {
       height: 230px;
+    }
+  }
+
+  @include media("<=992px") {
+    &-contentLower {
+      max-width: 84%;
+    }
+  }
+
+  @include media("<=576px") {
+    &-park {
+      padding-top: calc(#{$carousel_height} - 80px);
+    }
+
+    .custom-font-size {
+      font-size: 11px;
     }
   }
 }

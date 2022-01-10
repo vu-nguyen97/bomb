@@ -9,7 +9,6 @@ import challenger from "../../assets/images/features/icon-challenger.png";
 
 import parkUpper from "../../assets/images/features/park1.png";
 import parkLower from "../../assets/images/features/park2.png";
-import parternPixel from "../../assets/images/partern-pixel.png";
 
 const featureList = [
   {
@@ -18,7 +17,7 @@ const featureList = [
     content: "Farming from land and gainresource foranything.",
   },
   {
-    name: "Craft",
+    name: "Item Craft",
     img: forging,
     content: "Crafting consum and powerful equipment items.",
   },
@@ -47,7 +46,6 @@ const Features = () => {
         <OwlCarousel
           className="owl-theme"
           loop={true}
-          margin={10}
           dots={false}
           responsive={{
             0: {
@@ -77,10 +75,12 @@ const Features = () => {
                     className="Features-item-img img-contain"
                   />
                 </div>
-                <div className="h5 mt-0 mb-2 text-center text-orange">
-                  {item.name}
+                <div className="Features-item-name mb-3 d-flex align-items-center">
+                  <div className="h5 m-0 text-orange text-uppercase text-center">
+                    {item.name}
+                  </div>
                 </div>
-                <div className="px-1 text-center font-size-12">
+                <div className="custom-font-size px-1 text-center font-size-13">
                   {item.content}
                 </div>
               </div>
@@ -90,14 +90,6 @@ const Features = () => {
       </div>
 
       <div className="Features-park position-relative">
-        <div className="Features-park-pixel">
-          <img
-            src={parternPixel}
-            alt="partern pixel"
-            className="img-cover h-100 w-100"
-          />
-        </div>
-
         <img src={parkUpper} className="w-100 img-contain" alt="park upper" />
 
         <div className="Features-contentUpper text-font">
