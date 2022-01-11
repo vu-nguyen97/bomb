@@ -74,7 +74,7 @@ function RoadMap() {
   return (
     <section className="RoadMap page-section" id="roadmap">
       <div className="py-3">
-        <div className="h5 mt-0 text-font text-center text-blue reveal-from-bottom">
+        <div className="mb-3 text-font text-center text-blue reveal-from-bottom">
           ROAD MAP
         </div>
 

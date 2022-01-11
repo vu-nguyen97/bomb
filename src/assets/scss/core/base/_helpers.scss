@@ -89,7 +89,12 @@
 }
 .text-blue {
   color: #20d6c7;
+  font-size: 20px;
   text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.32);
+
+  @include media("<576px") {
+    font-size: 17px;
+  }
 }
 
 .invert-color {
@@ -108,7 +113,6 @@
 
 .text-font {
   @include font-family(page);
-  letter-spacing: 1px;
 }
 
 .text-base {

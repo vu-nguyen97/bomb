@@ -93,12 +93,14 @@ const Features = () => {
         <img src={parkUpper} className="w-100 img-contain" alt="park upper" />
 
         <div className="Features-contentUpper text-font">
-          <div className="font-size-18">Bring to you</div>
-          <div className="mt-3 h5 text-orange custom-text">
+          <div className="custom-size-1">Bring to you</div>
+          <div className="mt-lg-3 mt-2 mb-lg-3 mb-2 h5 text-orange custom-header">
             <div>CLASSIC</div>
             <div>METAVERSE</div>
             <div>WORLD!</div>
           </div>
+
+          <div className="custom-size-1">Dear Friends!</div>
         </div>
       </div>
 
@@ -106,18 +108,22 @@ const Features = () => {
         <img src={parkLower} className="w-100 img-contain" alt="park lower" />
 
         <div className="Features-contentLower text-font">
-          <div className="font-size-18">Dear Friends!</div>
-
-          <div className="mt-3">
-            I'm waiting for you guys to join our world.
+          <div className="custom-size-2">
+            <div className="mt-lg-3 mt-2">
+              I'm waiting for you guys to join our world.
+            </div>
+            <div>Where we can farm, play, earn and get fun together.</div>
+            <div className="mt-lg-3 mt-2">
+              Farm. Forge. Arena. Dungeon. Hunt.
+            </div>
+            <div className="mt-lg-3 mt-2">
+              All in one world Send this call to the world.
+            </div>
           </div>
-          <div>Where we can farm, play, earn and get fun together.</div>
-          <div className="mt-3">Farm. Forge. Arena. Dungeon. Hunt.</div>
-          <div className="mt-3">
-            All in one world Send this call to the world.
-          </div>
 
-          <div className="mt-5 text-end font-size-18">Uncle Qwan</div>
+          <div className="mt-xxl-5 mt-md-3 mt-2 text-end custom-size-1">
+            Uncle Qwan
+          </div>
         </div>
       </div>
     </section>

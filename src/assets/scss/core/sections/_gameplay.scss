@@ -1,5 +1,5 @@
 .Gameplay {
-  margin-top: -320px;
+  margin-top: -280px;
 
   &-slide {
     position: absolute;
@@ -71,5 +71,9 @@
   .owl-stage,
   .owl-item {
     height: 100%;
+  }
+
+  @include media("<=576px") {
+    margin-top: 10px;
   }
 }

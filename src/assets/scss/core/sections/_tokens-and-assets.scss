@@ -50,4 +50,10 @@
       background-color: white !important;
     }
   }
+
+  @include media("<=576px") {
+    .custom-size {
+      font-size: 9px;
+    }
+  }
 }

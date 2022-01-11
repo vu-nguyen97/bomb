@@ -23,7 +23,7 @@
   &-contentUpper {
     bottom: 0;
 
-    .custom-text {
+    .custom-header {
       $border_color: #171c29;
       text-shadow: -2px 0 $border_color, 0 2px $border_color,
         2px 0 $border_color, 0 -2px $border_color;
@@ -47,6 +47,16 @@
     }
   }
 
+  .custom-size-1 {
+    font-size: 18px;
+  }
+
+  @include media("<=1500px") {
+    &-contentLower {
+      max-width: 50%;
+    }
+  }
+
   @include media("<=992px") {
     &-contentLower {
       max-width: 84%;
@@ -55,11 +65,54 @@
 
   @include media("<=576px") {
     &-park {
-      padding-top: calc(#{$carousel_height} - 80px);
+      padding-top: calc(#{$carousel_height} - 50px);
+    }
+
+    &-contentUpper,
+    &-contentLower {
+      left: 0.75rem;
+      right: 0.75rem;
+      max-width: 100%;
+    }
+
+    &-contentUpper {
+      bottom: 50px;
+    }
+
+    &-contentLower {
+      top: -50px;
     }
 
     .custom-font-size {
       font-size: 11px;
+    }
+
+    .custom-header {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .custom-size-1 {
+      font-size: 14px;
+    }
+
+    .custom-size-2 {
+      font-size: 10px;
+    }
+  }
+
+  @include media("<=400px") {
+    .custom-header {
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    .custom-size-1 {
+      font-size: 11px;
+    }
+
+    .custom-size-2 {
+      font-size: 9px;
     }
   }
 }

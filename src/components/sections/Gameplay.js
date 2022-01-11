@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import OwlCarousel from "react-owl-carousel";
 
 import frame from "../../assets/images/gameplay/frame.png";
@@ -11,6 +11,13 @@ import avt4 from "../../assets/images/gameplay/avt4.png";
 import avt5 from "../../assets/images/gameplay/avt5.png";
 
 const Gameplay = () => {
+  const [isAutoPlay, setIsAutoPlay] = useState(false);
+  useEffect(() => {
+    if (window.innerWidth < 1000) {
+      setIsAutoPlay(true);
+    }
+  }, []);
+
   const listImg = [{ img: img1 }, { img: img2 }];
   const listAvt = [
     { img: avt1 },
@@ -19,6 +26,7 @@ const Gameplay = () => {
     { img: avt4 },
     { img: avt5 },
   ];
+
   return (
     <section
       id="gameplay"
@@ -52,15 +60,40 @@ const Gameplay = () => {
         </div>
       </div>
 
-      <div className="Gameplay-listAvt d-flex">
-        {listAvt.map((avt, id) => (
-          <img
-            key={id}
-            src={avt.img}
-            className="Gameplay-listAvt-avt img-contain mx-4"
-            alt="avatar"
-          />
-        ))}
+      <div className="Gameplay-listAvt container">
+        <OwlCarousel
+          loop={true}
+          dots={false}
+          autoplay={isAutoPlay}
+          autoplayTimeout={3000}
+          autoplayHoverPause={true}
+          responsive={{
+            0: {
+              items: 1,
+            },
+            330: {
+              items: 2,
+            },
+            500: {
+              items: 3,
+            },
+            750: {
+              items: 4,
+            },
+            1000: {
+              items: 5,
+            },
+          }}
+        >
+          {listAvt.map((avt, id) => (
+            <img
+              key={id}
+              src={avt.img}
+              className="Gameplay-listAvt-avt img-contain"
+              alt="avatar"
+            />
+          ))}
+        </OwlCarousel>
       </div>
     </section>
   );

@@ -26,11 +26,11 @@ const TokensAndAssets = () => {
         <div>
           <div className="row align-items-center text-font">
             <div className="col-lg-5 col-md-6 mt-4 reveal-from-left">
-              <div className="text-blue h5 mt-0 reveal-from-bottom text-uppercase">
+              <div className="text-blue mb-3 reveal-from-bottom text-uppercase">
                 Tokens and Assets
               </div>
 
-              <div className="m-0 font-size-10">
+              <div className="m-0 font-size-10 custom-size">
                 Be a part of the evolution of Pixel Metaverse World with PXC,
                 our governance token. Not only does it allows the owner to
                 receive valuable rewards but also to obtain the rights to decide
@@ -41,8 +41,10 @@ const TokensAndAssets = () => {
             <div className="col-lg-2 d-none d-lg-block" />
             <div className="col-lg-5 col-md-6 mt-4 d-flex flex-column align-items-center reveal-from-right">
               <img src={bigPXC} className="img-size" alt="pixel img" />
-              <h5 className="m-0 text-blue">1.000.000.000 PXC</h5>
-              <div className="font-size-10 mt-2">Ready for distribution</div>
+              <div className="text-blue text-center mt-2">
+                1.000.000.000 PXC
+              </div>
+              <div className="font-size-10 my-2">Ready for distribution</div>
             </div>
           </div>
 
