@@ -6,6 +6,7 @@ import CommonInfo from "../components/sections/CommonInfo";
 // import PenguinPreview from "../components/sections/PenguinPreview";
 import TokensAndAssets from "../components/sections/TokensAndAssets";
 import RoadMap from "../components/sections/RoadMap";
+import GameplayDemo from "../components/sections/Gameplay";
 // import Distribution from "../components/sections/Distribution";
 
 import joinDiscord from "../assets/images/landing-page/join-discord.png";
@@ -74,6 +75,7 @@ const Home = (props) => {
     <div className="Home position-relative">
       <CommonInfo />
       <Features />
+      <GameplayDemo />
       <TokensAndAssets />
       <RoadMap />
       {/* <PenguinPreview />

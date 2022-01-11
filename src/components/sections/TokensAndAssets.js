@@ -22,7 +22,7 @@ const TokensAndAssets = () => {
       id="tokenomics"
       className="TokensAndAssets page-section full-viewport d-flex align-items-center"
     >
-      <div className="container">
+      <div className="container mt-3">
         <div>
           <div className="row align-items-center text-font">
             <div className="col-lg-5 col-md-6 mt-4 reveal-from-left">

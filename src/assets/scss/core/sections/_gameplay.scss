@@ -1,23 +1,75 @@
-.GameplayDemo {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center bottom;
-  background-image: linear-gradient(to bottom, #01232c, #175a6c);
+.Gameplay {
+  margin-top: -320px;
 
-  &-header {
-    z-index: 2;
-    width: 100%;
+  &-slide {
     position: absolute;
-    top: 7%;
+    top: 4.2%;
+    left: 1.8%;
+    right: 1.8%;
+    bottom: 3.6%;
+
+    .owl-dots {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      height: 8%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+
+      .owl-dot {
+        background-color: rgba(235, 189, 51, 0.26);
+        height: 6px;
+        width: 100px;
+        margin: 0 20px;
+        border-radius: 4px;
+
+        &.active {
+          background-color: #ebbd33;
+        }
+      }
+    }
   }
 
-  .img-bg {
-    object-fit: contain;
-    position: relative;
+  &-listAvt {
+    margin-top: 6rem;
 
-    @include media("<=768px") {
-      max-width: 188%;
-      width: auto !important;
+    &-avt {
+      height: 160px;
     }
+  }
+
+  @include media("<=1300px") {
+    margin-top: -100px;
+  }
+
+  @include media("<=992px") {
+    .owl-dots {
+      height: 10%;
+    }
+  }
+
+  @include media("<=768px") {
+    margin-top: 0;
+
+    .owl-dots {
+      .owl-dot {
+        height: 5px;
+        width: 50px;
+        margin: 0 5px;
+      }
+    }
+
+    &-listAvt {
+      margin-top: 2rem;
+    }
+  }
+
+  .owl-carousel,
+  .owl-stage-outer,
+  .owl-stage,
+  .owl-item {
+    height: 100%;
   }
 }
