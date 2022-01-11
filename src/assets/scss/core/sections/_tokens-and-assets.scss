@@ -36,19 +36,14 @@
 
   &-pixel {
     position: absolute;
-    top: 0;
+    bottom: -25%;
     left: 0;
-    height: 1000px;
+    height: 1500px;
     z-index: -1;
 
     img {
       opacity: 0.3;
       object-position: left bottom;
-    }
-
-    @include media(">1950px") {
-      top: -30%;
-      height: 1500px;
     }
   }
 
@@ -66,6 +61,12 @@
   .owl-dot.active {
     span {
       background-color: white !important;
+    }
+  }
+
+  @include media("<=1300px") {
+    &-pixel {
+      height: 1100px;
     }
   }
 
