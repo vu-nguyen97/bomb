@@ -7,6 +7,7 @@ import item from "../../assets/images/tokens-and-assets/item.png";
 import pet from "../../assets/images/tokens-and-assets/pet.png";
 import land from "../../assets/images/tokens-and-assets/land.png";
 import bigPXC from "../../assets/images/tokens-and-assets/big-PXC.png";
+import pixel from "../../assets/images/partern-pixel-left.png";
 
 const TokensAndAssets = () => {
   const listItem = [
@@ -100,6 +101,10 @@ const TokensAndAssets = () => {
               ))}
             </OwlCarousel>
           </div>
+        </div>
+
+        <div className="TokensAndAssets-pixel">
+          <img src={pixel} className="w-100 h-100 img-contain" alt="pixel" />
         </div>
       </div>
     </section>

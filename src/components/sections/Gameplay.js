@@ -9,6 +9,7 @@ import avt2 from "../../assets/images/gameplay/avt2.png";
 import avt3 from "../../assets/images/gameplay/avt3.png";
 import avt4 from "../../assets/images/gameplay/avt4.png";
 import avt5 from "../../assets/images/gameplay/avt5.png";
+import pixel from "../../assets/images/partern-pixel-right.png";
 
 const Gameplay = () => {
   const [isAutoPlay, setIsAutoPlay] = useState(false);
@@ -94,6 +95,10 @@ const Gameplay = () => {
             />
           ))}
         </OwlCarousel>
+      </div>
+
+      <div className="Gameplay-pixel">
+        <img src={pixel} className="w-100 h-100 img-contain" alt="pixel" />
       </div>
     </section>
   );

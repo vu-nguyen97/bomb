@@ -5,6 +5,7 @@ import checkpoin3 from "../../assets/images/roadmap/roadmap-icon-3.png";
 import checkpoin4 from "../../assets/images/roadmap/roadmap-icon-4.png";
 import checkpoin5 from "../../assets/images/roadmap/roadmap-icon-5.png";
 import checkpoin6 from "../../assets/images/roadmap/roadmap-icon-6.png";
+import pixel from "../../assets/images/partern-pixel.png";
 
 function RoadMap() {
   const roadData = [
@@ -127,6 +128,10 @@ function RoadMap() {
             ))}
           </div>
         </div>
+      </div>
+
+      <div className="RoadMap-pixel">
+        <img src={pixel} className="w-100 h-100 img-contain" alt="pixel" />
       </div>
     </section>
   );

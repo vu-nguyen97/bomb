@@ -34,6 +34,24 @@
     }
   }
 
+  &-pixel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1000px;
+    z-index: -1;
+
+    img {
+      opacity: 0.3;
+      object-position: left bottom;
+    }
+
+    @include media(">1950px") {
+      top: -30%;
+      height: 1500px;
+    }
+  }
+
   .img-size {
     width: 200px;
     height: 200px;
