@@ -12,7 +12,10 @@ const CommonInfo = () => {
           <img src={banner} alt="banner" className="img-cover h-100 w-100" />
         </div>
 
-        <div className="CommonInfo-logo d-none d-sm-block">
+        <div
+          className="CommonInfo-logo reveal-from-bottom"
+          data-reveal-delay="300"
+        >
           <img
             src={logo}
             className="img-logo img-contain w-100 h-100"
@@ -20,12 +23,17 @@ const CommonInfo = () => {
           />
         </div>
 
-        <div className="CommonInfo-chatbox d-none d-sm-block">
-          <img src={chatbox} className="img-contain" alt="chatbox" />
+        <div
+          className="CommonInfo-chatbox d-flex flex-column justify-content-end reveal-from-bottom"
+          data-reveal-delay="300"
+        >
+          <div className="d-none d-sm-block position-relative">
+            <img src={chatbox} className="img-contain" alt="chatbox" />
 
-          <div className="CommonInfo-chatbox-content d-flex flex-column align-items-center justify-content-center text-font">
-            <div>LET PLAY</div>
-            <div className="pb-2">AND EARN!</div>
+            <div className="CommonInfo-chatbox-content d-flex flex-column align-items-center justify-content-center text-font">
+              <div>LET PLAY</div>
+              <div className="pb-2">AND EARN!</div>
+            </div>
           </div>
         </div>
       </section>

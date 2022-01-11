@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
-import classNames from "classnames";
+// import classNames from "classnames";
 
 import Features from "../components/sections/Features";
 import CommonInfo from "../components/sections/CommonInfo";
@@ -8,11 +8,11 @@ import RoadMap from "../components/sections/RoadMap";
 import GameplayDemo from "../components/sections/Gameplay";
 // import Distribution from "../components/sections/Distribution";
 
-import joinDiscord from "../assets/images/landing-page/join-discord.png";
-import joinDiscordOnMobile from "../assets/images/landing-page/join-discord-mini.png";
+// import joinDiscord from "../assets/images/landing-page/join-discord.png";
+// import joinDiscordOnMobile from "../assets/images/landing-page/join-discord-mini.png";
 
 const Home = (props) => {
-  const [isShowSmoothScroll, setIsShowSmoothScroll] = useState(false);
+  // const [isShowSmoothScroll, setIsShowSmoothScroll] = useState(false);
   const [sizeChangeHeader, setSizeChangeHeader] = useState(95);
 
   const isMoreInfo = props.location?.state?.isMoreInfo || false;
@@ -35,14 +35,14 @@ const Home = (props) => {
       isAnotherStyle = true;
     }
 
-    if (
-      window.scrollY + window.innerHeight + 120 >
-      document.body.clientHeight
-    ) {
-      setIsShowSmoothScroll(false);
-    } else {
-      setIsShowSmoothScroll(true);
-    }
+    // if (
+    //   window.scrollY + window.innerHeight + 120 >
+    //   document.body.clientHeight
+    // ) {
+    //   setIsShowSmoothScroll(false);
+    // } else {
+    //   setIsShowSmoothScroll(true);
+    // }
 
     const navItems = document.getElementsByClassName("header-nav-item") || [];
     const siteHeaderEl = document.getElementById("site-header");
@@ -79,7 +79,7 @@ const Home = (props) => {
       <RoadMap />
       {/*<Distribution /> */}
 
-      <a
+      {/* <a
         href="https://discord.com/channels/923503591719837696/923504349144055858"
         target="_blank"
         rel="noreferrer"
@@ -104,7 +104,7 @@ const Home = (props) => {
             className="d-sm-none h-100 w-100"
           />
         </div>
-      </a>
+      </a> */}
     </div>
   );
 };

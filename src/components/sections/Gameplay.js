@@ -61,7 +61,10 @@ const Gameplay = () => {
         </div>
       </div>
 
-      <div className="Gameplay-listAvt container">
+      <div
+        className="Gameplay-listAvt container reveal-from-bottom"
+        data-reveal-delay="300"
+      >
         <OwlCarousel
           loop={true}
           dots={false}

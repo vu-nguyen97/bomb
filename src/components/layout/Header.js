@@ -29,19 +29,20 @@ export const HeaderLinks = [
   {
     name: "Vesting",
     id: "vesting",
-    url: `${window.location.origin}/vesting`,
+    url: "/",
+    // url: `${window.location.origin}/vesting`,
   },
   {
     name: "Pitchdeck",
     id: "pitchdeck",
-    url: "https://drive.google.com/file/d/1Svjk7C-jljxnAHIaFFj9gDNrTvVyidm-/view",
-    isNewTab: true,
+    url: "/",
+    // isNewTab: true,
   },
   {
     name: "Whitepaper",
     id: "whitepaper",
-    url: "https://whitepaper.piguland.com/",
-    isNewTab: true,
+    url: "/",
+    // isNewTab: true,
   },
 ];
 

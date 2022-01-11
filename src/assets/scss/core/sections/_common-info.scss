@@ -21,6 +21,7 @@
     bottom: 20%;
     left: 55%;
     width: 140px;
+    padding-top: 100px;
 
     &-content {
       position: absolute;
@@ -30,6 +31,19 @@
       bottom: 0;
       color: #767397;
       font-size: 11px;
+    }
+  }
+
+  @include media("<768px") {
+    height: 600px;
+
+    &-logo {
+      top: 240px;
+      height: 85px;
+    }
+
+    &-chatbox {
+      left: 60%;
     }
   }
 }

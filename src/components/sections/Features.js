@@ -42,7 +42,10 @@ const featureList = [
 const Features = () => {
   return (
     <section className="Features page-section" id="features">
-      <div className="Features-carousel">
+      <div
+        className="Features-carousel reveal-from-bottom"
+        data-reveal-delay="300"
+      >
         <OwlCarousel
           className="owl-theme"
           loop={true}
@@ -92,23 +95,28 @@ const Features = () => {
       <div className="Features-park position-relative">
         <img src={parkUpper} className="w-100 img-contain" alt="park upper" />
 
-        <div className="Features-contentUpper text-font">
+        <div
+          className="Features-contentUpper text-font reveal-from-bottom"
+          data-reveal-delay="300"
+        >
           <div className="custom-size-1">Bring to you</div>
           <div className="mt-lg-3 mt-2 mb-lg-3 mb-2 h5 text-orange custom-header">
             <div>CLASSIC</div>
             <div>METAVERSE</div>
             <div>WORLD!</div>
           </div>
-
-          <div className="custom-size-1">Dear Friends!</div>
         </div>
       </div>
 
       <div className="position-relative">
         <img src={parkLower} className="w-100 img-contain" alt="park lower" />
 
-        <div className="Features-contentLower text-font">
+        <div
+          className="Features-contentLower text-font reveal-from-bottom"
+          data-reveal-delay="300"
+        >
           <div className="custom-size-2">
+            <div className="custom-size-1">Dear Friends!</div>
             <div className="mt-lg-3 mt-2">
               I'm waiting for you guys to join our world.
             </div>
