@@ -13,8 +13,10 @@ import pixel from "../../assets/images/partern-pixel-right.png";
 
 const Gameplay = () => {
   const [isAutoPlay, setIsAutoPlay] = useState(false);
+  const limitWidth = 1000;
+
   useEffect(() => {
-    if (window.innerWidth < 1000) {
+    if (window.innerWidth < limitWidth) {
       setIsAutoPlay(true);
     }
   }, []);
@@ -84,7 +86,7 @@ const Gameplay = () => {
             750: {
               items: 4,
             },
-            1000: {
+            [limitWidth]: {
               items: 5,
             },
           }}

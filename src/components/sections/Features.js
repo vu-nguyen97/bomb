@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import OwlCarousel from "react-owl-carousel";
 
 import resourceFarm from "../../assets/images/features/icon-farm.png";
@@ -40,6 +40,15 @@ const featureList = [
 ];
 
 const Features = () => {
+  const [isAutoPlay, setIsAutoPlay] = useState(false);
+  const limitWidth = 1535;
+
+  useEffect(() => {
+    if (window.innerWidth < limitWidth) {
+      setIsAutoPlay(true);
+    }
+  }, []);
+
   return (
     <section className="Features page-section" id="features">
       <div
@@ -50,6 +59,9 @@ const Features = () => {
           className="owl-theme"
           loop={true}
           dots={false}
+          autoplay={isAutoPlay}
+          autoplayTimeout={3000}
+          autoplayHoverPause={true}
           responsive={{
             0: {
               items: 1,
@@ -63,7 +75,7 @@ const Features = () => {
             1048: {
               items: 4,
             },
-            1535: {
+            [limitWidth]: {
               items: 5,
             },
           }}
