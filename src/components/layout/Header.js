@@ -183,16 +183,22 @@ const Header = ({
           </div>
 
           <div className="playNowContainer h-100 position-relative d-none d-lg-block cursor-pointer">
-            <img
-              src={btnPlay}
-              className="btnPlay img-contain h-100 w-100"
-              alt="wood"
-            />
+            <a
+              href="http://beta.pixelmeta.net/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                src={btnPlay}
+                className="btnPlay img-contain h-100 w-100"
+                alt="wood"
+              />
 
-            <div className="playNowContent text-uppercase text-center">
-              <div>Play</div>
-              <div>now</div>
-            </div>
+              <div className="playNowContent text-uppercase text-center">
+                <div>Play</div>
+                <div>now</div>
+              </div>
+            </a>
           </div>
 
           <button
